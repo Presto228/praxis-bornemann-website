@@ -1,0 +1,12 @@
+# Arbeitsdateien – gehören nicht auf die veröffentlichte Seite
+temporary screenshots/
+serve.mjs
+screenshot.mjs
+CLAUDE.md
+*.md
+!README.md
+.claude/
+node_modules/
+Thumbs.db
+.DS_Store
+.nexus/

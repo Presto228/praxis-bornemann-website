@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow"><!-- Vorschau auf GitHub Pages – vor dem Livegang entfernen -->
+<script>document.documentElement.className += ' js';</script>
+<title>Hausarztpraxis Dr. med. Christoph Bornemann · Essen-Karnap</title>
+<meta name="description" content="Hausärztliche Versorgung in Essen-Karnap: Vorsorge, Diagnostik, DMP-Programme und Hausbesuche. Karnaper Str. 99, 45329 Essen. Telefon 0201 381418.">
+<link rel="canonical" href="https://arztpraxis-bornemann.de/">
+
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:site_name" content="Hausarztpraxis Dr. med. Bornemann">
+<meta property="og:title" content="Hausarztpraxis Dr. med. Christoph Bornemann · Essen-Karnap">
+<meta property="og:description" content="Ihre Hausarztpraxis in Essen-Karnap: vollständige hausärztliche Grundversorgung von der Vorsorge bis zum Hausbesuch. Karnaper Str. 99, 45329 Essen.">
+<meta property="og:url" content="https://arztpraxis-bornemann.de/">
+<meta property="og:image" content="https://arztpraxis-bornemann.de/assets/Christoph-bornemann-1.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Hausarztpraxis Dr. med. Christoph Bornemann · Essen-Karnap">
+<meta name="twitter:description" content="Ihre Hausarztpraxis in Essen-Karnap: Vorsorge, Diagnostik, DMP-Programme und Hausbesuche.">
+<meta name="twitter:image" content="https://arztpraxis-bornemann.de/assets/Christoph-bornemann-1.jpg">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preload" href="fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/publicsans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts/fonts.css">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        blau:    { DEFAULT: '#1489C8', tief: '#0E6DA1', hell: '#EAF4FA', rand: '#D3E7F2' },
+        tinte:   { DEFAULT: '#0C3B57', soft: '#3D5A6C' },
+        rot:     { DEFAULT: '#BE2321', tief: '#9C1B19' },
+      },
+      fontFamily: {
+        display: ['Fraunces', 'Georgia', 'serif'],
+        sans: ['"Public Sans"', 'system-ui', 'sans-serif'],
+      },
+      boxShadow: {
+        'karte': '0 1px 2px rgba(12,59,87,.06), 0 8px 24px -8px rgba(12,59,87,.14)',
+        'schwebend': '0 2px 4px rgba(12,59,87,.08), 0 16px 40px -12px rgba(12,59,87,.25)',
+        'foto': '0 1px 3px rgba(12,59,87,.1), 0 20px 50px -16px rgba(20,137,200,.35)',
+      },
+    }
+  }
+}
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
+
+  .hero-atmo {
+    background:
+      radial-gradient(52rem 30rem at 82% -8%, rgba(20,137,200,.14), transparent 62%),
+      radial-gradient(40rem 26rem at -12% 34%, rgba(20,137,200,.09), transparent 58%),
+      radial-gradient(30rem 20rem at 58% 108%, rgba(190,35,33,.05), transparent 60%),
+      linear-gradient(180deg, #FDFEFF 0%, #F4FAFD 100%);
+  }
+  .grain { position: relative; }
+  .grain::after {
+    content: ''; position: absolute; inset: 0; pointer-events: none; opacity: .5; mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0.05 0 0 0 0 0.23 0 0 0 0 0.34 0 0 0 0.035 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* Signature: red swoosh from the logo, orbiting the key word */
+  .swoosh { position: relative; white-space: nowrap; }
+  .swoosh svg { position: absolute; left: -10%; top: -22%; width: 120%; height: 148%; overflow: visible; }
+  .swoosh svg path {
+    fill: none; stroke: #BE2321; stroke-width: 3.2; stroke-linecap: round;
+    stroke-dasharray: 100; stroke-dashoffset: 100;
+    animation: swoosh-draw 1s cubic-bezier(.55,.06,.28,1) .5s forwards;
+  }
+  @keyframes swoosh-draw { to { stroke-dashoffset: 4; } }
+  @media (prefers-reduced-motion: reduce) {
+    .swoosh svg path { animation: none; stroke-dashoffset: 4; }
+    .auftritt, .auftritt-2, .auftritt-3 { animation: none !important; opacity: 1 !important; transform: none !important; }
+  }
+
+  .auftritt, .auftritt-2, .auftritt-3 {
+    opacity: 0; transform: translateY(14px);
+    animation: auftauchen .7s cubic-bezier(.22,1,.36,1) forwards;
+  }
+  .auftritt-2 { animation-delay: .12s; }
+  .auftritt-3 { animation-delay: .24s; }
+  @keyframes auftauchen { to { opacity: 1; transform: translateY(0); } }
+
+  .foto-behandlung { position: relative; overflow: hidden; }
+  .foto-behandlung::before {
+    content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+    background: linear-gradient(180deg, rgba(20,137,200,.16), rgba(12,59,87,.05) 55%);
+    mix-blend-mode: multiply;
+  }
+  .foto-behandlung::after {
+    content: ''; position: absolute; inset: 0; z-index: 2; pointer-events: none;
+    background: linear-gradient(to top, rgba(12,59,87,.42), transparent 45%);
+  }
+
+  /* Sanfter Zoom beim Überfahren – für alle Fotos (wie in der Referenz) */
+  .zoom-foto { overflow: hidden; }
+  .foto-behandlung img, .zoom-foto img { transition: transform .6s cubic-bezier(.22,1,.36,1); }
+  .foto-behandlung:hover img, .zoom-foto:hover img { transform: scale(1.05); }
+  @media (prefers-reduced-motion: reduce) {
+    .foto-behandlung img, .zoom-foto img { transition: none; }
+    .foto-behandlung:hover img, .zoom-foto:hover img { transform: none; }
+  }
+
+  a, button, summary { outline: none; }
+  a:focus-visible, button:focus-visible, summary:focus-visible,
+  input:focus-visible, textarea:focus-visible {
+    outline: 2px solid #1489C8; outline-offset: 3px; border-radius: 4px;
+  }
+
+  /* Formularfelder im Design-System */
+  .feld {
+    width: 100%; background: #fff; border: 1px solid #D3E7F2; border-radius: 12px;
+    padding: .7rem .9rem; font-size: 15px; color: #0C3B57;
+    transition: border-color .2s ease, box-shadow .2s ease;
+  }
+  .feld::placeholder { color: #3D5A6C; opacity: .55; }
+  .feld:hover { border-color: #A9D2E8; }
+  .feld:focus { outline: none; border-color: #1489C8; box-shadow: 0 0 0 3px rgba(20,137,200,.14); }
+  .feld-label { font-size: 13px; font-weight: 600; color: #0C3B57; margin-bottom: .35rem; display: block; }
+
+  /* ============ SCROLL-REVEAL (portiert) ============ */
+  /* Nur wenn JS aktiv ist, werden Elemente vor dem Reveal versteckt — sonst immer sichtbar. */
+  @media (prefers-reduced-motion: no-preference) {
+    .js .anim-up    { opacity: 0; transform: translateY(26px); transition: opacity .65s cubic-bezier(.16,1,.3,1), transform .65s cubic-bezier(.16,1,.3,1); }
+    .js .anim-left  { opacity: 0; transform: translateX(-32px); transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1); }
+    .js .anim-right { opacity: 0; transform: translateX(32px);  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1); }
+    .js .anim-scale { opacity: 0; transform: scale(.96);        transition: opacity .6s cubic-bezier(.16,1,.3,1), transform .6s cubic-bezier(.16,1,.3,1); }
+    .js .anim-up.is-visible, .js .anim-left.is-visible, .js .anim-right.is-visible, .js .anim-scale.is-visible { opacity: 1; transform: none; }
+    .d1{transition-delay:.08s!important}.d2{transition-delay:.16s!important}.d3{transition-delay:.24s!important}
+    .d4{transition-delay:.32s!important}.d5{transition-delay:.40s!important}.d6{transition-delay:.48s!important}
+  }
+
+  /* ============ SERVICE-TABS ============ */
+  .svc-tablist {
+    display: flex; gap: .4rem; background: #fff; border: 1px solid #D3E7F2;
+    border-radius: 9999px; padding: .4rem; box-shadow: 0 1px 4px rgba(12,59,87,.06); margin-bottom: 1.75rem;
+  }
+  .svc-tab {
+    flex: 1; display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+    padding: .7rem 1rem; min-height: 50px; border: none; background: none; cursor: pointer;
+    border-radius: 9999px; font-family: inherit; font-weight: 600; font-size: 15px; color: #3D5A6C;
+    transition: background .2s, color .2s, box-shadow .2s;
+  }
+  .svc-tab svg { width: 18px; height: 18px; flex-shrink: 0; }
+  .svc-tab:hover:not([aria-selected="true"]) { background: #EAF4FA; color: #0E6DA1; }
+  .svc-tab[aria-selected="true"] { background: #1489C8; color: #fff; box-shadow: 0 3px 12px rgba(20,137,200,.32); }
+  .svc-tab .tab-lang { display: inline; }
+  @media (max-width: 560px) { .svc-tab { flex-direction: column; gap: .2rem; font-size: 12.5px; padding: .55rem .25rem; min-height: 58px; } .svc-tab svg { width: 20px; height: 20px; } }
+  .svc-panel { animation: svc-fade .4s cubic-bezier(0,0,.2,1); }
+  @keyframes svc-fade { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+  [hidden] { display: none !important; }
+
+  /* ============ GLOW (cursor-spotlight, brand blue) ============ */
+  [data-glow] {
+    --glow-hue: 200; --glow-spread: 16; --glow-radius: 16; --glow-border: 2; --glow-size: 240;
+    --glow-border-size: calc(var(--glow-border) * 1px);
+    --glow-spotlight-size: calc(var(--glow-size) * 1px);
+    --glow-hue-mix: calc(var(--glow-hue) + (var(--xp, .5) * var(--glow-spread)));
+    position: relative; isolation: isolate;
+  }
+  [data-glow]::before, [data-glow]::after {
+    content: ''; pointer-events: none; position: absolute; inset: calc(var(--glow-border-size) * -1);
+    border: var(--glow-border-size) solid transparent; border-radius: calc(var(--glow-radius) * 1px);
+    background-attachment: fixed; background-repeat: no-repeat; background-position: 50% 50%;
+    mask: linear-gradient(#000 0 0) padding-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor; mask-composite: exclude; opacity: 0; transition: opacity .3s cubic-bezier(0,0,.2,1); z-index: 1;
+  }
+  [data-glow]::before {
+    background-image: radial-gradient(var(--glow-spotlight-size) var(--glow-spotlight-size) at calc(var(--x,50%)) calc(var(--y,50%)), hsl(var(--glow-hue-mix) 85% 52% / .9), transparent 70%);
+    filter: brightness(1.4);
+  }
+  [data-glow]::after {
+    background-image: radial-gradient(calc(var(--glow-spotlight-size) * .5) calc(var(--glow-spotlight-size) * .5) at calc(var(--x,50%)) calc(var(--y,50%)), hsl(0 0% 100% / .8), transparent 100%);
+  }
+  [data-glow]:hover::before, [data-glow]:hover::after, [data-glow]:focus-within::before, [data-glow]:focus-within::after { opacity: 1; }
+  [data-glow] .glow-wash {
+    position: absolute; inset: 0; z-index: 0; border-radius: inherit; opacity: 0; pointer-events: none;
+    background: radial-gradient(calc(var(--glow-spotlight-size) * .8) calc(var(--glow-spotlight-size) * .8) at calc(var(--x,50%)) calc(var(--y,50%)), hsl(var(--glow-hue-mix) 90% 55% / .12), transparent 70%);
+    transition: opacity .3s cubic-bezier(0,0,.2,1);
+  }
+  [data-glow]:hover .glow-wash, [data-glow]:focus-within .glow-wash { opacity: 1; }
+  [data-glow] > :not(.glow-wash) { position: relative; z-index: 1; }
+  [data-glow]:not(.glow-ready) { border-color: #A9D2E8; }
+  @media (prefers-reduced-motion: reduce) { [data-glow]::before, [data-glow]::after, [data-glow] .glow-wash { transition: none; } }
+
+  /* ============ SHIMMER (nur Haupt-CTAs) ============ */
+  .btn-shimmer { position: relative; isolation: isolate; overflow: hidden; --shimmer-tint: rgba(255,255,255,.5); }
+  .btn-shimmer-onlight { --shimmer-tint: rgba(20,137,200,.28); }
+  .btn-shimmer::after {
+    content: ''; position: absolute; inset: 0; z-index: -1; width: 45%;
+    background: linear-gradient(115deg, transparent 0%, var(--shimmer-tint) 50%, transparent 100%);
+    transform: translateX(-260%) skewX(-18deg); animation: btn-shimmer-sweep 3.6s ease-in-out infinite; pointer-events: none;
+  }
+  @keyframes btn-shimmer-sweep { 0%{transform:translateX(-260%) skewX(-18deg)} 55%{transform:translateX(320%) skewX(-18deg)} 100%{transform:translateX(320%) skewX(-18deg)} }
+  @media (prefers-reduced-motion: reduce) { .btn-shimmer::after { display: none; } }
+
+  /* ============ LOADER (animiertes Logo) ============ */
+  .loader {
+    position: fixed; inset: 0; z-index: 9999; background: #fff; display: flex; align-items: center; justify-content: center;
+    transition: opacity .4s cubic-bezier(0,0,.2,1), visibility .4s cubic-bezier(0,0,.2,1);
+  }
+  .loader.hidden { opacity: 0; visibility: hidden; }
+  .loader video { width: min(380px, 74vw); height: auto; border-radius: 20px; }
+  body.loading { overflow: hidden; height: 100vh; }
+
+  /* ============ GOOGLE-BEWERTUNGEN (Marquee) ============ */
+  .testi-summary { display:inline-flex; align-items:center; gap:.55rem; padding:.55rem 1.2rem; background:#fff; border:1px solid #D3E7F2; border-radius:9999px; box-shadow:0 1px 4px rgba(12,59,87,.06); font-weight:600; font-size:14.5px; color:#0C3B57; transition:box-shadow .2s, transform .2s; }
+  .testi-summary:hover { box-shadow:0 8px 24px -8px rgba(12,59,87,.22); transform:translateY(-1px); }
+  .testi-summary .stars { color:#FBBC05; letter-spacing:1px; font-size:15px; }
+  .testi-summary-link { color:#0E6DA1; font-weight:600; }
+  .testi-summary:hover .testi-summary-link { text-decoration:underline; }
+  .marquee-wrap { position:relative; width:100%; overflow:hidden; -webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent); mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent); }
+  .marquee-track { display:flex; width:max-content; gap:1.25rem; padding:.5rem 0; animation:marquee-scroll 70s linear infinite; }
+  .marquee-wrap:hover .marquee-track, .marquee-wrap:focus-within .marquee-track { animation-play-state:paused; }
+  @keyframes marquee-scroll { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+  @media (prefers-reduced-motion: reduce){ .marquee-track{animation:none} .marquee-wrap{overflow-x:auto} }
+  .testi-card { flex:0 0 auto; width:320px; background:#fff; border:1px solid #D3E7F2; border-top:3px solid #1489C8; border-radius:16px; padding:1.5rem; box-shadow:0 1px 2px rgba(12,59,87,.06), 0 8px 24px -8px rgba(12,59,87,.14); text-align:left; display:flex; flex-direction:column; gap:.9rem; }
+  .testi-head { display:flex; align-items:center; gap:.75rem; }
+  .testi-avatar { width:44px; height:44px; border-radius:50%; background:#1489C8; color:#fff; display:flex; align-items:center; justify-content:center; font-family:'Fraunces',Georgia,serif; font-weight:560; font-size:15px; flex-shrink:0; }
+  .testi-name { font-family:'Fraunces',Georgia,serif; font-weight:560; font-size:16px; color:#0C3B57; line-height:1.3; }
+  .testi-src { font-size:12px; color:#8FA2B4; }
+  .testi-stars { color:#FBBC05; letter-spacing:1px; font-size:15px; line-height:1; }
+  .testi-quote { font-size:14.5px; color:#3D5A6C; line-height:1.65; }
+  @media (max-width:560px){ .testi-card{ width:270px; padding:1.25rem; } }
+
+  /* ============ KARTEN-VORSCHAU (Klick zum Laden) ============ */
+  .karten-cover {
+    background:
+      linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px),
+      radial-gradient(60% 60% at 50% 40%, rgba(20,137,200,.28), transparent 70%),
+      linear-gradient(140deg, #0b3552, #0d4f79);
+    background-size: 40px 40px, 40px 40px, 100% 100%, 100% 100%;
+    cursor: pointer;
+  }
+  .karten-cover::after {
+    content: ''; position: absolute; left: 18%; top: 0; bottom: 0; width: 12%;
+    background: rgba(255,255,255,.05); transform: skewX(-16deg); pointer-events: none;
+  }
+
+  /* ============ MOBILE-NAVIGATION & APP-LEISTE ============ */
+  .burger span { display:block; width:22px; height:2px; background:#0C3B57; border-radius:2px;
+    transition: transform .3s cubic-bezier(.22,1,.36,1), opacity .2s ease; }
+  .burger span + span { margin-top:5px; }
+  .burger[aria-expanded="true"] span:nth-child(1){ transform: translateY(7px) rotate(45deg); }
+  .burger[aria-expanded="true"] span:nth-child(2){ opacity:0; }
+  .burger[aria-expanded="true"] span:nth-child(3){ transform: translateY(-7px) rotate(-45deg); }
+
+  .mob-link { display:flex; align-items:center; justify-content:space-between; gap:1rem;
+    padding:1.05rem .25rem; font-family:'Fraunces',Georgia,serif; font-weight:560; font-size:21px;
+    color:#0C3B57; border-bottom:1px solid #EAF4FA; transition: color .2s ease, padding-left .2s ease; }
+  .mob-link::after { content:''; width:9px; height:9px; border-right:2px solid #A9D2E8;
+    border-top:2px solid #A9D2E8; transform: rotate(45deg); flex-shrink:0; transition: border-color .2s ease; }
+  .mob-link:hover, .mob-link:active { color:#1489C8; padding-left:.5rem; }
+  .mob-link:hover::after { border-color:#1489C8; }
+
+  #mobile-menu:not([hidden]) { animation: menu-in .28s cubic-bezier(.22,1,.36,1); }
+  @keyframes menu-in { from { opacity:0; transform: translateY(-10px);} to { opacity:1; transform:none; } }
+
+  /* ============ HERO AUF DEM HANDY: Text liegt auf dem Arztfoto ============ */
+  @media (max-width: 767.98px) {
+    .hero { background: #0C3B57; }
+    .hero .hero-desk-bg { display: none; }
+    .hero .hero-raster {
+      display: flex; flex-direction: column; justify-content: flex-end; gap: 0; align-items: stretch;
+      /* Oberes Drittel gehört dem Gesicht – der Text beginnt etwa auf Kinnhöhe */
+      padding: 70vw 1.25rem 4.5rem;
+    }
+    .hero .hero-foto, .hero .hero-foto > div, .hero .hero-foto .zoom-foto {
+      position: absolute; left: 0; right: 0; top: 0; width: 100%; max-width: none; margin: 0;
+    }
+    .hero .hero-foto { height: 125vw; z-index: 0; }
+    .hero .hero-foto > div, .hero .hero-foto .zoom-foto { bottom: 0; border-radius: 0; box-shadow: none; }
+    .hero .hero-foto img { width: 100%; height: 100%; aspect-ratio: auto; object-fit: cover; object-position: 54% 0; transform: none; transition: none; }
+    .hero .hero-foto p { display: none; }
+    /* leichter Blauschleier wie bei allen Praxisfotos */
+    .hero .hero-foto::before {
+      content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+      background: linear-gradient(180deg, rgba(20,137,200,.16), rgba(12,59,87,.06) 55%);
+      mix-blend-mode: multiply;
+    }
+    /* Verlauf ins Praxisblau – darauf liegt der Text */
+    .hero .hero-foto::after {
+      content: ''; position: absolute; inset: 0; z-index: 2; pointer-events: none;
+      background: linear-gradient(to bottom, transparent 32%, rgba(12,59,87,.42) 48%, rgba(12,59,87,.86) 66%, #0C3B57 90%);
+    }
+    .hero .hero-text { position: relative; z-index: 2; }
+    .hero .hero-pill {
+      background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.26); box-shadow: none;
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); margin-bottom: 1.1rem;
+    }
+    .hero .hero-pill-text { color: #fff; }
+    .hero .hero-h1 { color: #fff; font-size: clamp(36px, 10.6vw, 44px); margin-bottom: 1rem; text-shadow: 0 1px 2px rgba(12,59,87,.35); }
+    .hero .hero-akzent { color: #8FD0F2; }
+    .hero .hero-p { color: rgba(255,255,255,.84); font-size: 15.5px; line-height: 1.6; margin-bottom: 1.5rem; text-shadow: 0 1px 2px rgba(12,59,87,.3); }
+    .hero .hero-ctas { flex-direction: column; align-items: stretch; gap: .65rem; max-width: 460px; }
+    .hero .hero-text .hero-cta-primar, .hero .hero-text .hero-cta-primar:hover {
+      justify-content: center; min-height: 54px; font-size: 16px; background: #fff; color: #0C3B57;
+      box-shadow: 0 1px 2px rgba(0,0,0,.14), 0 16px 32px -12px rgba(0,0,0,.55);
+    }
+    .hero .hero-text .hero-cta-primar svg { color: #1489C8; }
+    .hero .hero-text .hero-cta-sekundar, .hero .hero-text .hero-cta-sekundar:hover {
+      justify-content: center; min-height: 54px; font-size: 16px; color: #fff;
+      background: rgba(255,255,255,.1); border-color: rgba(255,255,255,.3);
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    }
+
+    /* Leistungen: Symbol links, Text rechts – halb so hoch, schneller zu überfliegen */
+    #leistungen .grid { gap: .85rem; }
+    #leistungen article[data-glow] {
+      display: grid; grid-template-columns: 44px 1fr; column-gap: 1rem; row-gap: .3rem;
+      align-items: start; padding: 1.15rem 1.25rem;
+    }
+    #leistungen article[data-glow] h3 { align-self: center; font-size: 18px; }
+    #leistungen article[data-glow] p { grid-column: 2; font-size: 14.5px; line-height: 1.55; }
+  }
+
+  /* Platz, damit die untere App-Leiste nichts verdeckt */
+  @media (max-width:1023px){ body { padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px)); } }
+  @media (prefers-reduced-motion: reduce){ #mobile-menu:not([hidden]){ animation:none; } .burger span{ transition:none; } }
+</style>
+
+<!-- Strukturierte Daten für lokale Suche & Google Maps -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Physician",
+  "@id": "https://arztpraxis-bornemann.de/#praxis",
+  "name": "Hausarztpraxis Dr. med. Christoph Bornemann",
+  "medicalSpecialty": "GeneralPractice",
+  "url": "https://arztpraxis-bornemann.de/",
+  "image": "https://arztpraxis-bornemann.de/assets/Christoph-bornemann-1.jpg",
+  "telephone": "+49 201 381418",
+  "faxNumber": "+49 201 383530",
+  "email": "kontakt@arztpraxis-bornemann.de",
+  "isAcceptingNewPatients": true,
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Karnaper Straße 99",
+    "postalCode": "45329",
+    "addressLocality": "Essen",
+    "addressRegion": "Nordrhein-Westfalen",
+    "addressCountry": "DE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 51.522157,
+    "longitude": 7.007856
+  },
+  "hasMap": "https://www.openstreetmap.org/?mlat=51.522157&mlon=7.007856#map=18/51.522157/7.007856",
+  "physician": {
+    "@type": "Physician",
+    "name": "Dr. med. Christoph Bornemann",
+    "medicalSpecialty": "GeneralPractice"
+  },
+  "availableService": [
+    { "@type": "MedicalProcedure", "name": "Vorsorgeuntersuchungen und Krebsvorsorge" },
+    { "@type": "MedicalProcedure", "name": "Hautkrebsscreening" },
+    { "@type": "MedicalProcedure", "name": "Impfberatung und Impfungen" },
+    { "@type": "MedicalProcedure", "name": "EKG und Belastungs-EKG" },
+    { "@type": "MedicalProcedure", "name": "24-Stunden-Blutdruckmessung" },
+    { "@type": "MedicalProcedure", "name": "Ultraschalluntersuchungen" },
+    { "@type": "MedicalProcedure", "name": "Laboruntersuchungen und Schnelltests" },
+    { "@type": "MedicalProcedure", "name": "DMP-Programme: Asthma, COPD, KHK, Diabetes" },
+    { "@type": "MedicalProcedure", "name": "Hausbesuche und geriatrische Betreuung" }
+  ],
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Thursday"], "opens": "07:00", "closes": "11:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Thursday"], "opens": "14:30", "closes": "17:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Wednesday","Friday"], "opens": "07:00", "closes": "11:00" }
+  ]
+}
+</script>
+</head>
+<body class="font-sans text-tinte-soft bg-white leading-[1.7]">
+
+<!-- Ladeanimation (animiertes Logo, spielt einmal beim Aufruf) -->
+<div class="loader" id="loader" role="presentation" aria-hidden="true">
+  <video id="loaderVideo" autoplay muted playsinline preload="auto" aria-label="Animiertes Logo der Hausarztpraxis Bornemann">
+    <source src="logo-animation.mp4" type="video/mp4">
+  </video>
+</div>
+<noscript><style>.loader{display:none!important}</style></noscript>
+
+<!-- Hinweisleiste -->
+<div class="bg-rot text-white text-[12px] leading-[1.4] sm:text-sm sm:leading-normal">
+  <div class="max-w-6xl mx-auto px-5 py-2 sm:py-2.5 flex flex-wrap items-center justify-center gap-x-2 text-center">
+    <svg class="w-4 h-4 shrink-0 hidden sm:block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m0 3.75h.008v.008H12v-.008zM21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+    <p><strong class="font-semibold">Urlaub:</strong> Unsere Praxis bleibt vom 17.08. – 28.08.2026 geschlossen. Vertretung: MVZ Karnap (Dr. Rust &amp; Dr. Hansen).</p>
+  </div>
+</div>
+
+<!-- Kopfzeile -->
+<header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-blau-rand">
+  <div class="max-w-6xl mx-auto px-5 h-[72px] flex items-center justify-between gap-6">
+    <a href="#" class="flex items-center gap-3 group">
+      <img src="brand_assets/hf_20260701_115437_ca2db878-88dd-467b-9d83-c12559ff5524.png" alt="Logo der Hausarztpraxis Dr. med. Bornemann" class="h-12 w-12 object-contain">
+      <span class="leading-tight hidden min-[370px]:block">
+        <span class="block font-display font-[560] text-tinte text-[14px] min-[420px]:text-[15px] sm:text-[17px] tracking-[-0.01em]">Dr. med. Christoph Bornemann</span>
+        <span class="block whitespace-nowrap text-[10px] min-[420px]:text-[11px] sm:text-[12px] uppercase tracking-[0.1em] sm:tracking-[0.14em] text-blau-tief font-medium">Hausarztpraxis · Essen-Karnap</span>
+      </span>
+    </a>
+    <nav class="hidden lg:flex items-center gap-3 xl:gap-6 text-[13.5px] xl:text-[14.5px] font-medium text-tinte">
+      <a href="#leistungen" class="hover:text-blau active:text-blau-tief transition-colors">Leistungen</a>
+      <a href="#service" data-tab="termin" class="nav-tab-link hover:text-blau active:text-blau-tief transition-colors">Termine</a>
+      <a href="#service" data-tab="rezept" class="nav-tab-link hover:text-blau active:text-blau-tief transition-colors">Rezepte</a>
+      <a href="#service" data-tab="ueberweisung" class="nav-tab-link hover:text-blau active:text-blau-tief transition-colors">Überweisungen</a>
+      <a href="#bewertungen" class="hover:text-blau active:text-blau-tief transition-colors">Bewertungen</a>
+      <a href="#kontakt" class="hover:text-blau active:text-blau-tief transition-colors">Kontakt</a>
+    </nav>
+    <a href="tel:0201381418" class="btn-shimmer hidden lg:inline-flex items-center gap-2 bg-blau hover:bg-blau-tief active:scale-[.97] text-white font-semibold text-[14px] xl:text-[15px] px-3.5 xl:px-4 py-2.5 rounded-full shadow-karte transition-[background-color,transform] shrink-0">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
+      <span>0201 381418</span>
+    </a>
+
+    <!-- Hamburger (nur Handy/Tablet) -->
+    <button id="menu-toggle" class="burger lg:hidden w-11 h-11 -mr-2 flex flex-col items-center justify-center rounded-lg hover:bg-blau-hell active:scale-95 transition-[background-color,transform]" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile-Menü (Vollbild, app-artig) -->
+<div id="mobile-menu" class="lg:hidden fixed inset-0 z-50 bg-white flex flex-col" hidden role="dialog" aria-modal="true" aria-label="Navigation">
+  <div class="h-[72px] px-5 flex items-center justify-between border-b border-blau-rand shrink-0">
+    <span class="flex items-center gap-3">
+      <img src="brand_assets/hf_20260701_115437_ca2db878-88dd-467b-9d83-c12559ff5524.png" alt="" class="h-9 w-9 object-contain">
+      <span class="font-display font-[560] text-tinte text-[16px] tracking-[-0.01em]">Menü</span>
+    </span>
+    <button id="menu-close" class="w-11 h-11 -mr-2 flex items-center justify-center rounded-full text-tinte hover:bg-blau-hell active:scale-95 transition-[background-color,transform]" aria-label="Menü schließen">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <nav class="flex-1 overflow-y-auto px-5 py-2">
+    <a href="#leistungen" class="mob-link">Leistungen</a>
+    <a href="#praxis" class="mob-link">Unsere Praxis</a>
+    <a href="#service" data-tab="termin" class="mob-link nav-tab-link">Termine</a>
+    <a href="#service" data-tab="rezept" class="mob-link nav-tab-link">Rezepte</a>
+    <a href="#service" data-tab="ueberweisung" class="mob-link nav-tab-link">Überweisungen</a>
+    <a href="#team" class="mob-link">Team</a>
+    <a href="#bewertungen" class="mob-link">Bewertungen</a>
+    <a href="#kontakt" class="mob-link">Kontakt</a>
+  </nav>
+  <div class="px-5 py-4 border-t border-blau-rand shrink-0 grid grid-cols-2 gap-3">
+    <a href="tel:0201381418" class="inline-flex items-center justify-center gap-2 bg-rot hover:bg-rot-tief active:scale-[.98] text-white font-semibold px-4 py-3.5 rounded-full shadow-karte transition-[background-color,transform]">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
+      Anrufen
+    </a>
+    <a href="#service" class="inline-flex items-center justify-center gap-2 bg-blau hover:bg-blau-tief active:scale-[.98] text-white font-semibold px-4 py-3.5 rounded-full shadow-karte transition-[background-color,transform]">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"/></svg>
+      Termin
+    </a>
+  </div>
+</div>
+
+<!-- Hero (hell, im Stil von DocReach) -->
+<section class="hero relative overflow-hidden">
+  <!-- weiche Farbflächen im Hintergrund (nur Desktop/Tablet) -->
+  <div class="hero-desk-bg absolute inset-0 -z-10" style="background: radial-gradient(40rem 32rem at 86% 12%, rgba(20,137,200,.12), transparent 60%), radial-gradient(32rem 26rem at -4% 104%, rgba(190,35,33,.05), transparent 60%), linear-gradient(180deg,#F1F8FD 0%, #FFFFFF 72%);"></div>
+  <div class="hero-desk-bg absolute inset-0 -z-10 grain opacity-40"></div>
+
+  <div class="hero-raster max-w-6xl mx-auto px-5 pt-14 pb-14 lg:pt-20 lg:pb-20 grid md:grid-cols-[1.06fr_.94fr] gap-10 lg:gap-14 items-center">
+    <!-- Text (auf dem Handy liegt er auf dem Foto) -->
+    <div class="hero-text">
+      <div class="hero-pill auftritt inline-flex items-center gap-2.5 bg-white border border-blau-rand rounded-full pl-3 pr-4 py-1.5 shadow-karte mb-6">
+        <span class="text-[#FBBC05] text-[13px] tracking-[1px]">★★★★★</span>
+        <span class="hero-pill-text text-[13px] font-semibold text-tinte">4,6 · Google-Bewertung</span>
+      </div>
+      <h1 class="hero-h1 auftritt font-display font-[340] text-tinte text-[44px] sm:text-[54px] md:text-[46px] lg:text-[60px] leading-[1.04] tracking-[-0.03em] mb-6">
+        Ihre Gesundheit<br>in <span class="hero-akzent font-[560] text-blau-tief">besten Händen</span>.
+      </h1>
+      <p class="hero-p auftritt-2 text-[17px] text-tinte-soft leading-[1.7] max-w-[48ch] mb-9">
+        Persönliche, gründliche hausärztliche Versorgung für die ganze Familie — von der Vorsorge über moderne Diagnostik bis zum Hausbesuch, mitten in Essen-Karnap.
+      </p>
+      <div class="hero-ctas auftritt-3 flex flex-wrap items-center gap-4">
+        <!-- Handy: anrufen · PC/Tablet: Online-Kalender öffnen -->
+        <a href="tel:0201381418" class="hero-cta-primar btn-shimmer inline-flex md:hidden items-center gap-2.5 bg-blau hover:bg-blau-tief active:scale-[.97] text-white font-semibold px-7 py-3.5 rounded-full shadow-schwebend transition-[background-color,transform]">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
+          Termin vereinbaren
+        </a>
+        <a href="#service" data-tab="termin" class="nav-tab-link btn-shimmer hidden md:inline-flex items-center gap-2.5 bg-blau hover:bg-blau-tief active:scale-[.97] text-white font-semibold px-7 py-3.5 rounded-full shadow-schwebend transition-[background-color,transform]">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"/></svg>
+          Online-Termin buchen
+        </a>
+        <a href="#leistungen" class="hero-cta-sekundar inline-flex items-center gap-2 text-tinte font-semibold px-6 py-3.5 rounded-full border border-blau-rand bg-white hover:border-blau hover:text-blau-tief active:scale-[.97] transition-[color,border-color,transform]">
+          Unsere Leistungen
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Arzt rechts, auf weicher Fläche – auf dem Handy als Vollbild-Hintergrund des Heros -->
+    <div class="hero-foto auftritt-2 max-w-[430px] w-full mx-auto md:ml-auto">
+      <div class="relative">
+        <div class="zoom-foto rounded-[30px] overflow-hidden shadow-foto ring-4 ring-white">
+          <img src="assets/Christoph-bornemann-1.jpg" alt="Dr. med. Christoph Bornemann, Facharzt für Allgemeinmedizin" class="w-full aspect-[4/5] object-cover object-top" fetchpriority="high">
+        </div>
+      </div>
+      <p class="text-center mt-6">
+        <span class="block font-display font-[560] text-tinte text-[18px] tracking-[-0.01em]">Dr. med. Christoph Bornemann</span>
+        <span class="block text-[13.5px] text-tinte-soft mt-1">Facharzt für Allgemeinmedizin · Knappschaftsarzt</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Info-Karte unter dem Hero -->
+<div class="relative z-20 max-w-6xl mx-auto px-5 -mt-10 sm:-mt-4 mb-14 sm:mb-20">
+    <div class="auftritt-3 bg-white rounded-2xl shadow-schwebend grid sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-blau-rand overflow-hidden">
+      <div class="flex items-start gap-4 p-6">
+        <span class="w-11 h-11 rounded-xl bg-rot/10 text-rot flex items-center justify-center shrink-0"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg></span>
+        <div>
+          <p class="text-[12px] font-semibold uppercase tracking-[0.12em] text-tinte-soft mb-1">Notfall &amp; Kontakt</p>
+          <p class="text-[15px] text-tinte"><a href="tel:0201381418" class="font-semibold hover:text-blau transition-colors">0201 381418</a><br><span class="text-[13.5px] text-tinte-soft">Bereitschaftsdienst: 116 117</span></p>
+        </div>
+      </div>
+      <div class="flex items-start gap-4 p-6">
+        <span class="w-11 h-11 rounded-xl bg-blau-hell text-blau-tief flex items-center justify-center shrink-0"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg></span>
+        <div>
+          <p class="text-[12px] font-semibold uppercase tracking-[0.12em] text-tinte-soft mb-1">So finden Sie uns</p>
+          <p class="text-[15px] text-tinte font-medium">Karnaper Str. 99<br><span class="text-[13.5px] text-tinte-soft font-normal">45329 Essen-Karnap</span></p>
+        </div>
+      </div>
+      <div class="flex items-start gap-4 p-6">
+        <span class="w-11 h-11 rounded-xl bg-blau-hell text-blau-tief flex items-center justify-center shrink-0"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"/></svg></span>
+        <div>
+          <p class="text-[12px] font-semibold uppercase tracking-[0.12em] text-tinte-soft mb-1">Sprechzeiten</p>
+          <p class="text-[15px] text-tinte font-medium">Mo · Di · Do <span class="text-tinte-soft font-normal">7–11 · 14:30–17 Uhr</span><br>Mi · Fr <span class="text-tinte-soft font-normal">7–11 Uhr</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Leistungen -->
+<section id="leistungen" class="bg-blau-hell/60 py-14 sm:py-20 lg:py-28 scroll-mt-20">
+  <div class="max-w-6xl mx-auto px-5">
+    <div class="max-w-2xl mb-14">
+      <p class="text-[13px] font-semibold uppercase tracking-[0.18em] text-rot mb-4 anim-up">Leistungsspektrum</p>
+      <h2 class="font-display font-[420] text-tinte text-[34px] sm:text-[42px] leading-[1.12] tracking-[-0.03em] mb-5 anim-up d1">Die ganze hausärztliche Versorgung — unter einem Dach.</h2>
+      <p class="text-[16.5px] anim-up d2">Von der jährlichen Vorsorge bis zur Betreuung chronischer Erkrankungen: Wir begleiten Sie mit moderner Diagnostik und viel Erfahrung.</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <!-- 1 Vorsorge & Krebsscreening -->
+      <article class="bg-white rounded-2xl border border-blau-rand shadow-karte p-7 flex flex-col gap-3 anim-up d1 hover:-translate-y-1 transition-transform" data-glow>
+        <span class="glow-wash" aria-hidden="true"></span>
+        <span class="w-11 h-11 rounded-xl bg-blau-hell text-blau-tief flex items-center justify-center"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z"/></svg></span>
+        <h3 class="font-display font-[560] text-tinte text-[20px] tracking-[-0.01em]">Vorsorge &amp; Krebsscreening</h3>
+        <p class="text-[15px]">Check-up 35, Hautkrebsscreening und Krebsvorsorge­untersuchungen für Männer und Frauen aller Altersgruppen.</p>
+      </article>
+
+      <!-- 2 Impfberatung & Impfungen -->
+      <article class="bg-white rounded-2xl border border-blau-rand shadow-karte p-7 flex flex-col gap-3 anim-up d2 hover:-translate-y-1 transition-transform" data-glow>
+        <span class="glow-wash" aria-hidden="true"></span>
+        <span class="w-11 h-11 rounded-xl bg-blau-hell text-blau-tief flex items-center justify-center"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></span>
+        <h3 class="font-display font-[560] text-tinte text-[20px] tracking-[-0.01em]">Impfberatung &amp; Impfungen</h3>
+        <p class="text-[15px]">Individuelle Impfberatung und Durchführung aller empfohlenen Schutzimpfungen nach STIKO-Empfehlungen.</p>
+      </article>
+
+      <!-- 3 EKG & Kardiologie -->
+      <article class="bg-white rounded-2xl border border-blau-rand shadow-karte p-7 flex flex-col gap-3 anim-up d3 hover:-translate-y-1 transition-transform" data-glow>
+        <span class="glow-wash" aria-hidden="true"></span>
+        <span class="w-11 h-11 rounded-xl bg-blau-hell text-blau-tief flex items-center justify-center"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 12h3l2.25-6 3 12 2.25-6h6"/></svg></span>
+        <h3 class="font-display font-[560] text-tinte text-[20px] tracking-[-0.01em]">EKG &amp; Kardiologie</h3>
+        <p class="text-[15px]">Ruhe-EKG, Belastungs-EKG und umfassende Herz-Kreislauf-Diagnostik direkt in der Praxis.</p>
+      </article>
+
+      <!-- 4 24h-Blutdruckmessung -->
+      <article class="bg-white rounded-2xl border border-blau-rand shadow-karte p-7 flex flex-col gap-3 anim-up d1 hover:-translate-y-1 transition-transform" data-glow>
+        <span class="glow-wash" aria-hidden="true"></span>
+        <span class="w-11 h-11 rounded-xl bg-blau-hell text-blau-tief flex items-center justify-center"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></span>
+        <h3 class="font-display font-[560] text-tinte text-[20px] tracking-[-0.01em]">24-Stunden-Blutdruckmessung</h3>
+        <p class="text-[15px]">Langzeit-Blutdruckmessung über 24 Stunden für präzise Diagnostik und optimale Therapieeinstellung.</p>
+      </article>
+
+      <!-- 5 Ultraschall & Labor -->
+      <article class="bg-white rounded-2xl border border-blau-rand shadow-karte p-7 flex flex-col gap-3 anim-up d2 hover:-translate-y-1 transition-transform" data-glow>
+        <span class="glow-wash" aria-hidden="true"></span>
+        <span class="w-11 h-11 rounded-xl bg-blau-hell text-blau-tief flex items-center justify-center"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23-.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5"/></svg></span>
+        <h3 class="font-display font-[560] text-tinte text-[20px] tracking-[-0.01em]">Ultraschall &amp; Labor</h3>
+        <p class="text-[15px]">Ultraschalluntersuchungen und umfassende Labordiagnostik mit schnellen Ergebnissen direkt in der Praxis.</p>
+      </article>
+
+      <!-- 6 Hausbesuche -->
+      <article class="bg-white rounded-2xl border border-blau-rand shadow-karte p-7 flex flex-col gap-3 anim-up d3 hover:-translate-y-1 transition-transform" data-glow>
+        <span class="glow-wash" aria-hidden="true"></span>
+        <span class="w-11 h-11 rounded-xl bg-blau-hell text-blau-tief flex items-center justify-center"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75"/></svg></span>
+        <h3 class="font-display font-[560] text-tinte text-[20px] tracking-[-0.01em]">Hausbesuche</h3>
+        <p class="text-[15px]">Wir kommen zu Ihnen — Hausbesuche und Versorgung im Evangelischen Altenzentrum am Emscherpark in Essen-Karnap.</p>
+      </article>
+
+      <!-- 7 DMP-Programme -->
+      <article class="bg-white rounded-2xl border border-blau-rand shadow-karte p-7 flex flex-col gap-3 anim-up d1 hover:-translate-y-1 transition-transform" data-glow>
+        <span class="glow-wash" aria-hidden="true"></span>
+        <span class="w-11 h-11 rounded-xl bg-blau-hell text-blau-tief flex items-center justify-center"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9"/></svg></span>
+        <h3 class="font-display font-[560] text-tinte text-[20px] tracking-[-0.01em]">DMP-Programme</h3>
+        <p class="text-[15px]">Disease-Management-Programme für Asthma, COPD, koronare Herzkrankheit und Diabetes mellitus Typ II.</p>
+      </article>
+
+      <!-- 8 Geriatrie -->
+      <article class="bg-white rounded-2xl border border-blau-rand shadow-karte p-7 flex flex-col gap-3 anim-up d2 hover:-translate-y-1 transition-transform" data-glow>
+        <span class="glow-wash" aria-hidden="true"></span>
+        <span class="w-11 h-11 rounded-xl bg-blau-hell text-blau-tief flex items-center justify-center"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg></span>
+        <h3 class="font-display font-[560] text-tinte text-[20px] tracking-[-0.01em]">Geriatrie</h3>
+        <p class="text-[15px]">Umfassende geriatrische Versorgung älterer Patientinnen und Patienten mit individueller, einfühlsamer Betreuung.</p>
+      </article>
+
+      <!-- 9 Lungenfunktion & Notfall -->
+      <article class="bg-white rounded-2xl border border-blau-rand shadow-karte p-7 flex flex-col gap-3 anim-up d3 hover:-translate-y-1 transition-transform" data-glow>
+        <span class="glow-wash" aria-hidden="true"></span>
+        <span class="w-11 h-11 rounded-xl bg-blau-hell text-blau-tief flex items-center justify-center"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg></span>
+        <h3 class="font-display font-[560] text-tinte text-[20px] tracking-[-0.01em]">Lungenfunktion &amp; Notfall</h3>
+        <p class="text-[15px]">Lungenfunktionsprüfung sowie Notfallbehandlung mit schneller Labordiagnostik — auch Unfall-Nachversorgung.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Praxis -->
+<section id="praxis" class="py-14 sm:py-20 lg:py-28 scroll-mt-20">
+  <div class="max-w-6xl mx-auto px-5 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+    <div class="grid grid-cols-[1.2fr_1fr] gap-4 items-start anim-left">
+      <div class="foto-behandlung rounded-2xl overflow-hidden shadow-foto"><img src="assets/anmeldung.jpg" alt="Anmeldung der Praxis" loading="lazy" decoding="async" class="w-full aspect-[4/5] object-cover"></div>
+      <div class="foto-behandlung rounded-2xl overflow-hidden shadow-karte mt-10"><img src="assets/team.jpg" alt="Das Praxisteam" loading="lazy" decoding="async" class="w-full aspect-[4/5] object-cover"></div>
+    </div>
+    <div class="anim-right">
+      <p class="text-[13px] font-semibold uppercase tracking-[0.18em] text-rot mb-4">Unsere Praxis</p>
+      <h2 class="font-display font-[420] text-tinte text-[34px] sm:text-[42px] leading-[1.12] tracking-[-0.03em] mb-5">Kurze Wege, vertraute Gesichter.</h2>
+      <p class="text-[16.5px] mb-5">
+        Mitten in Essen-Karnap, an der Karnaper Straße 99, ist unsere Praxis seit Jahren die erste
+        Anlaufstelle für die medizinische Versorgung im Stadtteil — von der akuten Erkältung bis zur
+        langjährigen Begleitung chronischer Erkrankungen.
+      </p>
+      <p class="text-[16.5px] mb-8">
+        Damit Sie möglichst wenig warten, bitten wir Sie, Termine vorab telefonisch zu vereinbaren.
+        Rezepte und Überweisungen können Sie ebenfalls bequem vorbestellen und am Folgetag abholen.
+      </p>
+      <ul class="space-y-3 text-[15.5px] text-tinte">
+        <li class="flex gap-3 items-start"><svg class="w-5 h-5 text-blau mt-1 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span>Terminvereinbarung telefonisch unter <a href="tel:0201381418" class="font-semibold text-blau-tief hover:text-rot transition-colors whitespace-nowrap">0201 381418</a></span></li>
+        <li class="flex gap-3 items-start"><svg class="w-5 h-5 text-blau mt-1 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Rezepte &amp; Überweisungen einfach vorbestellen</li>
+        <li class="flex gap-3 items-start"><svg class="w-5 h-5 text-blau mt-1 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Gut erreichbar mit Bus &amp; Bahn, Parkplätze in der Nähe</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Praxis-Service -->
+<section id="service" class="bg-blau-hell/60 py-14 sm:py-20 lg:py-28 scroll-mt-20">
+  <div class="max-w-6xl mx-auto px-5">
+    <div class="max-w-2xl mb-12">
+      <p class="text-[13px] font-semibold uppercase tracking-[0.18em] text-rot mb-4 anim-up">Praxis-Service</p>
+      <h2 class="font-display font-[420] text-tinte text-[34px] sm:text-[42px] leading-[1.12] tracking-[-0.03em] mb-5 anim-up d1">Termin, Rezept &amp; Überweisung — bequem von zu Hause.</h2>
+      <p class="text-[16.5px] anim-up d2">Vereinbaren Sie Ihren Termin online oder bestellen Sie Rezepte und Überweisungen vor — fertig ausgestellt liegen sie am Folgetag für Sie in der Praxis bereit.</p>
+    </div>
+
+    <div class="max-w-4xl mx-auto anim-up d2">
+
+      <!-- Tabs -->
+      <div class="svc-tablist" role="tablist" aria-label="Art der Anfrage">
+        <button class="svc-tab" role="tab" id="tab-termin" aria-controls="panel-termin" aria-selected="true">
+          <svg fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"/></svg>
+          <span class="tab-lang">Termin</span>
+        </button>
+        <button class="svc-tab" role="tab" id="tab-rezept" aria-controls="panel-rezept" aria-selected="false" tabindex="-1">
+          <svg fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg>
+          <span class="tab-lang">Rezept</span>
+        </button>
+        <button class="svc-tab" role="tab" id="tab-ueberweisung" aria-controls="panel-ueberweisung" aria-selected="false" tabindex="-1">
+          <svg fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
+          <span class="tab-lang">Überweisung</span>
+        </button>
+      </div>
+
+      <!-- Panel: Termin -->
+      <div class="svc-panel" role="tabpanel" id="panel-termin" aria-labelledby="tab-termin">
+    <!-- Termin (Online-Kalender, DSGVO-konform per Klick geladen) -->
+    <div class="bg-white rounded-2xl border border-blau-rand shadow-karte overflow-hidden">
+      <div class="grid lg:grid-cols-[.9fr_1.1fr]">
+        <div class="p-7 sm:p-9 flex flex-col">
+          <span class="w-11 h-11 rounded-xl bg-blau-hell text-blau-tief flex items-center justify-center mb-4"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z"/></svg></span>
+          <h3 class="font-display font-[560] text-tinte text-[22px] tracking-[-0.01em] mb-2">Termin online vereinbaren</h3>
+          <p class="text-[15px] mb-4">Wählen Sie im Online-Kalender einen freien Termin — oder rufen Sie uns einfach an. Spontane Besuche sind bei akuten Beschwerden jederzeit möglich.</p>
+          <a href="tel:0201381418" class="inline-flex items-center gap-2 text-blau-tief font-semibold text-[15px] hover:text-rot transition-colors mb-6 w-fit">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
+            Telefonisch: 0201 381418
+          </a>
+        </div>
+        <!-- Kalender wird erst nach Klick vom externen Anbieter (DGN/docvisit) geladen -->
+        <div id="kalender-huelle" class="relative bg-blau-hell/50 border-t lg:border-t-0 lg:border-l border-blau-rand min-h-[320px] flex items-center justify-center p-7">
+          <div id="kalender-platzhalter" class="text-center max-w-xs">
+            <svg class="w-9 h-9 text-blau mx-auto mb-3" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"/></svg>
+            <p class="text-[14px] text-tinte-soft mb-4">Der Online-Kalender wird von unserem Dienstleister <strong class="text-tinte font-semibold">DGN Service GmbH (docvisit)</strong> bereitgestellt. Beim Laden werden Daten an den Anbieter übertragen.</p>
+            <button type="button" id="kalender-laden" class="inline-flex items-center gap-2 bg-blau hover:bg-blau-tief active:scale-[.97] text-white font-semibold text-[15px] px-5 py-3 rounded-full shadow-karte transition-[background-color,transform]">
+              Online-Kalender laden
+            </button>
+            <p class="text-[12px] text-tinte-soft/80 mt-3">Es gilt die <a href="https://www.dgn.de/datenschutz/" target="_blank" rel="noopener" class="underline hover:text-blau">Datenschutz­erklärung der DGN</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+      </div><!-- /panel-termin -->
+
+      <!-- Panel: Rezept -->
+      <div class="svc-panel" role="tabpanel" id="panel-rezept" aria-labelledby="tab-rezept" hidden>
+      <form class="praxis-formular bg-white rounded-2xl border border-blau-rand shadow-karte p-7 sm:p-8 flex flex-col gap-4"
+            data-betreff="Rezeptbestellung über die Website" data-glow>
+        <span class="glow-wash" aria-hidden="true"></span>
+        <div class="flex items-center gap-3">
+          <span class="w-11 h-11 rounded-xl bg-blau-hell text-blau-tief flex items-center justify-center shrink-0"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25z"/></svg></span>
+          <h3 class="font-display font-[560] text-tinte text-[20px] tracking-[-0.01em]">Rezept bestellen</h3>
+        </div>
+        <p class="text-[14.5px] -mt-1">Bitte geben Sie die benötigten Medikamente an. Wir stellen Ihr Rezept aus — zur Abholung am Folgetag.</p>
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div><label class="feld-label" for="rz-name">Name <span class="text-rot">*</span></label><input class="feld" type="text" id="rz-name" name="Name" required autocomplete="name"></div>
+          <div><label class="feld-label" for="rz-mail">E-Mail <span class="text-rot">*</span></label><input class="feld" type="email" id="rz-mail" name="E-Mail" required autocomplete="email"></div>
+        </div>
+        <div><label class="feld-label" for="rz-tel">Telefon <span class="text-tinte-soft font-normal">(für Rückfragen)</span></label><input class="feld" type="tel" id="rz-tel" name="Telefon" autocomplete="tel"></div>
+        <div><label class="feld-label" for="rz-med">Medikamente <span class="text-rot">*</span></label><textarea class="feld" id="rz-med" name="Medikamente" rows="3" required placeholder="z. B. Ramipril 5 mg, 1 Packung"></textarea></div>
+        <div><label class="feld-label" for="rz-anm">Anmerkungen</label><textarea class="feld" id="rz-anm" name="Anmerkungen" rows="2"></textarea></div>
+        <label class="flex gap-3 items-start text-[13.5px] text-tinte-soft cursor-pointer">
+          <input type="checkbox" required class="mt-0.5 w-4 h-4 accent-blau shrink-0" name="Datenschutz">
+          <span>Ich habe die <a href="datenschutzerklaerung.html" class="underline text-blau-tief hover:text-rot">Datenschutz­erklärung</a> zur Kenntnis genommen und bin mit der Verarbeitung meiner Angaben zur Bearbeitung meines Anliegens einverstanden. <span class="text-rot">*</span></span>
+        </label>
+        <button type="submit" class="mt-1 inline-flex items-center justify-center gap-2 bg-rot hover:bg-rot-tief active:scale-[.97] text-white font-semibold px-6 py-3 rounded-full shadow-schwebend transition-[background-color,transform] w-fit">Rezept anfordern</button>
+        <p class="formular-hinweis hidden text-[13.5px] text-blau-tief bg-blau-hell rounded-lg px-4 py-3" role="status"></p>
+      </form>
+      </div><!-- /panel-rezept -->
+
+      <!-- Panel: Überweisung -->
+      <div class="svc-panel" role="tabpanel" id="panel-ueberweisung" aria-labelledby="tab-ueberweisung" hidden>
+      <form class="praxis-formular bg-white rounded-2xl border border-blau-rand shadow-karte p-7 sm:p-8 flex flex-col gap-4"
+            data-betreff="Überweisungsanforderung über die Website" data-glow>
+        <span class="glow-wash" aria-hidden="true"></span>
+        <div class="flex items-center gap-3">
+          <span class="w-11 h-11 rounded-xl bg-blau-hell text-blau-tief flex items-center justify-center shrink-0"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5"/></svg></span>
+          <h3 class="font-display font-[560] text-tinte text-[20px] tracking-[-0.01em]">Überweisung anfordern</h3>
+        </div>
+        <p class="text-[14.5px] -mt-1">Wählen Sie den Fachbereich — die fertige Überweisung liegt am Folgetag zur Abholung bereit.</p>
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div><label class="feld-label" for="ue-name">Name <span class="text-rot">*</span></label><input class="feld" type="text" id="ue-name" name="Name" required autocomplete="name"></div>
+          <div><label class="feld-label" for="ue-mail">E-Mail <span class="text-rot">*</span></label><input class="feld" type="email" id="ue-mail" name="E-Mail" required autocomplete="email"></div>
+        </div>
+        <div><label class="feld-label" for="ue-tel">Telefon <span class="text-tinte-soft font-normal">(für Rückfragen)</span></label><input class="feld" type="tel" id="ue-tel" name="Telefon" autocomplete="tel"></div>
+        <fieldset>
+          <legend class="feld-label mb-2">Überweisung zum Facharzt für <span class="text-rot">*</span></legend>
+          <div class="grid grid-cols-2 gap-x-4 gap-y-2 text-[14px] text-tinte">
+            <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="Fachbereich" value="Augenheilkunde" class="w-4 h-4 accent-blau">Augenheilkunde</label>
+            <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="Fachbereich" value="Diabetologie" class="w-4 h-4 accent-blau">Diabetologie</label>
+            <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="Fachbereich" value="Psychiatrie" class="w-4 h-4 accent-blau">Psychiatrie</label>
+            <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="Fachbereich" value="Orthopädie" class="w-4 h-4 accent-blau">Orthopädie</label>
+            <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="Fachbereich" value="Gynäkologie" class="w-4 h-4 accent-blau">Gynäkologie</label>
+            <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="Fachbereich" value="HNO" class="w-4 h-4 accent-blau">HNO</label>
+            <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="Fachbereich" value="Chirurgie" class="w-4 h-4 accent-blau">Chirurgie</label>
+            <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="Fachbereich" value="Nuklearmedizin" class="w-4 h-4 accent-blau">Nuklearmedizin</label>
+            <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="Fachbereich" value="Radiologie" class="w-4 h-4 accent-blau">Radiologie</label>
+            <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="Fachbereich" value="Pulmologie" class="w-4 h-4 accent-blau">Pulmologie</label>
+            <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="Fachbereich" value="Nephrologie" class="w-4 h-4 accent-blau">Nephrologie</label>
+            <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="Fachbereich" value="Gastroenterologie" class="w-4 h-4 accent-blau">Gastroenterologie</label>
+            <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="Fachbereich" value="Kardiologie" class="w-4 h-4 accent-blau">Kardiologie</label>
+            <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="Fachbereich" value="Dermatologie" class="w-4 h-4 accent-blau">Dermatologie</label>
+            <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="Fachbereich" value="Urologie" class="w-4 h-4 accent-blau">Urologie</label>
+            <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="Fachbereich" value="Neurologie" class="w-4 h-4 accent-blau">Neurologie</label>
+            <label class="flex items-center gap-2 cursor-pointer col-span-2"><input type="checkbox" name="Fachbereich" value="Sonstiges" class="w-4 h-4 accent-blau">Sonstiges</label>
+          </div>
+        </fieldset>
+        <div><label class="feld-label" for="ue-sonst">Sonstiges — bitte Fachbereich eintragen</label><input class="feld" type="text" id="ue-sonst" name="Sonstiges"></div>
+        <label class="flex gap-3 items-start text-[13.5px] text-tinte-soft cursor-pointer">
+          <input type="checkbox" required class="mt-0.5 w-4 h-4 accent-blau shrink-0" name="Datenschutz">
+          <span>Ich habe die <a href="datenschutzerklaerung.html" class="underline text-blau-tief hover:text-rot">Datenschutz­erklärung</a> zur Kenntnis genommen und bin mit der Verarbeitung meiner Angaben zur Bearbeitung meines Anliegens einverstanden. <span class="text-rot">*</span></span>
+        </label>
+        <button type="submit" class="mt-1 inline-flex items-center justify-center gap-2 bg-rot hover:bg-rot-tief active:scale-[.97] text-white font-semibold px-6 py-3 rounded-full shadow-schwebend transition-[background-color,transform] w-fit">Überweisung anfordern</button>
+        <p class="formular-hinweis hidden text-[13.5px] text-blau-tief bg-blau-hell rounded-lg px-4 py-3" role="status"></p>
+      </form>
+      </div><!-- /panel-ueberweisung -->
+
+    </div><!-- /svc-shell -->
+  </div>
+</section>
+
+<!-- Team -->
+<section id="team" class="py-14 sm:py-20 lg:py-28 scroll-mt-20">
+  <div class="max-w-6xl mx-auto px-5">
+    <div class="max-w-2xl mb-14">
+      <p class="text-[13px] font-semibold uppercase tracking-[0.18em] text-rot mb-4 anim-up">Unser Team</p>
+      <h2 class="font-display font-[420] text-tinte text-[34px] sm:text-[42px] leading-[1.12] tracking-[-0.03em] mb-5 anim-up d1">Sechs Menschen, ein Ziel: Ihre Gesundheit.</h2>
+      <p class="text-[16.5px]">Unser eingespieltes Team aus Medizinischen Fachangestellten ist in den DMP-Chronikerprogrammen geschult und nimmt sich Zeit für Ihr Anliegen.</p>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-5 lg:gap-6">
+      <figure class="bg-white rounded-2xl border border-blau-rand shadow-karte overflow-hidden anim-up hover:-translate-y-1 hover:shadow-schwebend transition-[transform,box-shadow] duration-300">
+        <div class="foto-behandlung"><img src="assets/Christoph-bornemann-1.jpg" alt="Dr. med. Christoph Bornemann" loading="lazy" decoding="async" class="w-full aspect-square object-cover object-top"></div>
+        <figcaption class="p-4">
+          <p class="font-display font-[560] text-tinte text-[17px] tracking-[-0.01em]">Dr. med. Christoph Bornemann</p>
+          <p class="text-[13.5px] mt-0.5">Facharzt für Allgemeinmedizin, Knappschaftsarzt</p>
+        </figcaption>
+      </figure>
+      <figure class="bg-white rounded-2xl border border-blau-rand shadow-karte overflow-hidden anim-up hover:-translate-y-1 hover:shadow-schwebend transition-[transform,box-shadow] duration-300">
+        <div class="foto-behandlung"><img src="assets/christina-kempf.jpg" alt="Christina Kempf" loading="lazy" decoding="async" class="w-full aspect-square object-cover object-top"></div>
+        <figcaption class="p-4">
+          <p class="font-display font-[560] text-tinte text-[17px] tracking-[-0.01em]">Christina Kempf</p>
+          <p class="text-[13.5px] mt-0.5">MFA, entlastende Versorgungsassistentin, Fachwirtin für ambulante medizinische Versorgung</p>
+        </figcaption>
+      </figure>
+      <figure class="bg-white rounded-2xl border border-blau-rand shadow-karte overflow-hidden anim-up hover:-translate-y-1 hover:shadow-schwebend transition-[transform,box-shadow] duration-300">
+        <div class="foto-behandlung"><img src="assets/Nicole-Marasus.jpg" alt="Nicole Marasus" loading="lazy" decoding="async" class="w-full aspect-square object-cover object-top"></div>
+        <figcaption class="p-4">
+          <p class="font-display font-[560] text-tinte text-[17px] tracking-[-0.01em]">Nicole Marasus</p>
+          <p class="text-[13.5px] mt-0.5">MFA, entlastende Versorgungsassistentin</p>
+        </figcaption>
+      </figure>
+      <figure class="bg-white rounded-2xl border border-blau-rand shadow-karte overflow-hidden anim-up hover:-translate-y-1 hover:shadow-schwebend transition-[transform,box-shadow] duration-300">
+        <div class="foto-behandlung"><img src="assets/Jenny-Discher.jpg" alt="Jenny Discher" loading="lazy" decoding="async" class="w-full aspect-square object-cover object-top"></div>
+        <figcaption class="p-4">
+          <p class="font-display font-[560] text-tinte text-[17px] tracking-[-0.01em]">Jenny Discher</p>
+          <p class="text-[13.5px] mt-0.5">Medizinische Fachangestellte</p>
+        </figcaption>
+      </figure>
+      <figure class="bg-white rounded-2xl border border-blau-rand shadow-karte overflow-hidden anim-up hover:-translate-y-1 hover:shadow-schwebend transition-[transform,box-shadow] duration-300">
+        <div class="foto-behandlung"><img src="assets/Lara-Zupp.jpg" alt="Lara Zupp" loading="lazy" decoding="async" class="w-full aspect-square object-cover object-top"></div>
+        <figcaption class="p-4">
+          <p class="font-display font-[560] text-tinte text-[17px] tracking-[-0.01em]">Lara Zupp</p>
+          <p class="text-[13.5px] mt-0.5">Medizinische Fachangestellte · derzeit in Elternzeit</p>
+        </figcaption>
+      </figure>
+      <figure class="bg-white rounded-2xl border border-blau-rand shadow-karte overflow-hidden anim-up hover:-translate-y-1 hover:shadow-schwebend transition-[transform,box-shadow] duration-300">
+        <div class="foto-behandlung"><img src="assets/Dummy-1.jpg" alt="Elena Dähn" loading="lazy" decoding="async" class="w-full aspect-square object-cover object-top"></div>
+        <figcaption class="p-4">
+          <p class="font-display font-[560] text-tinte text-[17px] tracking-[-0.01em]">Elena Dähn</p>
+          <p class="text-[13.5px] mt-0.5">Medizinische Fachangestellte</p>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- Bewertungen (Google) -->
+<section id="bewertungen" class="bg-blau-hell/40 py-14 sm:py-20 lg:py-28 scroll-mt-20 overflow-hidden">
+  <div class="max-w-6xl mx-auto px-5">
+    <div class="max-w-2xl mx-auto text-center mb-9">
+      <p class="text-[13px] font-semibold uppercase tracking-[0.18em] text-rot mb-4 anim-up">Das sagen unsere Patienten</p>
+      <h2 class="font-display font-[420] text-tinte text-[34px] sm:text-[42px] leading-[1.12] tracking-[-0.03em] mb-5 anim-up d1">Bewertungen auf Google</h2>
+      <p class="text-[16.5px] anim-up d2">Vertrauen, das von unseren Patientinnen und Patienten kommt.</p>
+    </div>
+    <div class="flex justify-center mb-12 anim-up d2">
+      <a class="testi-summary" href="https://maps.app.goo.gl/cc7gPQjM1DDPZFNJ7" target="_blank" rel="noopener">
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        4,6 von 5 · Google
+        <span class="testi-summary-link">Ansehen →</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="marquee-wrap anim-scale">
+    <div class="marquee-track">
+      <!-- Satz 1 -->
+      <article class="testi-card"><div class="testi-head"><span class="testi-avatar" aria-hidden="true">AE</span><div><div class="testi-name">Anke Eickwinkel</div><div class="testi-src">Local Guide · Google-Rezension</div></div></div><div class="testi-stars" role="img" aria-label="5 von 5 Sternen">★★★★★</div><p class="testi-quote">„Dr. Bornemann und sein Team sind für mich mit Abstand die beste Praxis weit und breit. Man fühlt sich vom ersten Moment an ernst genommen und hervorragend betreut. Er nimmt sich Zeit, hört aufmerksam zu und erklärt alles verständlich.“</p></article>
+      <article class="testi-card"><div class="testi-head"><span class="testi-avatar" aria-hidden="true">Y</span><div><div class="testi-name">Yakub 13</div><div class="testi-src">Local Guide · Google-Rezension</div></div></div><div class="testi-stars" role="img" aria-label="5 von 5 Sternen">★★★★★</div><p class="testi-quote">„Als Neupatient habe ich mich kurzfristig und kurz vor Praxisschluss telefonisch gemeldet. Trotz der späten Stunde wurde ich nach kurzer Wartezeit behandelt. Ein äußerst freundlicher, kompetenter Arzt. Absolut empfehlenswert!“</p></article>
+      <article class="testi-card"><div class="testi-head"><span class="testi-avatar" aria-hidden="true">OM</span><div><div class="testi-name">O. M</div><div class="testi-src">Google-Rezension</div></div></div><div class="testi-stars" role="img" aria-label="5 von 5 Sternen">★★★★★</div><p class="testi-quote">„Der beste Arzt überhaupt. Wenn ich könnte, würde ich mehr Sterne geben. Die Damen am Empfang super nett und der Arzt selbst ist sehr nett und ruhig, nimmt sich viel Zeit und ist zu 1000 % kompetent.“</p></article>
+      <article class="testi-card"><div class="testi-head"><span class="testi-avatar" aria-hidden="true">CS</span><div><div class="testi-name">Christian S.</div><div class="testi-src">Local Guide · Google-Rezension</div></div></div><div class="testi-stars" role="img" aria-label="5 von 5 Sternen">★★★★★</div><p class="testi-quote">„Einfach eine gute Praxis mit einem spitzenmäßigen Arzt und einem freundlichen Team. Der Notfall mit dem Hexenschuss wurde unkompliziert und schnell behandelt. Die Praxis ist modern ausgestattet.“</p></article>
+      <article class="testi-card"><div class="testi-head"><span class="testi-avatar" aria-hidden="true">P</span><div><div class="testi-name">Persephone</div><div class="testi-src">Local Guide · Google-Rezension</div></div></div><div class="testi-stars" role="img" aria-label="5 von 5 Sternen">★★★★★</div><p class="testi-quote">„Einfach ein toller Arzt, der sich Zeit für seine Patient*innen nimmt und darauf schaut, was sie wirklich brauchen. Auch an schwierigere Fälle traut er sich ran. Auch die Arzthelferinnen sind große Klasse.“</p></article>
+      <article class="testi-card"><div class="testi-head"><span class="testi-avatar" aria-hidden="true">TP</span><div><div class="testi-name">Trixi Paschen</div><div class="testi-src">Local Guide · Google-Rezension</div></div></div><div class="testi-stars" role="img" aria-label="5 von 5 Sternen">★★★★★</div><p class="testi-quote">„Ein einzigartiger Arzt! Dr. Bornemann ist äußerst empathisch, nimmt sich stets viel Zeit, hört zu, erklärt gut. Sein gesamtes Team ist top! Alle sind freundlich und hilfsbereit.“</p></article>
+      <article class="testi-card"><div class="testi-head"><span class="testi-avatar" aria-hidden="true">DG</span><div><div class="testi-name">Dilan Gürbüz</div><div class="testi-src">Local Guide · Google-Rezension</div></div></div><div class="testi-stars" role="img" aria-label="5 von 5 Sternen">★★★★★</div><p class="testi-quote">„Dr. Bornemann ist super freundlich, geduldig und empathisch (sogar montagmorgens). Selten einen Arzt kennengelernt, der so freundlich ist und seinen Patienten wirklich zuhört.“</p></article>
+      <article class="testi-card"><div class="testi-head"><span class="testi-avatar" aria-hidden="true">JC</span><div><div class="testi-name">J. C.</div><div class="testi-src">Local Guide · Google-Rezension</div></div></div><div class="testi-stars" role="img" aria-label="5 von 5 Sternen">★★★★★</div><p class="testi-quote">„Ohne Frage der freundlichste Arzt, mit dem ich je zu tun hatte. Jeder in der Praxis ist echt freundlich und nimmt sich Zeit für einen. Der Doktor hört einem richtig zu, egal wie oft man da ist.“</p></article>
+      <!-- Satz 2 (Duplikat für nahtlose Endlosschleife) -->
+      <article class="testi-card" aria-hidden="true"><div class="testi-head"><span class="testi-avatar">AE</span><div><div class="testi-name">Anke Eickwinkel</div><div class="testi-src">Local Guide · Google-Rezension</div></div></div><div class="testi-stars">★★★★★</div><p class="testi-quote">„Dr. Bornemann und sein Team sind für mich mit Abstand die beste Praxis weit und breit. Man fühlt sich vom ersten Moment an ernst genommen und hervorragend betreut. Er nimmt sich Zeit, hört aufmerksam zu und erklärt alles verständlich.“</p></article>
+      <article class="testi-card" aria-hidden="true"><div class="testi-head"><span class="testi-avatar">Y</span><div><div class="testi-name">Yakub 13</div><div class="testi-src">Local Guide · Google-Rezension</div></div></div><div class="testi-stars">★★★★★</div><p class="testi-quote">„Als Neupatient habe ich mich kurzfristig und kurz vor Praxisschluss telefonisch gemeldet. Trotz der späten Stunde wurde ich nach kurzer Wartezeit behandelt. Ein äußerst freundlicher, kompetenter Arzt. Absolut empfehlenswert!“</p></article>
+      <article class="testi-card" aria-hidden="true"><div class="testi-head"><span class="testi-avatar">OM</span><div><div class="testi-name">O. M</div><div class="testi-src">Google-Rezension</div></div></div><div class="testi-stars">★★★★★</div><p class="testi-quote">„Der beste Arzt überhaupt. Wenn ich könnte, würde ich mehr Sterne geben. Die Damen am Empfang super nett und der Arzt selbst ist sehr nett und ruhig, nimmt sich viel Zeit und ist zu 1000 % kompetent.“</p></article>
+      <article class="testi-card" aria-hidden="true"><div class="testi-head"><span class="testi-avatar">CS</span><div><div class="testi-name">Christian S.</div><div class="testi-src">Local Guide · Google-Rezension</div></div></div><div class="testi-stars">★★★★★</div><p class="testi-quote">„Einfach eine gute Praxis mit einem spitzenmäßigen Arzt und einem freundlichen Team. Der Notfall mit dem Hexenschuss wurde unkompliziert und schnell behandelt. Die Praxis ist modern ausgestattet.“</p></article>
+      <article class="testi-card" aria-hidden="true"><div class="testi-head"><span class="testi-avatar">P</span><div><div class="testi-name">Persephone</div><div class="testi-src">Local Guide · Google-Rezension</div></div></div><div class="testi-stars">★★★★★</div><p class="testi-quote">„Einfach ein toller Arzt, der sich Zeit für seine Patient*innen nimmt und darauf schaut, was sie wirklich brauchen. Auch an schwierigere Fälle traut er sich ran. Auch die Arzthelferinnen sind große Klasse.“</p></article>
+      <article class="testi-card" aria-hidden="true"><div class="testi-head"><span class="testi-avatar">TP</span><div><div class="testi-name">Trixi Paschen</div><div class="testi-src">Local Guide · Google-Rezension</div></div></div><div class="testi-stars">★★★★★</div><p class="testi-quote">„Ein einzigartiger Arzt! Dr. Bornemann ist äußerst empathisch, nimmt sich stets viel Zeit, hört zu, erklärt gut. Sein gesamtes Team ist top! Alle sind freundlich und hilfsbereit.“</p></article>
+      <article class="testi-card" aria-hidden="true"><div class="testi-head"><span class="testi-avatar">DG</span><div><div class="testi-name">Dilan Gürbüz</div><div class="testi-src">Local Guide · Google-Rezension</div></div></div><div class="testi-stars">★★★★★</div><p class="testi-quote">„Dr. Bornemann ist super freundlich, geduldig und empathisch (sogar montagmorgens). Selten einen Arzt kennengelernt, der so freundlich ist und seinen Patienten wirklich zuhört.“</p></article>
+      <article class="testi-card" aria-hidden="true"><div class="testi-head"><span class="testi-avatar">JC</span><div><div class="testi-name">J. C.</div><div class="testi-src">Local Guide · Google-Rezension</div></div></div><div class="testi-stars">★★★★★</div><p class="testi-quote">„Ohne Frage der freundlichste Arzt, mit dem ich je zu tun hatte. Jeder in der Praxis ist echt freundlich und nimmt sich Zeit für einen. Der Doktor hört einem richtig zu, egal wie oft man da ist.“</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- Kontakt -->
+<section id="kontakt" class="py-14 sm:py-20 lg:py-28 scroll-mt-20">
+  <div class="max-w-6xl mx-auto px-5">
+    <div class="bg-tinte rounded-[28px] overflow-hidden grain relative anim-scale">
+      <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(44rem 26rem at 88% -10%, rgba(20,137,200,.35), transparent 60%), radial-gradient(30rem 20rem at 0% 110%, rgba(190,35,33,.22), transparent 55%);"></div>
+      <div class="relative grid lg:grid-cols-2 gap-10 p-6 sm:p-12 lg:p-16">
+        <div>
+          <p class="text-[13px] font-semibold uppercase tracking-[0.18em] text-[#7FC4E8] mb-4">Kontakt &amp; Anfahrt</p>
+          <h2 class="font-display font-[420] text-white text-[32px] sm:text-[40px] leading-[1.12] tracking-[-0.03em] mb-6">Wir sind für Sie da.</h2>
+          <address class="not-italic space-y-4 text-[16px] text-white/85">
+            <p class="flex gap-3 items-start"><svg class="w-5 h-5 mt-1 text-[#7FC4E8] shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>Hausarztpraxis Dr. med. Bornemann<br>Karnaper Str. 99 · 45329 Essen</p>
+            <p class="flex gap-3 items-center"><svg class="w-5 h-5 text-[#7FC4E8] shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg><a href="tel:0201381418" class="hover:text-white transition-colors font-semibold">0201 381418</a></p>
+            <p class="flex gap-3 items-center"><svg class="w-5 h-5 text-[#7FC4E8] shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6.72 13.829c-.24.03-.48.062-.72.096m.72-.096a42.415 42.415 0 0110.56 0m-10.56 0L6.34 18m10.94-4.171c.24.03.48.062.72.096m-.72-.096L17.66 18m0 0l.229 2.523a1.125 1.125 0 01-1.12 1.227H7.231c-.662 0-1.18-.568-1.12-1.227L6.34 18m11.318 0h1.091A2.25 2.25 0 0021 15.75V9.456c0-1.081-.768-2.015-1.837-2.175a48.055 48.055 0 00-1.913-.247M6.34 18H5.25A2.25 2.25 0 013 15.75V9.456c0-1.081.768-2.015 1.837-2.175a48.041 48.041 0 011.913-.247m10.5 0a48.536 48.536 0 00-10.5 0m10.5 0V3.375c0-.621-.504-1.125-1.125-1.125h-8.25c-.621 0-1.125.504-1.125 1.125v3.659M18 10.5h.008v.008H18V10.5z"/></svg>Fax: 0201 383530</p>
+            <p class="flex gap-3 items-center"><svg class="w-5 h-5 text-[#7FC4E8] shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg><a href="mailto:kontakt@arztpraxis-bornemann.de" class="hover:text-white transition-colors">kontakt@arztpraxis-bornemann.de</a></p>
+          </address>
+          <a href="tel:0201381418" class="btn-shimmer mt-9 inline-flex items-center gap-2.5 bg-rot hover:bg-rot-tief active:scale-[.97] text-white font-semibold px-7 py-3.5 rounded-full shadow-schwebend transition-[background-color,transform]">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
+            <span class="md:hidden">Jetzt anrufen</span><span class="hidden md:inline">0201 381418</span>
+          </a>
+        </div>
+        <div class="bg-white/[.06] backdrop-blur rounded-2xl border border-white/10 p-5 sm:p-8 self-start">
+          <p class="flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.16em] text-[#F0A8A0] mb-5">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Sprechzeiten
+          </p>
+          <table class="w-full text-[15px] text-white/90">
+            <tbody>
+              <tr class="border-b border-white/10"><td class="py-3 font-medium text-white">Montag</td><td class="py-3 text-right leading-snug">7:00 – 11:00<span class="hidden sm:inline"> · </span><br class="sm:hidden">14:30 – 17:00 Uhr</td></tr>
+              <tr class="border-b border-white/10"><td class="py-3 font-medium text-white">Dienstag</td><td class="py-3 text-right leading-snug">7:00 – 11:00<span class="hidden sm:inline"> · </span><br class="sm:hidden">14:30 – 17:00 Uhr</td></tr>
+              <tr class="border-b border-white/10"><td class="py-3 font-medium text-white">Mittwoch</td><td class="py-3 text-right">7:00 – 11:00 Uhr</td></tr>
+              <tr class="border-b border-white/10"><td class="py-3 font-medium text-white">Donnerstag</td><td class="py-3 text-right leading-snug">7:00 – 11:00<span class="hidden sm:inline"> · </span><br class="sm:hidden">14:30 – 17:00 Uhr</td></tr>
+              <tr><td class="py-3 font-medium text-white">Freitag</td><td class="py-3 text-right">7:00 – 11:00 Uhr</td></tr>
+            </tbody>
+          </table>
+          <p class="mt-5 text-[13.5px] text-white/60">Außerhalb der Sprechzeiten wenden Sie sich bitte an den ärztlichen Bereitschaftsdienst unter 116 117.</p>
+        </div>
+
+        <!-- Karte / Anfahrt (Google Maps) -->
+        <div class="lg:col-span-2">
+          <div class="flex items-center justify-between gap-4 flex-wrap mb-4">
+            <p class="flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.16em] text-[#7FC4E8]">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+              Anfahrt
+            </p>
+            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Karnaper+Str.+99%2C+45329+Essen" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-[14px] font-semibold text-white bg-white/10 hover:bg-white/20 active:scale-[.97] border border-white/15 px-4 py-2.5 rounded-full transition-[background-color,transform]">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125V21M3 13.125L12 3l9 10.125M4.5 12v7.875c0 .621.504 1.125 1.125 1.125h13.75c.621 0 1.125-.504 1.125-1.125V12"/></svg>
+              Route planen
+            </a>
+          </div>
+          <div id="karte-huelle" class="relative rounded-2xl overflow-hidden border border-white/10 shadow-schwebend h-[300px] sm:h-[380px]">
+            <button type="button" id="karte-laden" class="karten-cover group absolute inset-0 w-full h-full flex flex-col items-center justify-center gap-3 text-center px-6 transition-[filter] duration-300 hover:brightness-110">
+              <span class="relative w-14 h-14 rounded-full bg-rot text-white flex items-center justify-center shadow-schwebend mb-1">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+              </span>
+              <span class="relative font-display font-[560] text-white text-[19px] tracking-[-0.01em]">Karnaper Str. 99 · 45329 Essen</span>
+              <span class="relative text-[13px] text-white/60 max-w-xs">Beim Anzeigen der Karte werden Daten an Google Maps übertragen.</span>
+              <span class="relative mt-1 inline-flex items-center gap-2 bg-white text-tinte font-semibold text-[14.5px] px-5 py-2.5 rounded-full shadow-karte group-hover:bg-blau-hell transition-colors">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z"/></svg>
+                Karte anzeigen
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Fußzeile -->
+<footer class="border-t border-blau-rand">
+  <div class="max-w-6xl mx-auto px-5 py-10 flex flex-col sm:flex-row items-center justify-between gap-6">
+    <a href="#" class="flex items-center gap-3">
+      <img src="brand_assets/hf_20260701_115437_ca2db878-88dd-467b-9d83-c12559ff5524.png" alt="" class="h-10 w-10 object-contain">
+      <span class="leading-tight">
+        <span class="block font-display font-[560] text-tinte text-[15px]">Dr. med. Christoph Bornemann</span>
+        <span class="block text-[12px] text-tinte-soft">Karnaper Str. 99 · 45329 Essen</span>
+      </span>
+    </a>
+    <nav class="flex items-center gap-6 text-[14px] font-medium text-tinte">
+      <a href="impressum.html" class="hover:text-blau transition-colors">Impressum</a>
+      <a href="datenschutzerklaerung.html" class="hover:text-blau transition-colors">Datenschutzerklärung</a>
+    </nav>
+    <p class="text-[13px] text-tinte-soft">© 2026 Hausarztpraxis Dr. med. Bornemann</p>
+  </div>
+</footer>
+
+<!-- Untere App-Leiste (nur Handy/Tablet) -->
+<div class="lg:hidden fixed bottom-0 inset-x-0 z-40 bg-white/95 backdrop-blur border-t border-blau-rand shadow-[0_-12px_32px_-16px_rgba(12,59,87,.28)]" style="padding-bottom: env(safe-area-inset-bottom, 0px);">
+  <div class="grid grid-cols-2 gap-2.5 px-4 py-2.5">
+    <a href="tel:0201381418" class="inline-flex items-center justify-center gap-2 bg-rot hover:bg-rot-tief active:scale-[.98] text-white font-semibold text-[15px] py-3 rounded-full shadow-karte transition-[background-color,transform]">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
+      Anrufen
+    </a>
+    <a href="#service" class="inline-flex items-center justify-center gap-2 bg-blau hover:bg-blau-tief active:scale-[.98] text-white font-semibold text-[15px] py-3 rounded-full shadow-karte transition-[background-color,transform]">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"/></svg>
+      Termin
+    </a>
+  </div>
+</div>
+
+<script>
+  // Online-Kalender (docvisit/DGN) erst nach ausdrücklichem Klick laden – keine Datenübertragung vorab.
+  (function () {
+    var btn = document.getElementById('kalender-laden');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        var huelle = document.getElementById('kalender-huelle');
+        var iframe = document.createElement('iframe');
+        iframe.src = 'https://www.docvisit.de/kalender/praxis-bornemann';
+        iframe.title = 'Online-Terminkalender der Hausarztpraxis Dr. med. Bornemann';
+        iframe.loading = 'lazy';
+        iframe.style.cssText = 'width:100%;height:100%;min-height:520px;border:0;display:block;';
+        huelle.innerHTML = '';
+        huelle.classList.remove('flex', 'items-center', 'justify-center', 'p-7');
+        huelle.appendChild(iframe);
+      });
+    }
+
+    // Google-Karte erst nach Klick laden – keine Datenübertragung an Google vor der Einwilligung.
+    var karteBtn = document.getElementById('karte-laden');
+    if (karteBtn) {
+      karteBtn.addEventListener('click', function () {
+        var huelle = document.getElementById('karte-huelle');
+        var iframe = document.createElement('iframe');
+        iframe.src = 'https://maps.google.com/maps?q=Karnaper+Str.+99,+45329+Essen,+Germany&z=15&output=embed';
+        iframe.title = 'Standort der Hausarztpraxis Dr. med. Bornemann – Karnaper Str. 99, 45329 Essen';
+        iframe.loading = 'lazy';
+        iframe.setAttribute('allowfullscreen', '');
+        iframe.referrerPolicy = 'no-referrer-when-downgrade';
+        iframe.style.cssText = 'width:100%;height:100%;border:0;display:block;';
+        huelle.innerHTML = '';
+        huelle.appendChild(iframe);
+      });
+    }
+
+    // Rezept-/Überweisungsformulare: bis ein Server-Endpunkt eingerichtet ist,
+    // wird die Anfrage über das E-Mail-Programm des Patienten an die Praxis übergeben.
+    // TODO: durch eigenen POST-Endpunkt (SMTP/Formspree o. ä.) ersetzen und action/method setzen.
+    document.querySelectorAll('.praxis-formular').forEach(function (form) {
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (!form.reportValidity()) return;
+        var betreff = form.getAttribute('data-betreff') || 'Anfrage über die Website';
+        var zeilen = [];
+        var gesehen = {};
+        new FormData(form).forEach(function (wert, name) {
+          if (name === 'Datenschutz' || !String(wert).trim()) return;
+          if (name === 'Fachbereich') {
+            gesehen.Fachbereich = (gesehen.Fachbereich ? gesehen.Fachbereich + ', ' : '') + wert;
+          } else {
+            zeilen.push(name + ': ' + wert);
+          }
+        });
+        if (gesehen.Fachbereich) zeilen.push('Fachbereich(e): ' + gesehen.Fachbereich);
+        var body = encodeURIComponent(zeilen.join('\n'));
+        window.location.href = 'mailto:kontakt@arztpraxis-bornemann.de'
+          + '?subject=' + encodeURIComponent(betreff) + '&body=' + body;
+        var hinweis = form.querySelector('.formular-hinweis');
+        if (hinweis) {
+          hinweis.textContent = 'Ihr E-Mail-Programm wurde geöffnet. Bitte senden Sie die vorbereitete Nachricht ab, damit wir Ihre Anfrage bearbeiten können.';
+          hinweis.classList.remove('hidden');
+        }
+      });
+    });
+  })();
+</script>
+
+<script>
+  // Ladeanimation: Video einmal abspielen, dann Seite zeigen. Blockiert nie – auch ohne Video-Datei.
+  (function () {
+    var loader = document.getElementById('loader');
+    if (!loader) return;
+    // Auf dem Handy keine Splash-Animation – Inhalt sofort zeigen (app-artig).
+    if (window.matchMedia('(max-width: 1023px)').matches) { loader.remove(); return; }
+    var video = document.getElementById('loaderVideo');
+    document.body.classList.add('loading');
+    var done = false, playing = false;
+    function finish() {
+      if (done) return; done = true;
+      loader.classList.add('hidden');
+      document.body.classList.remove('loading');
+      setTimeout(function () { if (loader) loader.remove(); }, 440);
+    }
+    if (video) {
+      video.addEventListener('ended', finish);
+      video.addEventListener('error', finish);
+      video.addEventListener('playing', function () { playing = true; });
+      try { var p = video.play(); if (p && p.catch) p.catch(finish); } catch (e) { finish(); }
+    } else { finish(); }
+    // Startet das Video kurz nach dem Laden nicht, wird die Seite trotzdem gezeigt.
+    window.addEventListener('load', function () { setTimeout(function () { if (!playing) finish(); }, 400); });
+    setTimeout(finish, 8000); // harte Obergrenze (falls das Logo-Video sehr lang ist)
+  })();
+
+  // Scroll-Reveal via IntersectionObserver
+  (function () {
+    var els = document.querySelectorAll('.anim-up, .anim-left, .anim-right, .anim-scale');
+    if (!els.length) return;
+    if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      els.forEach(function (el) { el.classList.add('is-visible'); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -44px 0px' });
+    els.forEach(function (el) { io.observe(el); });
+  })();
+
+  // Mobile-Menü (Vollbild) öffnen/schließen
+  (function () {
+    var toggle = document.getElementById('menu-toggle');
+    var menu = document.getElementById('mobile-menu');
+    var closeBtn = document.getElementById('menu-close');
+    if (!toggle || !menu) return;
+    function open() {
+      menu.hidden = false;
+      toggle.setAttribute('aria-expanded', 'true');
+      document.documentElement.style.overflow = 'hidden';
+    }
+    function close() {
+      menu.hidden = true;
+      toggle.setAttribute('aria-expanded', 'false');
+      document.documentElement.style.overflow = '';
+    }
+    toggle.addEventListener('click', function () { menu.hidden ? open() : close(); });
+    if (closeBtn) closeBtn.addEventListener('click', close);
+    // Klick auf einen Link schließt das Menü (und lässt den Anker/Tab wirken)
+    menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', close); });
+    // Esc schließt, Wechsel auf Desktop schließt ebenfalls
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !menu.hidden) close(); });
+    var mq = window.matchMedia('(min-width: 1024px)');
+    (mq.addEventListener ? mq.addEventListener.bind(mq, 'change') : mq.addListener.bind(mq))(function (e) {
+      if (e.matches && !menu.hidden) close();
+    });
+  })();
+
+  // Service-Tabs — Termin / Rezept / Überweisung (klick → Panel öffnet, andere schließen)
+  (function () {
+    var tabs = Array.prototype.slice.call(document.querySelectorAll('.svc-tab'));
+    if (!tabs.length) return;
+    function selectTab(tab) {
+      tabs.forEach(function (t) {
+        var sel = t === tab;
+        t.setAttribute('aria-selected', String(sel));
+        t.tabIndex = sel ? 0 : -1;
+        var panel = document.getElementById(t.getAttribute('aria-controls'));
+        if (panel) panel.hidden = !sel;
+      });
+    }
+    tabs.forEach(function (tab, i) {
+      tab.addEventListener('click', function () { selectTab(tab); });
+      tab.addEventListener('keydown', function (e) {
+        var idx = null;
+        if (e.key === 'ArrowRight') idx = (i + 1) % tabs.length;
+        else if (e.key === 'ArrowLeft') idx = (i - 1 + tabs.length) % tabs.length;
+        else if (e.key === 'Home') idx = 0;
+        else if (e.key === 'End') idx = tabs.length - 1;
+        if (idx !== null) { e.preventDefault(); tabs[idx].focus(); selectTab(tabs[idx]); }
+      });
+    });
+  })();
+
+  // Menü-Links „Termine / Rezepte / Überweisungen" öffnen den passenden Tab
+  (function () {
+    document.querySelectorAll('.nav-tab-link').forEach(function (link) {
+      link.addEventListener('click', function () {
+        var btn = document.getElementById('tab-' + link.getAttribute('data-tab'));
+        if (btn) btn.click();
+      });
+    });
+  })();
+
+  // Glow / Spotlight — Cursor-verfolgtes Leuchten (nur Zeigergeräte, respektiert reduced-motion)
+  (function () {
+    var els = Array.prototype.slice.call(document.querySelectorAll('[data-glow]'));
+    if (!els.length) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (!window.matchMedia('(any-hover: hover)').matches) return;
+    els.forEach(function (el) { el.classList.add('glow-ready'); });
+    var pending = false, lx = 0, ly = 0;
+    function apply() {
+      pending = false;
+      els.forEach(function (el) {
+        var r = el.getBoundingClientRect();
+        el.style.setProperty('--x', (lx - r.left) + 'px');
+        el.style.setProperty('--y', (ly - r.top) + 'px');
+        el.style.setProperty('--xp', (lx / window.innerWidth).toFixed(2));
+      });
+    }
+    document.addEventListener('pointermove', function (e) {
+      lx = e.clientX; ly = e.clientY;
+      if (!pending) { pending = true; requestAnimationFrame(apply); }
+    }, { passive: true });
+  })();
+</script>
+
+</body>
+</html>

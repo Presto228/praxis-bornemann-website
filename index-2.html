@@ -1,0 +1,2911 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow"><!-- Vorschau auf GitHub Pages – vor dem Livegang entfernen -->
+  <meta name="description" content="Hausarztpraxis Bornemann in Essen-Karnap – Dr. med. Christoph Bornemann, Facharzt für Allgemeinmedizin. Persönliche Betreuung, moderne Diagnostik, online Termin vereinbaren.">
+  <meta name="theme-color" content="#063B66">
+  <title>Hausarztpraxis Bornemann – Dr. med. Christoph Bornemann | Essen</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&family=Noto+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* =========================================
+       RESET + CUSTOM PROPERTIES
+    ========================================= */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blue-950: #021F3A;
+      --blue-900: #072a4b;
+      --blue-800: #063B66;
+      --blue-700: #0A5491;
+      --blue-600: #0E6DB8;
+      --blue-500: #1282CC;
+      --blue-400: #3A9CD8;
+      --blue-300: #6BB8E4;
+      --blue-200: #A8D6F2;
+      --blue-100: #D6EEFA;
+      --blue-50:  #EEF8FD;
+
+      --red-700:  #8F0B12;
+      --red-600:  #B01018;
+      --red-500:  #C4121A;
+      --red-400:  #D63A41;
+      --red-100:  #FDE8E9;
+      --red-50:   #FFF0F0;
+
+      --gray-950: #0E1923;
+      --gray-900: #1C2B3A;
+      --gray-800: #2D3F52;
+      --gray-700: #3D5166;
+      --gray-600: #516278;
+      --gray-500: #6B7E90;
+      --gray-400: #8FA2B4;
+      --gray-300: #B5C4D2;
+      --gray-200: #D8E4EE;
+      --gray-100: #EBF0F6;
+      --gray-50:  #F5F8FC;
+
+      --white:   #FFFFFF;
+      --success: #16A34A;
+
+      --font-display: 'Figtree', system-ui, -apple-system, sans-serif;
+      --font-body:    'Noto Sans', system-ui, sans-serif;
+
+      --radius-xs: 4px;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+      --radius-2xl: 36px;
+      --radius-full: 9999px;
+
+      --shadow-xs: 0 1px 2px rgba(0,0,0,.05);
+      --shadow-sm: 0 1px 4px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
+      --shadow-md: 0 4px 12px rgba(6,59,102,.10), 0 2px 4px rgba(0,0,0,.05);
+      --shadow-lg: 0 8px 24px rgba(6,59,102,.14), 0 4px 8px rgba(0,0,0,.06);
+      --shadow-xl: 0 16px 48px rgba(6,59,102,.18), 0 8px 16px rgba(0,0,0,.08);
+      --shadow-2xl: 0 24px 64px rgba(6,59,102,.22), 0 12px 24px rgba(0,0,0,.10);
+
+      --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-out:    cubic-bezier(0.0, 0, 0.2, 1);
+      --ease-in:     cubic-bezier(0.4, 0, 1, 1);
+
+      --nav-h: 76px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+    body {
+      font-family: var(--font-body);
+      color: var(--gray-900);
+      background: var(--white);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+    img  { display: block; max-width: 100%; height: auto; }
+    a    { color: inherit; text-decoration: none; }
+    ul   { list-style: none; }
+    button { cursor: pointer; font-family: inherit; border: none; background: none; }
+
+    /* Skip link */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 1rem;
+      padding: .5rem 1rem;
+      background: var(--blue-800);
+      color: var(--white);
+      border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+      font-size: .875rem;
+      font-weight: 600;
+      z-index: 9999;
+      transition: top .2s;
+    }
+    .skip-link:focus { top: 0; }
+
+    /* Utilities */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    .sr-only {
+      position: absolute;
+      width: 1px; height: 1px;
+      padding: 0; margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* =========================================
+       SCROLL ANIMATIONS
+    ========================================= */
+    @media (prefers-reduced-motion: no-preference) {
+      .anim-up {
+        opacity: 0;
+        transform: translateY(28px);
+        transition: opacity .65s var(--ease-spring), transform .65s var(--ease-spring);
+      }
+      .anim-left {
+        opacity: 0;
+        transform: translateX(-36px);
+        transition: opacity .7s var(--ease-spring), transform .7s var(--ease-spring);
+      }
+      .anim-right {
+        opacity: 0;
+        transform: translateX(36px);
+        transition: opacity .7s var(--ease-spring), transform .7s var(--ease-spring);
+      }
+      .anim-scale {
+        opacity: 0;
+        transform: scale(0.96);
+        transition: opacity .6s var(--ease-spring), transform .6s var(--ease-spring);
+      }
+      .anim-up.is-visible,
+      .anim-left.is-visible,
+      .anim-right.is-visible,
+      .anim-scale.is-visible {
+        opacity: 1;
+        transform: none;
+      }
+      .d1 { transition-delay: .08s !important; }
+      .d2 { transition-delay: .16s !important; }
+      .d3 { transition-delay: .24s !important; }
+      .d4 { transition-delay: .32s !important; }
+      .d5 { transition-delay: .40s !important; }
+      .d6 { transition-delay: .48s !important; }
+      .d7 { transition-delay: .56s !important; }
+    }
+
+    /* =========================================
+       NAV
+    ========================================= */
+    .nav {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 900;
+      height: var(--nav-h);
+      display: flex;
+      align-items: center;
+      transition:
+        background .3s var(--ease-out),
+        backdrop-filter .3s var(--ease-out),
+        box-shadow .3s var(--ease-out),
+        height .3s var(--ease-out);
+    }
+    .nav > .container { width: 100%; }
+    .nav.stuck {
+      background: rgba(255,255,255,.94);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      box-shadow: 0 1px 0 rgba(0,0,0,.06), 0 4px 20px rgba(6,59,102,.07);
+      height: 62px;
+    }
+    .nav-wrap {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+
+    /* Logo */
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: .875rem;
+      flex-shrink: 0;
+    }
+    .nav-logo-img {
+      width: 58px;
+      height: 58px;
+      object-fit: contain;
+      transition: width .3s, height .3s;
+    }
+    .nav.stuck .nav-logo-img { width: 46px; height: 46px; }
+    .nav-logo-stack {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.25;
+    }
+    .nav-logo-name {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: .975rem;
+      color: var(--blue-900);
+    }
+    .nav-logo-title {
+      font-size: .7rem;
+      font-weight: 400;
+      color: var(--gray-600);
+    }
+
+    /* Desktop links */
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: .25rem;
+    }
+    .nav-links a {
+      font-family: var(--font-display);
+      font-weight: 500;
+      font-size: .84rem;
+      white-space: nowrap;
+      color: var(--gray-700);
+      padding: .5rem .6rem;
+      border-radius: var(--radius-sm);
+      transition: color .15s, background .15s;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+    }
+    .nav-links a:hover, .nav-links a:focus-visible {
+      color: var(--blue-700);
+      background: var(--blue-50);
+    }
+
+    /* Nav CTA */
+    .nav-cta {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: .85rem;
+      padding: .625rem 1.25rem;
+      min-height: 44px;
+      border-radius: var(--radius-full);
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      white-space: nowrap;
+      background: var(--blue-600);
+      color: var(--white);
+      box-shadow: 0 2px 8px rgba(6,59,102,.18);
+      transition: transform .15s var(--ease-spring), box-shadow .15s;
+    }
+    .nav-cta:hover, .nav-cta:focus-visible {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(10,84,145,.35);
+    }
+    .nav-cta svg { flex-shrink: 0; }
+
+    /* Hamburger */
+    .nav-burger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      width: 44px; height: 44px;
+      align-items: center;
+      justify-content: center;
+      border-radius: var(--radius-sm);
+      transition: background .15s;
+    }
+    .nav-burger:hover { background: var(--blue-50); }
+    .nav-burger span {
+      display: block;
+      width: 22px; height: 2px;
+      background: var(--gray-700);
+      border-radius: 2px;
+      transition: transform .3s, opacity .3s;
+    }
+    .nav-burger[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-burger[aria-expanded="true"] span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .nav-burger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* Mobile drawer */
+    .nav-drawer {
+      position: absolute;
+      top: 100%; left: 0; right: 0;
+      background: var(--white);
+      padding: .75rem 1rem 1.25rem;
+      box-shadow: 0 8px 24px rgba(0,0,0,.12);
+      border-top: 1px solid var(--gray-100);
+      display: none;
+      flex-direction: column;
+      gap: .25rem;
+    }
+    .nav-drawer.open { display: flex; }
+    .nav-drawer a {
+      font-family: var(--font-display);
+      font-weight: 500;
+      font-size: 1rem;
+      color: var(--gray-800);
+      padding: .75rem 1rem;
+      border-radius: var(--radius-md);
+      transition: background .15s, color .15s;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+    }
+    .nav-drawer a:hover { background: var(--blue-50); color: var(--blue-700); }
+    .nav-drawer .drawer-cta {
+      margin-top: .5rem;
+      background: var(--blue-600);
+      color: var(--white);
+      justify-content: center;
+      font-weight: 700;
+      border-radius: var(--radius-full);
+    }
+    .nav-drawer .drawer-cta:hover { background: var(--blue-700); }
+
+    /* =========================================
+       HERO
+    ========================================= */
+    .hero {
+      position: relative;
+      /* the hero photo (assets/team-foto-hero.jpg) is 1421×780 — capping the
+         box at 780px keeps cover-fit close to 1:1 so nobody gets cropped out */
+      min-height: min(100dvh, 780px);
+      display: flex;
+      align-items: flex-end;   /* copy sits in the lower half, over the scrubs and the white fade */
+      overflow: hidden;
+      background: var(--gray-100);
+      padding-top: var(--nav-h);
+    }
+    /* flex child: keep the container full width, otherwise it shrink-wraps
+       the copy and floats it to the middle of the photo */
+    .hero > .container { width: 100%; }
+
+    /* Full-bleed team photo behind the hero content */
+    .hero-bg-photo {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+    .hero-bg-photo picture {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    .hero-bg-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      /* faces sit in the middle band of the photo — keep them there when
+         wide monitors crop the top/bottom edge */
+      object-position: center 45%;
+    }
+    /* No colour wash over the photo — only a soft white veil on the copy
+       column so navy text stays readable over the light wall and scrubs,
+       plus a thin fade under the transparent nav. Both dissolve to nothing
+       before the middle of the frame, so the team stays fully visible. */
+    .hero-bg-overlay {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.72) 0%, rgba(255,255,255,0) 18%),
+        linear-gradient(0deg, var(--white) 0%, rgba(255,255,255,.55) 9%, rgba(255,255,255,0) 22%),
+        linear-gradient(90deg, rgba(255,255,255,.84) 0%, rgba(255,255,255,.68) 28%, rgba(255,255,255,.28) 48%, rgba(255,255,255,0) 64%);
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: minmax(0, 560px);
+      padding: 3rem 0 5rem;
+      width: 100%;
+    }
+
+    /* Hero — Left */
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .35rem 1rem .35rem .75rem;
+      background: rgba(255,255,255,.72);
+      border: 1px solid rgba(6,59,102,.14);
+      border-radius: var(--radius-full);
+      font-size: .78rem;
+      font-weight: 600;
+      color: var(--blue-900);
+      margin-bottom: 1.5rem;
+      backdrop-filter: blur(8px);
+      letter-spacing: .02em;
+    }
+    .hero-pulse {
+      width: 7px; height: 7px;
+      background: var(--success);
+      border-radius: 50%;
+      flex-shrink: 0;
+      animation: pulse 2.2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(22,163,74,.45); }
+      50%       { opacity: .7; box-shadow: 0 0 0 5px rgba(22,163,74,0); }
+    }
+
+    .hero-h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 5.5vw, 4rem);
+      font-weight: 900;
+      line-height: 1.08;
+      color: var(--blue-950);
+      letter-spacing: -.03em;
+      margin-bottom: 1.375rem;
+    }
+    .hero-h1 em {
+      font-style: normal;
+      color: var(--blue-600);
+    }
+
+    .hero-lead {
+      font-size: 1.075rem;
+      color: var(--gray-700);
+      line-height: 1.75;
+      max-width: 490px;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .875rem;
+    }
+    .btn-hero-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .9rem 2rem;
+      min-height: 52px;
+      background: var(--blue-600);
+      color: var(--white);
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: .95rem;
+      border-radius: var(--radius-full);
+      box-shadow: 0 4px 20px rgba(6,59,102,.22);
+      transition: transform .15s var(--ease-spring), box-shadow .15s, background .15s;
+    }
+    .btn-hero-primary:hover, .btn-hero-primary:focus-visible {
+      background: var(--blue-700);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(6,59,102,.28);
+    }
+    .btn-hero-primary:active { transform: translateY(0); }
+    .btn-hero-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .9rem 2rem;
+      min-height: 52px;
+      background: rgba(255,255,255,.78);
+      border: 1.5px solid rgba(6,59,102,.16);
+      color: var(--blue-900);
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: .95rem;
+      border-radius: var(--radius-full);
+      backdrop-filter: blur(8px);
+      transition: background .15s, border-color .15s, transform .15s var(--ease-spring);
+    }
+    .btn-hero-ghost:hover, .btn-hero-ghost:focus-visible {
+      background: var(--white);
+      border-color: var(--blue-600);
+      transform: translateY(-1px);
+    }
+    .btn-hero-ghost:active { transform: translateY(0); }
+
+    /* =========================================
+       LOADING SCREEN (animated logo)
+    ========================================= */
+    .loader {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity .3s var(--ease-out), visibility .3s var(--ease-out);
+    }
+    .loader.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+    .loader video {
+      width: min(420px, 78vw);
+      height: auto;
+      border-radius: var(--radius-lg);
+    }
+    /* Lock scroll while loader is visible */
+    body.loading {
+      overflow: hidden;
+      height: 100vh;
+    }
+
+    /* Hero load animations */
+    @media (prefers-reduced-motion: no-preference) {
+      .h-anim { opacity: 0; transform: translateY(22px); animation: h-in .7s var(--ease-spring) forwards; }
+      .h-anim:nth-child(1) { animation-delay: .05s; }
+      .h-anim:nth-child(2) { animation-delay: .13s; }
+      .h-anim:nth-child(3) { animation-delay: .21s; }
+      .h-anim:nth-child(4) { animation-delay: .29s; }
+      .h-anim:nth-child(5) { animation-delay: .37s; }
+      @keyframes h-in { to { opacity: 1; transform: none; } }
+
+    }
+
+    /* =========================================
+       SECTION SHELL
+    ========================================= */
+    .section {
+      padding: 6rem 0;
+    }
+    .section-alt { background: var(--gray-50); }
+
+    .section-kicker {
+      display: inline-block;
+      font-size: .72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      color: var(--blue-600);
+      margin-bottom: .875rem;
+    }
+    .section-h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.15;
+      color: var(--gray-900);
+      margin-bottom: 1rem;
+    }
+    .section-lead {
+      font-size: 1.05rem;
+      color: var(--gray-500);
+      line-height: 1.75;
+      max-width: 560px;
+    }
+    .section-hdr { text-align: center; margin-bottom: 3.5rem; }
+    .section-hdr .section-lead { margin: 0 auto; }
+
+    /* =========================================
+       SERVICES GRID
+    ========================================= */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+    .svc-card {
+      background: var(--white);
+      border: 1px solid var(--gray-100);
+      border-radius: var(--radius-lg);
+      padding: 1.875rem;
+      transition:
+        transform .25s var(--ease-spring),
+        box-shadow .25s var(--ease-spring),
+        border-color .25s;
+    }
+    .svc-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--blue-200);
+    }
+    .svc-ico {
+      width: 52px; height: 52px;
+      background: var(--blue-50);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+      color: var(--blue-600);
+      transition: background .25s, transform .25s var(--ease-spring);
+    }
+    .svc-card:hover .svc-ico {
+      background: var(--blue-100);
+      transform: scale(1.06);
+    }
+    .svc-ico svg { width: 26px; height: 26px; stroke-width: 1.75; }
+    .svc-name {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--gray-900);
+      margin-bottom: .5rem;
+      line-height: 1.3;
+    }
+    .svc-desc {
+      font-size: .865rem;
+      color: var(--gray-500);
+      line-height: 1.65;
+    }
+
+    /* =========================================
+       ABOUT
+    ========================================= */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+    .about-frame {
+      position: relative;
+    }
+    .about-img-main {
+      border-radius: var(--radius-2xl);
+      overflow: hidden;
+      aspect-ratio: 4 / 5;
+      box-shadow: var(--shadow-2xl);
+    }
+    .about-img-main img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      transition: transform .6s var(--ease-spring);
+    }
+    .about-img-main:hover img { transform: scale(1.03); }
+
+    /* Accent shape */
+    .about-accent {
+      position: absolute;
+      right: -2rem;
+      bottom: -2rem;
+      width: 60%;
+      aspect-ratio: 1;
+      background: var(--blue-500);
+      border-radius: var(--radius-xl);
+      opacity: .1;
+      z-index: -1;
+    }
+
+    /* Reception inset */
+    .about-inset {
+      position: absolute;
+      bottom: 2rem;
+      left: -2.25rem;
+      width: 44%;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-xl);
+      border: 3px solid var(--white);
+      aspect-ratio: 4/3;
+    }
+    .about-inset img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+    }
+
+    .about-tag {
+      display: inline-block;
+      background: var(--blue-50);
+      color: var(--blue-700);
+      font-size: .72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      padding: .35rem .9rem;
+      border-radius: var(--radius-full);
+      margin-bottom: 1rem;
+    }
+    .about-h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.15;
+      color: var(--gray-900);
+      margin-bottom: 1.25rem;
+    }
+    .about-p {
+      font-size: 1rem;
+      color: var(--gray-600);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+    .about-quals {
+      display: flex;
+      flex-direction: column;
+      gap: .625rem;
+      margin: 1.75rem 0 2.25rem;
+    }
+    .about-qual {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      font-size: .925rem;
+      color: var(--gray-800);
+      font-weight: 500;
+    }
+    .about-qual::before {
+      content: '';
+      width: 8px; height: 8px;
+      background: var(--blue-500);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .btn-solid {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .9rem 2rem;
+      min-height: 52px;
+      background: var(--blue-600);
+      color: var(--white);
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: .95rem;
+      border-radius: var(--radius-full);
+      box-shadow: 0 4px 18px rgba(14,109,184,.35);
+      transition: background .15s, transform .15s var(--ease-spring), box-shadow .15s;
+    }
+    .btn-solid:hover, .btn-solid:focus-visible {
+      background: var(--blue-700);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(14,109,184,.45);
+    }
+
+    /* =========================================
+       TEAM
+    ========================================= */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+    .team-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--gray-100);
+      transition: transform .25s var(--ease-spring), box-shadow .25s;
+    }
+    .team-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+    }
+    .team-thumb {
+      aspect-ratio: 1;
+      overflow: hidden;
+      background: var(--gray-100);
+      position: relative;
+    }
+    .team-thumb img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      transition: transform .5s var(--ease-spring);
+    }
+    .team-card:hover .team-thumb img { transform: scale(1.06); }
+    .team-info {
+      padding: 1.25rem 1.375rem;
+    }
+    .team-name {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.025rem;
+      color: var(--gray-900);
+      margin-bottom: .25rem;
+    }
+    .team-role {
+      font-size: .73rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .07em;
+      color: var(--blue-600);
+      margin-bottom: .5rem;
+    }
+    .team-quals {
+      font-size: .82rem;
+      color: var(--gray-500);
+      line-height: 1.55;
+    }
+    .team-badge {
+      display: inline-block;
+      margin-top: .625rem;
+      padding: .2rem .7rem;
+      background: var(--gray-100);
+      color: var(--gray-600);
+      font-size: .68rem;
+      font-weight: 600;
+      border-radius: var(--radius-full);
+    }
+    .team-card-lead {
+      border-color: var(--blue-200);
+      background: linear-gradient(145deg, var(--blue-50), var(--white));
+    }
+    .team-card-lead .team-role { color: var(--blue-700); }
+
+    /* =========================================
+       KONTAKT — dark card: address, hours, click-to-load map (matches index.html)
+    ========================================= */
+    .kontakt-card {
+      position: relative;
+      overflow: hidden;
+      background: var(--blue-900);
+      border-radius: 28px;
+      color: rgba(255,255,255,.85);
+    }
+    /* fine grain so the flat navy doesn't band */
+    .kontakt-card::after {
+      content: ''; position: absolute; inset: 0; pointer-events: none; opacity: .5; mix-blend-mode: multiply;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0.05 0 0 0 0 0.23 0 0 0 0 0.34 0 0 0 0.035 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+    .kontakt-glow {
+      position: absolute; inset: 0; pointer-events: none;
+      background:
+        radial-gradient(44rem 26rem at 88% -10%, rgba(14,109,184,.45), transparent 60%),
+        radial-gradient(30rem 20rem at 0% 110%, rgba(196,18,26,.22), transparent 55%);
+    }
+    .kontakt-grid {
+      position: relative; z-index: 1;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem;
+      padding: 4rem;
+    }
+    .kontakt-kicker {
+      display: block; font-size: .72rem; font-weight: 800; text-transform: uppercase;
+      letter-spacing: .14em; color: #7FC4E8; margin-bottom: .875rem;
+    }
+    .kontakt-h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 900; letter-spacing: -.03em; line-height: 1.15;
+      color: var(--white); margin-bottom: 1.5rem;
+    }
+    .kontakt-adresse { font-style: normal; display: flex; flex-direction: column; gap: 1rem; font-size: 1rem; }
+    .kontakt-adresse p { display: flex; gap: .75rem; align-items: flex-start; line-height: 1.55; }
+    .kontakt-adresse svg { width: 20px; height: 20px; flex-shrink: 0; color: #7FC4E8; margin-top: .15rem; }
+    .kontakt-adresse a { color: inherit; font-weight: 600; transition: color .15s; }
+    .kontakt-adresse a:hover, .kontakt-adresse a:focus-visible { color: var(--white); text-decoration: underline; }
+    .kontakt-cta {
+      margin-top: 2.25rem;
+      display: inline-flex; align-items: center; gap: .6rem;
+      padding: .9rem 1.75rem; min-height: 52px;
+      background: var(--red-500); color: var(--white);
+      font-family: var(--font-display); font-weight: 700; font-size: .95rem;
+      border-radius: var(--radius-full);
+      box-shadow: 0 8px 24px rgba(196,18,26,.35);
+      transition: background .15s, transform .15s var(--ease-spring);
+    }
+    .kontakt-cta:hover, .kontakt-cta:focus-visible { background: var(--red-600); transform: translateY(-2px); }
+    .kontakt-cta:active { transform: translateY(0); }
+    .kontakt-cta svg { width: 18px; height: 18px; flex-shrink: 0; }
+
+    .kontakt-zeiten {
+      align-self: start;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+    }
+    .kontakt-zeiten-hd {
+      display: flex; align-items: center; gap: .5rem;
+      font-size: .72rem; font-weight: 800; text-transform: uppercase; letter-spacing: .14em;
+      color: #F0A8A0; margin-bottom: 1.25rem;
+    }
+    .kontakt-zeiten-hd svg { width: 16px; height: 16px; }
+    .kontakt-tbl { width: 100%; border-collapse: collapse; font-size: .95rem; color: rgba(255,255,255,.9); }
+    .kontakt-tbl tr { border-bottom: 1px solid rgba(255,255,255,.1); }
+    .kontakt-tbl tr:last-child { border-bottom: 0; }
+    .kontakt-tbl td { padding: .75rem 0; vertical-align: top; }
+    .kontakt-tbl td:first-child { font-weight: 600; color: var(--white); }
+    .kontakt-tbl td:last-child { text-align: right; line-height: 1.4; }
+    .kontakt-tbl .br-m { display: none; }
+    .kontakt-zeiten-note { margin-top: 1.25rem; font-size: .85rem; color: rgba(255,255,255,.6); line-height: 1.55; }
+
+    .kontakt-karte-wrap { grid-column: 1 / -1; }
+    .kontakt-karte-hd { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-bottom: 1rem; }
+    .kontakt-karte-hd p {
+      display: flex; align-items: center; gap: .5rem;
+      font-size: .72rem; font-weight: 800; text-transform: uppercase; letter-spacing: .14em; color: #7FC4E8;
+    }
+    .kontakt-karte-hd p svg { width: 16px; height: 16px; }
+    .kontakt-route {
+      display: inline-flex; align-items: center; gap: .5rem;
+      font-size: .875rem; font-weight: 600; color: var(--white);
+      background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.15);
+      padding: .6rem 1rem; border-radius: var(--radius-full);
+      transition: background .15s, transform .15s var(--ease-spring);
+    }
+    .kontakt-route:hover, .kontakt-route:focus-visible { background: rgba(255,255,255,.2); }
+    .kontakt-route:active { transform: scale(.97); }
+    .kontakt-route svg { width: 16px; height: 16px; }
+    .kontakt-karte {
+      position: relative; height: 380px;
+      border-radius: var(--radius-lg); overflow: hidden;
+      border: 1px solid rgba(255,255,255,.1); box-shadow: var(--shadow-xl);
+    }
+    .kontakt-karte iframe { width: 100%; height: 100%; border: 0; display: block; }
+    /* map cover: Google Maps loads only after this click */
+    .karten-cover {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .75rem;
+      text-align: center; padding: 1.5rem; color: var(--white); cursor: pointer;
+      background:
+        linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px),
+        radial-gradient(60% 60% at 50% 40%, rgba(14,109,184,.35), transparent 70%),
+        linear-gradient(140deg, #0b3552, #0d4f79);
+      background-size: 40px 40px, 40px 40px, 100% 100%, 100% 100%;
+      transition: filter .3s;
+    }
+    .karten-cover:hover, .karten-cover:focus-visible { filter: brightness(1.1); }
+    .karten-cover::after {
+      content: ''; position: absolute; left: 18%; top: 0; bottom: 0; width: 12%;
+      background: rgba(255,255,255,.05); transform: skewX(-16deg); pointer-events: none;
+    }
+    .karten-cover > * { position: relative; }
+    .karten-pin {
+      width: 56px; height: 56px; border-radius: 50%; background: var(--red-500);
+      display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-lg); margin-bottom: .25rem;
+    }
+    .karten-pin svg { width: 28px; height: 28px; }
+    .karten-adresse { font-family: var(--font-display); font-weight: 800; font-size: 1.15rem; letter-spacing: -.01em; }
+    .karten-hinweis { font-size: .8rem; color: rgba(255,255,255,.6); max-width: 20rem; }
+    .karten-btn {
+      margin-top: .25rem; display: inline-flex; align-items: center; gap: .5rem;
+      background: var(--white); color: var(--blue-900);
+      font-family: var(--font-display); font-weight: 700; font-size: .9rem;
+      padding: .65rem 1.25rem; border-radius: var(--radius-full); box-shadow: var(--shadow-md);
+      transition: background .15s;
+    }
+    .karten-cover:hover .karten-btn { background: var(--blue-50); }
+    .karten-btn svg { width: 16px; height: 16px; }
+    @media (max-width: 1024px) {
+      .kontakt-grid { grid-template-columns: 1fr; padding: 3rem; }
+    }
+    @media (max-width: 768px) {
+      .kontakt-grid { padding: 1.5rem; gap: 2rem; }
+      .kontakt-zeiten { padding: 1.25rem; }
+      .kontakt-tbl { font-size: .9rem; }
+      .kontakt-tbl .dot { display: none; }
+      .kontakt-tbl .br-m { display: inline; }
+      .kontakt-karte { height: 300px; }
+    }
+
+    /* =========================================
+       FOOTER    /* =========================================
+       FOOTER
+    ========================================= */
+    .footer {
+      background: var(--blue-950);
+      color: rgba(255,255,255,.62);
+      padding: 4.5rem 0 2rem;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 4rem;
+      padding-bottom: 3rem;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    .footer-logo-img {
+      width: 58px;
+      margin-bottom: 1.125rem;
+    }
+    .footer-brand-name {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--white);
+      margin-bottom: .25rem;
+    }
+    .footer-brand-sub {
+      font-size: .8rem;
+      color: rgba(255,255,255,.42);
+      margin-bottom: 1rem;
+    }
+    .footer-brand-desc {
+      font-size: .875rem;
+      line-height: 1.7;
+      max-width: 300px;
+    }
+    .footer-col-hd {
+      font-family: var(--font-display);
+      font-size: .72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: var(--white);
+      margin-bottom: 1.25rem;
+    }
+    .footer-nav {
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+    }
+    .footer-nav a {
+      font-size: .875rem;
+      color: rgba(255,255,255,.55);
+      transition: color .15s;
+    }
+    .footer-nav a:hover { color: var(--white); }
+    .footer-contact-row {
+      display: flex;
+      gap: .625rem;
+      align-items: flex-start;
+      font-size: .875rem;
+      color: rgba(255,255,255,.55);
+      margin-bottom: .75rem;
+    }
+    .footer-contact-row svg {
+      flex-shrink: 0;
+      margin-top: .15rem;
+      color: rgba(255,255,255,.3);
+    }
+    /* let long text (e-mail address) shrink & wrap instead of overflowing */
+    .footer-contact-row span {
+      min-width: 0;
+      overflow-wrap: anywhere;
+    }
+    .footer-contact-row a { color: inherit; }
+    .footer-contact-row a:hover { color: rgba(255,255,255,.9); }
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      font-size: .8rem;
+    }
+    .footer-legal {
+      display: flex;
+      gap: 1.5rem;
+    }
+    .footer-legal a {
+      color: rgba(255,255,255,.35);
+      transition: color .15s;
+    }
+    .footer-legal a:hover { color: rgba(255,255,255,.65); }
+
+    /* =========================================
+       SERVICE / ANFRAGEN
+    ========================================= */
+    .section-service {
+      background: linear-gradient(180deg, var(--blue-50) 0%, var(--white) 70%);
+    }
+    .svc-shell {
+      max-width: 840px;
+      margin: 0 auto;
+    }
+
+    /* Tabs */
+    .svc-tablist {
+      display: flex;
+      gap: .4rem;
+      background: var(--white);
+      border: 1px solid var(--gray-100);
+      border-radius: var(--radius-full);
+      padding: .4rem;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 2rem;
+    }
+    .svc-tab {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: .5rem;
+      padding: .75rem 1rem;
+      min-height: 50px;
+      border-radius: var(--radius-full);
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: .92rem;
+      color: var(--gray-600);
+      transition: background .2s, color .2s, box-shadow .2s;
+    }
+    .svc-tab svg { width: 18px; height: 18px; flex-shrink: 0; }
+    .svc-tab:hover:not([aria-selected="true"]) {
+      background: var(--blue-50);
+      color: var(--blue-700);
+    }
+    .svc-tab[aria-selected="true"] {
+      background: var(--blue-600);
+      color: var(--white);
+      box-shadow: 0 3px 12px rgba(14,109,184,.32);
+    }
+
+    .svc-panel { animation: svc-fade .4s var(--ease-out); }
+    @keyframes svc-fade {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: none; }
+    }
+
+    /* Form card */
+    .form-card {
+      background: var(--white);
+      border: 1px solid var(--gray-100);
+      border-radius: var(--radius-xl);
+      padding: 2.25rem;
+      box-shadow: var(--shadow-md);
+    }
+    .form-card h3 {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.4rem;
+      color: var(--gray-900);
+      margin-bottom: .5rem;
+    }
+    .form-card > p.form-lead {
+      font-size: .95rem;
+      color: var(--gray-500);
+      line-height: 1.65;
+      margin-bottom: 1.5rem;
+    }
+    .form-note {
+      display: flex;
+      gap: .65rem;
+      align-items: flex-start;
+      padding: .9rem 1.1rem;
+      background: var(--blue-50);
+      border-left: 3px solid var(--blue-500);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      font-size: .85rem;
+      color: var(--blue-800);
+      line-height: 1.55;
+      margin-bottom: 1.75rem;
+    }
+    .form-note svg { flex-shrink: 0; margin-top: .1rem; color: var(--blue-600); }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.15rem;
+    }
+    .field { margin-bottom: 1.2rem; }
+    .field label {
+      display: block;
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: .85rem;
+      color: var(--gray-800);
+      margin-bottom: .45rem;
+    }
+    .field .req { color: var(--red-500); }
+    .field input,
+    .field select,
+    .field textarea {
+      width: 100%;
+      padding: .75rem .9rem;
+      min-height: 50px;
+      border: 1.5px solid var(--gray-200);
+      border-radius: var(--radius-md);
+      font-family: var(--font-body);
+      font-size: .95rem;
+      color: var(--gray-900);
+      background: var(--white);
+      transition: border-color .15s, box-shadow .15s;
+    }
+    .field textarea { min-height: 110px; resize: vertical; line-height: 1.6; }
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus {
+      outline: none;
+      border-color: var(--blue-500);
+      box-shadow: 0 0 0 3px var(--blue-100);
+    }
+    .field-hint {
+      font-size: .78rem;
+      color: var(--gray-400);
+      margin-top: .35rem;
+    }
+
+    .consent {
+      display: flex;
+      gap: .7rem;
+      align-items: flex-start;
+      margin: .25rem 0 1.6rem;
+    }
+    .consent input {
+      width: 20px; height: 20px;
+      margin-top: .15rem;
+      flex-shrink: 0;
+      accent-color: var(--blue-600);
+      cursor: pointer;
+    }
+    .consent label {
+      font-size: .82rem;
+      color: var(--gray-600);
+      line-height: 1.55;
+    }
+
+    .form-submit {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .5rem;
+      width: 100%;
+      padding: .95rem 2rem;
+      min-height: 54px;
+      background: var(--blue-600);
+      color: var(--white);
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: .98rem;
+      border-radius: var(--radius-full);
+      box-shadow: 0 4px 18px rgba(14,109,184,.32);
+      transition: background .15s, transform .15s var(--ease-spring), box-shadow .15s;
+    }
+    .form-submit:hover, .form-submit:focus-visible {
+      background: var(--blue-700);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 26px rgba(14,109,184,.42);
+    }
+
+    .form-success {
+      display: flex;
+      gap: .65rem;
+      align-items: flex-start;
+      margin-top: 1.25rem;
+      padding: 1rem 1.2rem;
+      background: #F0FDF4;
+      border: 1px solid #BBF7D0;
+      border-radius: var(--radius-md);
+      font-size: .88rem;
+      color: #166534;
+      line-height: 1.55;
+    }
+    .form-success svg { flex-shrink: 0; margin-top: .1rem; color: var(--success); }
+
+    /* Termin options */
+    /* Online-Kalender (DGN / docvisit) — the iframe is created only after an
+       explicit click, so nothing is sent to the provider before consent */
+    .form-card.kalender-card { padding: 0; overflow: hidden; }
+    .kalender-grid { display: grid; grid-template-columns: .9fr 1.1fr; }
+    .kalender-copy { padding: 2.25rem; display: flex; flex-direction: column; align-items: flex-start; }
+    .kalender-ico {
+      width: 44px; height: 44px; border-radius: var(--radius-md);
+      background: var(--blue-50); color: var(--blue-600);
+      display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;
+    }
+    .kalender-ico svg { width: 22px; height: 22px; }
+    .kalender-copy .form-lead { font-size: .95rem; color: var(--gray-500); line-height: 1.65; margin-bottom: 1rem; }
+    .kalender-tel {
+      display: inline-flex; align-items: center; gap: .5rem;
+      color: var(--blue-700); font-weight: 600; font-size: .95rem;
+      margin-bottom: 1.5rem; transition: color .15s;
+    }
+    .kalender-tel svg { width: 16px; height: 16px; flex-shrink: 0; }
+    .kalender-tel:hover, .kalender-tel:focus-visible { color: var(--red-500); }
+    .kalender-copy .form-note { margin: auto 0 0; }
+    .kalender-huelle {
+      position: relative; min-height: 340px;
+      background: var(--blue-50); border-left: 1px solid var(--gray-100);
+      display: flex; align-items: center; justify-content: center; padding: 2rem;
+    }
+    .kalender-platzhalter { text-align: center; max-width: 320px; }
+    .kalender-platzhalter > svg { width: 36px; height: 36px; color: var(--blue-600); display: block; margin: 0 auto .75rem; }
+    .kalender-platzhalter p { font-size: .875rem; color: var(--gray-600); line-height: 1.6; margin-bottom: 1rem; }
+    .kalender-platzhalter p strong { color: var(--blue-900); font-weight: 600; }
+    .kalender-platzhalter .btn-solid { padding: .8rem 1.5rem; min-height: 48px; font-size: .9rem; }
+    .kalender-platzhalter .kalender-ds { font-size: .75rem; color: var(--gray-500); margin: .85rem 0 0; }
+    .kalender-ds a { color: inherit; text-decoration: underline; }
+    .kalender-ds a:hover, .kalender-ds a:focus-visible { color: var(--blue-600); }
+    .kalender-huelle iframe { width: 100%; height: 100%; min-height: 520px; border: 0; display: block; }
+    @media (max-width: 768px) {
+      .kalender-grid { grid-template-columns: 1fr; }
+      .kalender-copy { padding: 1.5rem; }
+      .kalender-huelle { border-left: 0; border-top: 1px solid var(--gray-100); min-height: 300px; padding: 1.5rem; }
+    }
+
+    .termin-options {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .termin-opt {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: .5rem;
+      padding: 1.5rem 1.375rem;
+      background: var(--white);
+      border: 1px solid var(--gray-100);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+      transition: border-color .2s, box-shadow .2s, transform .2s var(--ease-spring);
+    }
+    a.termin-opt:hover {
+      border-color: var(--blue-200);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-3px);
+    }
+    .termin-opt-ico {
+      width: 46px; height: 46px;
+      background: var(--blue-50);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--blue-600);
+      margin-bottom: .35rem;
+    }
+    .termin-opt-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--gray-900);
+    }
+    .termin-opt-val {
+      font-size: .875rem;
+      color: var(--gray-500);
+      line-height: 1.5;
+    }
+    .termin-opt-val strong { color: var(--blue-700); font-weight: 600; }
+
+    /* =========================================
+       GLOW / SPOTLIGHT EFFECT (on-brand, subtle)
+       Cursor-tracked spotlight border, restricted to the
+       practice's blue with a faint red accent — no rainbow
+       hue-cycling, no bright neon, per the medical design system.
+    ========================================= */
+    [data-glow] {
+      --glow-hue: 205;      /* practice blue */
+      --glow-accent: 355;   /* faint red accent at high xp */
+      --glow-spread: 22;    /* keep hue drift inside the blue family */
+      --glow-radius: 14;
+      --glow-border: 2;
+      --glow-size: 260;
+      --glow-border-size: calc(var(--glow-border) * 1px);
+      --glow-spotlight-size: calc(var(--glow-size) * 1px);
+      --glow-hue-mix: calc(var(--glow-hue) + (var(--xp, 0.5) * var(--glow-spread)));
+      position: relative;
+      isolation: isolate;
+    }
+    [data-glow]::before,
+    [data-glow]::after {
+      content: '';
+      pointer-events: none;
+      position: absolute;
+      inset: calc(var(--glow-border-size) * -1);
+      border: var(--glow-border-size) solid transparent;
+      border-radius: calc(var(--glow-radius) * 1px);
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      mask: linear-gradient(#000 0 0) padding-box, linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      opacity: 0;
+      transition: opacity .3s var(--ease-out);
+      z-index: 1;
+    }
+    [data-glow]::before {
+      background-image: radial-gradient(
+        var(--glow-spotlight-size) var(--glow-spotlight-size) at
+        calc(var(--x, 50%)) calc(var(--y, 50%)),
+        hsl(var(--glow-hue-mix) 85% 55% / .9), transparent 70%
+      );
+      filter: brightness(1.5);
+    }
+    [data-glow]::after {
+      background-image: radial-gradient(
+        calc(var(--glow-spotlight-size) * .5) calc(var(--glow-spotlight-size) * .5) at
+        calc(var(--x, 50%)) calc(var(--y, 50%)),
+        hsl(0 0% 100% / .8), transparent 100%
+      );
+    }
+    [data-glow]:hover::before,
+    [data-glow]:hover::after,
+    [data-glow]:focus-within::before,
+    [data-glow]:focus-within::after {
+      opacity: 1;
+    }
+    /* soft ambient wash inside the card, brand blue only */
+    [data-glow] .glow-wash {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      border-radius: inherit;
+      opacity: 0;
+      pointer-events: none;
+      background: radial-gradient(
+        calc(var(--glow-spotlight-size) * .8) calc(var(--glow-spotlight-size) * .8) at
+        calc(var(--x, 50%)) calc(var(--y, 50%)),
+        hsl(var(--glow-hue-mix) 90% 60% / .12), transparent 70%
+      );
+      transition: opacity .3s var(--ease-out);
+    }
+    [data-glow]:hover .glow-wash,
+    [data-glow]:focus-within .glow-wash { opacity: 1; }
+    [data-glow] > :not(.glow-wash) { position: relative; z-index: 1; }
+
+    @media (prefers-reduced-motion: reduce) {
+      [data-glow]::before, [data-glow]::after, [data-glow] .glow-wash {
+        transition: none;
+      }
+    }
+    /* pointer tracking is unavailable (no JS / touch-only) — keep a static on-brand border */
+    [data-glow]:not(.glow-ready) {
+      border-color: var(--blue-200);
+    }
+
+    /* =========================================
+       SHIMMER BUTTON (on-brand, main CTAs only)
+       Periodic light sweep behind the button label —
+       white sheen for blue buttons, blue sheen for
+       white/light buttons, kept behind the label via z-index.
+    ========================================= */
+    .btn-shimmer {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+    }
+    .btn-shimmer::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      width: 45%;
+      background: linear-gradient(115deg,
+        transparent 0%,
+        var(--shimmer-tint, rgba(255,255,255,.55)) 50%,
+        transparent 100%);
+      transform: translateX(-260%) skewX(-18deg);
+      animation: btn-shimmer-sweep 3.4s ease-in-out infinite;
+      pointer-events: none;
+    }
+    /* blue-background buttons (e.g. btn-solid) get a white sheen */
+    .btn-shimmer { --shimmer-tint: rgba(255,255,255,.55); }
+    /* white/light-background buttons get a blue sheen so it stays visible */
+    .btn-shimmer-onlight { --shimmer-tint: rgba(10,84,145,.32); }
+
+    @keyframes btn-shimmer-sweep {
+      0%   { transform: translateX(-260%) skewX(-18deg); }
+      55%  { transform: translateX(320%) skewX(-18deg); }
+      100% { transform: translateX(320%) skewX(-18deg); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .btn-shimmer::after { display: none; }
+    }
+
+    /* =========================================
+       TESTIMONIALS MARQUEE
+       PLACEHOLDER CONTENT — replace quotes/names with
+       real Google reviews before going live (see HTML comment).
+    ========================================= */
+    .section-testimonials { background: var(--gray-50); overflow: hidden; }
+
+    .testi-summary {
+      display: inline-flex;
+      align-items: center;
+      gap: .6rem;
+      margin: 0 auto 3rem;
+      padding: .6rem 1.25rem;
+      background: var(--white);
+      border: 1px solid var(--gray-100);
+      border-radius: var(--radius-full);
+      box-shadow: var(--shadow-sm);
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: .9rem;
+      color: var(--gray-800);
+    }
+    .testi-summary .stars { display: inline-flex; gap: 1px; }
+    .testi-summary svg { width: 16px; height: 16px; color: #FBBC05; }
+    .testi-summary-link {
+      color: var(--blue-600);
+      font-weight: 600;
+      margin-left: .25rem;
+    }
+    .testi-summary:hover .testi-summary-link { text-decoration: underline; }
+
+    .marquee-wrap {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+      mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+    }
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      gap: 1.25rem;
+      animation: marquee-scroll 66s linear infinite;
+    }
+    .marquee-wrap:hover .marquee-track,
+    .marquee-wrap:focus-within .marquee-track {
+      animation-play-state: paused;
+    }
+    @keyframes marquee-scroll {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .marquee-track { animation: none; }
+      .marquee-wrap { overflow-x: auto; }
+    }
+
+    .testi-card {
+      flex: 0 0 auto;
+      width: 300px;
+      background: var(--white);
+      border: 1px solid var(--gray-100);
+      border-top: 3px solid var(--blue-500);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-sm);
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .testi-head {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+    }
+    .testi-avatar {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: var(--blue-600);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: .85rem;
+      flex-shrink: 0;
+    }
+    .testi-name {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: .9rem;
+      color: var(--gray-900);
+      line-height: 1.3;
+    }
+    .testi-src {
+      font-size: .74rem;
+      color: var(--gray-400);
+    }
+    .testi-stars {
+      display: flex;
+      gap: 1px;
+    }
+    .testi-stars svg {
+      width: 15px;
+      height: 15px;
+      color: #FBBC05;
+    }
+    .testi-quote {
+      font-size: .875rem;
+      color: var(--gray-600);
+      line-height: 1.65;
+    }
+
+    /* Same element, different job per device: phones call, PCs book online */
+    @media (min-width: 1025px) { .only-mobile  { display: none !important; } }
+    @media (max-width: 1024px) { .only-desktop { display: none !important; } }
+
+    /* =========================================
+       MOBILE ACTION BAR — "Anrufen / Termin", sticks to the bottom on
+       phone & tablet (same range where the nav collapses to the burger)
+    ========================================= */
+    .mobile-bar {
+      display: none;
+      position: fixed;
+      left: 0; right: 0; bottom: 0;
+      z-index: 850;                       /* under the nav/drawer (900), above content */
+      background: rgba(255,255,255,.95);
+      -webkit-backdrop-filter: blur(12px);
+      backdrop-filter: blur(12px);
+      border-top: 1px solid var(--gray-200);
+      box-shadow: 0 -12px 32px -16px rgba(6,59,102,.28);
+      padding: .625rem 1rem calc(.625rem + env(safe-area-inset-bottom, 0px));
+    }
+    .mobile-bar-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .625rem;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .mobile-bar a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .5rem;
+      min-height: 50px;
+      border-radius: var(--radius-full);
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: .95rem;
+      color: var(--white);
+      box-shadow: 0 4px 14px rgba(6,59,102,.16);
+      transition: transform .15s var(--ease-spring), background .15s;
+    }
+    .mobile-bar a:active { transform: scale(.97); }
+    .mobile-bar a svg { width: 20px; height: 20px; flex-shrink: 0; }
+    .mobile-bar-call { background: var(--red-500); }
+    .mobile-bar-call:hover, .mobile-bar-call:focus-visible { background: var(--red-600); }
+    .mobile-bar-termin { background: var(--blue-600); }
+    .mobile-bar-termin:hover, .mobile-bar-termin:focus-visible { background: var(--blue-700); }
+    @media (max-width: 1024px) {
+      .mobile-bar { display: block; }
+      /* keep the footer readable above the bar */
+      body { padding-bottom: calc(70px + env(safe-area-inset-bottom, 0px)); }
+    }
+    @media (prefers-reduced-motion: reduce) { .mobile-bar a { transition: none; } }
+
+    /* =========================================
+       RESPONSIVE
+    ========================================= */
+    /* free up nav space: drop the call button before the links get cramped */
+    @media (max-width: 1200px) {
+      .nav-cta { display: none; }
+    }
+
+    @media (max-width: 1024px) {
+      /* switch to the burger menu on tablet — 7 links need the drawer */
+      .nav-links  { display: none; }
+      .nav-burger { display: flex; }
+
+      /* photo on top, copy below — the panorama can't fill a tall narrow box */
+      .hero {
+        display: block;
+        min-height: 0;
+        background: var(--white);
+      }
+      .hero-bg-photo {
+        position: relative;
+        inset: auto;
+        aspect-ratio: 16 / 9;
+      }
+      .hero-bg-photo img { object-position: center 40%; }
+      /* nav sits above the photo here, so only the fade into the copy remains */
+      .hero-bg-overlay {
+        background: linear-gradient(180deg, rgba(255,255,255,0) 62%, var(--white) 100%);
+      }
+      .hero-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 0 0 3rem;
+        margin-top: -4.5rem;
+      }
+      .hero-h1 { font-size: clamp(2.2rem, 7vw, 3.25rem); }
+      .hero-lead { margin: 0 auto 2.5rem; }
+      .hero-btns { justify-content: center; }
+      .services-grid  { grid-template-columns: repeat(2, 1fr); }
+      .about-grid     { grid-template-columns: 1fr; gap: 3rem; }
+      .about-frame    { max-width: 480px; margin: 0 auto; }
+      .team-grid      { grid-template-columns: repeat(2, 1fr); }
+
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .footer-grid > :first-child { grid-column: 1 / -1; }
+    }
+
+    @media (max-width: 768px) {
+      .section { padding: 4.5rem 0; }
+
+      /* first screen must show headline + both buttons: cap the photo band
+         and tighten the rhythm underneath it */
+      .hero-bg-photo { aspect-ratio: auto; height: clamp(200px, 58vw, 300px); }
+      .hero-inner { margin-top: -3.5rem; padding-bottom: 2rem; }
+      .hero-pill { margin-bottom: 1.125rem; }
+      .hero-h1 { margin-bottom: 1rem; }
+      .hero-lead { font-size: 1rem; line-height: 1.6; margin-bottom: 1.5rem; }
+      .hero-btns { gap: .625rem; }
+      .btn-hero-primary, .btn-hero-ghost { min-height: 48px; padding: .8rem 1.5rem; }
+
+      .services-grid { grid-template-columns: 1fr; }
+      .team-grid     { grid-template-columns: repeat(2, 1fr); }
+
+      .footer-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+
+      .form-row       { grid-template-columns: 1fr; gap: 0; }
+      .termin-options { grid-template-columns: 1fr; }
+      .form-card      { padding: 1.5rem; }
+      .svc-tab        { font-size: .82rem; padding: .7rem .5rem; }
+      .svc-tab .svc-tab-label-long { display: none; }
+
+      .testi-card { width: 250px; padding: 1.25rem; }
+    }
+
+    @media (max-width: 480px) {
+      .team-grid  { grid-template-columns: 1fr; }
+      .about-inset { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== LOADING SCREEN — animated logo, plays once on entry ===== -->
+  <div class="loader" id="loader" role="presentation" aria-hidden="true">
+    <video id="loaderVideo" autoplay muted playsinline preload="auto"
+           aria-label="Animiertes Logo der Hausarztpraxis Bornemann">
+      <source src="logo-animation.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <a href="#main" class="skip-link">Zum Inhalt springen</a>
+
+  <!-- ===================== NAV ===================== -->
+  <header>
+    <nav class="nav" id="nav" aria-label="Hauptnavigation">
+      <div class="container">
+        <div class="nav-wrap">
+
+          <a href="#" class="nav-logo" aria-label="Hausarztpraxis Bornemann – zur Startseite">
+            <img class="nav-logo-img"
+                 src="assets/logo.png"
+                 alt="Logo Hausarztpraxis Bornemann"
+                 width="58" height="58">
+            <div class="nav-logo-stack">
+              <span class="nav-logo-name">Hausarztpraxis Bornemann</span>
+              <span class="nav-logo-title">Dr. med. Christoph Bornemann</span>
+            </div>
+          </a>
+
+          <ul class="nav-links" role="list">
+            <li><a href="#leistungen">Leistungen</a></li>
+            <li><a href="#ueber-uns">Über uns</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#service" class="nav-tab-link" data-tab="termin">Termine</a></li>
+            <li><a href="#service" class="nav-tab-link" data-tab="rezept">Rezepte</a></li>
+            <li><a href="#service" class="nav-tab-link" data-tab="ueberweisung">Überweisungen</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+          </ul>
+
+          <a href="tel:0201381418" class="nav-cta btn-shimmer">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            0201 381418
+          </a>
+
+          <button class="nav-burger"
+                  id="navBurger"
+                  aria-label="Menü öffnen"
+                  aria-expanded="false"
+                  aria-controls="navDrawer">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+
+        <nav class="nav-drawer" id="navDrawer" aria-label="Mobile Navigation">
+          <a href="#leistungen">Leistungen</a>
+          <a href="#ueber-uns">Über uns</a>
+          <a href="#team">Team</a>
+          <a href="#service" class="nav-tab-link" data-tab="termin">Termine</a>
+          <a href="#service" class="nav-tab-link" data-tab="rezept">Rezepte</a>
+          <a href="#service" class="nav-tab-link" data-tab="ueberweisung">Überweisungen</a>
+          <a href="#kontakt">Kontakt</a>
+          <a href="tel:0201381418" class="drawer-cta btn-shimmer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Jetzt anrufen – 0201 381418
+          </a>
+        </nav>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" aria-labelledby="hero-h1">
+      <div class="hero-bg-photo">
+        <picture>
+          <!-- desktop: full-bleed cover; the file carries soft top/bottom
+               padding so no one is cropped out. Narrow screens get the tight
+               panorama in its own band above the copy. -->
+          <source media="(min-width: 1025px)" srcset="assets/team-foto-hero.jpg?v=3">
+          <img src="assets/team.jpg"
+               alt="Das Praxisteam der Hausarztpraxis Bornemann: Dr. med. Christoph Bornemann und vier Medizinische Fachangestellte"
+               width="1421" height="500"
+               loading="eager"
+               fetchpriority="high">
+        </picture>
+        <div class="hero-bg-overlay" aria-hidden="true"></div>
+      </div>
+
+      <div class="container">
+        <div class="hero-inner">
+
+          <!-- Left: copy -->
+          <div class="hero-copy">
+            <div class="hero-pill h-anim" aria-label="Praxis aktuell geöffnet">
+              <span class="hero-pulse" aria-hidden="true"></span>
+              Ihre Hausarztpraxis in Essen-Karnap
+            </div>
+
+            <h1 class="hero-h1 h-anim" id="hero-h1">
+              Medizin mit<br><em>Herz &amp;&nbsp;Erfahrung</em>
+            </h1>
+
+            <p class="hero-lead h-anim">
+              Als Facharzt für Allgemeinmedizin begleiten wir Sie und Ihre Familie mit persönlicher, kompetenter Versorgung –
+              von der Vorsorge bis zur modernen Diagnostik.
+            </p>
+
+            <div class="hero-btns h-anim">
+              <!-- phones call · PCs open the online calendar -->
+              <a href="tel:0201381418" class="btn-hero-primary btn-shimmer only-mobile">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                Termin vereinbaren
+              </a>
+              <a href="#service" class="btn-hero-primary btn-shimmer only-desktop nav-tab-link" data-tab="termin">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                Online-Termin buchen
+              </a>
+              <a href="#leistungen" class="btn-hero-ghost">
+                Leistungen entdecken
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ===================== LEISTUNGEN ===================== -->
+    <section class="section" id="leistungen" aria-labelledby="leistungen-h2">
+      <div class="container">
+        <header class="section-hdr">
+          <span class="section-kicker anim-up">Unser Angebot</span>
+          <h2 class="section-h2 anim-up d1" id="leistungen-h2">Leistungsspektrum</h2>
+          <p class="section-lead anim-up d2">
+            Von der Vorsorge über die Diagnostik bis zur Nachsorge – wir begleiten Sie umfassend auf Ihrem Gesundheitsweg.
+          </p>
+        </header>
+
+        <div class="services-grid">
+
+          <article class="svc-card anim-up d1">
+            <div class="svc-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 class="svc-name">Vorsorge &amp; Krebsscreening</h3>
+            <p class="svc-desc">Check-Up 35, Hautkrebsscreening, Krebsvorsorgeuntersuchungen für Männer und Frauen aller Altersgruppen.</p>
+          </article>
+
+          <article class="svc-card anim-up d2">
+            <div class="svc-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            </div>
+            <h3 class="svc-name">Impfberatung &amp; Impfungen</h3>
+            <p class="svc-desc">Individuelle Impfberatung und Durchführung aller empfohlenen Schutzimpfungen nach STIKO-Empfehlungen.</p>
+          </article>
+
+          <article class="svc-card anim-up d3">
+            <div class="svc-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <h3 class="svc-name">EKG &amp; Kardiologie</h3>
+            <p class="svc-desc">Ruhe-EKG, Belastungs-EKG und umfassende Herz-Kreislauf-Diagnostik direkt in der Praxis.</p>
+          </article>
+
+          <article class="svc-card anim-up d4">
+            <div class="svc-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h3 class="svc-name">24h-Blutdruckmessung</h3>
+            <p class="svc-desc">Langzeit-Blutdruckmessung über 24 Stunden für präzise Diagnostik und optimale Therapieeinstellung.</p>
+          </article>
+
+          <article class="svc-card anim-up d5">
+            <div class="svc-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+            </div>
+            <h3 class="svc-name">Ultraschall &amp; Labor</h3>
+            <p class="svc-desc">Ultraschalluntersuchungen und umfassende Labordiagnostik mit schnellen Ergebnissen direkt in der Praxis.</p>
+          </article>
+
+          <article class="svc-card anim-up d6">
+            <div class="svc-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <h3 class="svc-name">Hausbesuche</h3>
+            <p class="svc-desc">Wir kommen zu Ihnen – Hausbesuche und Versorgung im evangelischen Seniorenzentrum Essen-Karnap.</p>
+          </article>
+
+          <article class="svc-card anim-up d1">
+            <div class="svc-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+            </div>
+            <h3 class="svc-name">DMP-Programme</h3>
+            <p class="svc-desc">Disease-Management-Programme für Asthma, COPD, Koronare Herzkrankheit und Diabetes mellitus Typ II.</p>
+          </article>
+
+          <article class="svc-card anim-up d2">
+            <div class="svc-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+            <h3 class="svc-name">Geriatrie</h3>
+            <p class="svc-desc">Umfassende geriatrische Versorgung älterer Patienten mit individueller, einfühlsamer Betreuung.</p>
+          </article>
+
+          <article class="svc-card anim-up d3">
+            <div class="svc-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </div>
+            <h3 class="svc-name">Lungenfunktion &amp; Notfall</h3>
+            <p class="svc-desc">Lungenfunktionsprüfung sowie Notfallbehandlung mit schneller Labordiagnostik – auch Unfall-Nachversorgung.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ÜBER UNS ===================== -->
+    <section class="section section-alt" id="ueber-uns" aria-labelledby="about-h2">
+      <div class="container">
+        <div class="about-grid">
+
+          <div class="about-frame anim-left">
+            <div class="about-img-main">
+              <img src="https://arztpraxis-bornemann.de/wp-content/uploads/2024/11/Christoph-bornemann-1.jpg"
+                   alt="Dr. med. Christoph Bornemann, Facharzt für Allgemeinmedizin"
+                   width="480" height="600"
+                   loading="lazy">
+            </div>
+            <div class="about-accent" aria-hidden="true"></div>
+            <div class="about-inset" aria-hidden="true">
+              <img src="https://arztpraxis-bornemann.de/wp-content/uploads/2024/11/Anm500.jpg"
+                   alt=""
+                   width="200" height="150"
+                   loading="lazy">
+            </div>
+          </div>
+
+          <div class="anim-right">
+            <span class="about-tag">Über den Arzt</span>
+            <h2 class="about-h2" id="about-h2">Dr. med.<br>Christoph Bornemann</h2>
+
+            <p class="about-p">
+              Als Facharzt für Allgemeinmedizin und Knappschaftsarzt verbinde ich medizinische Expertise mit persönlicher Zuwendung.
+              In meiner Praxis in Essen-Karnap stehen Sie als Patient stets im Mittelpunkt.
+            </p>
+            <p class="about-p">
+              Gemeinsam mit meinem erfahrenen Team bieten wir Ihnen eine umfassende hausärztliche Betreuung –
+              von der Routine-Untersuchung bis zur spezialisierten Diagnostik unter einem Dach.
+            </p>
+
+            <ul class="about-quals" aria-label="Qualifikationen">
+              <li class="about-qual">Facharzt für Allgemeinmedizin</li>
+              <li class="about-qual">Knappschaftsarzt</li>
+              <li class="about-qual">Umfassendes diagnostisches Leistungsspektrum</li>
+              <li class="about-qual">Persönliche Betreuung &amp; individuelle Fürsorge</li>
+              <li class="about-qual">Hausbesuche &amp; Versorgung im Seniorenzentrum</li>
+            </ul>
+
+            <a href="tel:0201381418" class="btn-solid btn-shimmer only-mobile">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Jetzt Termin vereinbaren
+            </a>
+            <a href="#service" class="btn-solid btn-shimmer only-desktop nav-tab-link" data-tab="termin">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              Online-Termin buchen
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TEAM ===================== -->
+    <section class="section" id="team" aria-labelledby="team-h2">
+      <div class="container">
+        <header class="section-hdr">
+          <span class="section-kicker anim-up">Unser Team</span>
+          <h2 class="section-h2 anim-up d1" id="team-h2">Menschen, denen Sie vertrauen können</h2>
+          <p class="section-lead anim-up d2">
+            Unser engagiertes Team begleitet Sie mit Fachwissen, Erfahrung und Herzlichkeit.
+          </p>
+        </header>
+
+        <div class="team-grid">
+
+          <article class="team-card team-card-lead anim-up d1">
+            <div class="team-thumb">
+              <img src="https://arztpraxis-bornemann.de/wp-content/uploads/2024/11/Christoph-bornemann-1.jpg"
+                   alt="Dr. med. Christoph Bornemann"
+                   width="400" height="400"
+                   loading="lazy">
+            </div>
+            <div class="team-info">
+              <div class="team-name">Dr. med. Christoph Bornemann</div>
+              <div class="team-role">Hausarzt &amp; Praxisinhaber</div>
+              <div class="team-quals">Facharzt für Allgemeinmedizin · Knappschaftsarzt</div>
+            </div>
+          </article>
+
+          <article class="team-card anim-up d2">
+            <div class="team-thumb">
+              <img src="https://arztpraxis-bornemann.de/wp-content/uploads/2024/11/christina-kempf.jpg"
+                   alt="Christina Kempf"
+                   width="400" height="400"
+                   loading="lazy">
+            </div>
+            <div class="team-info">
+              <div class="team-name">Christina Kempf</div>
+              <div class="team-role">MFA &amp; Versorgungsassistentin</div>
+              <div class="team-quals">Medizinische Fachangestellte · entlastende Versorgungsassistentin · Fachwirtin für ambulante medizinische Versorgung</div>
+            </div>
+          </article>
+
+          <article class="team-card anim-up d3">
+            <div class="team-thumb">
+              <img src="https://arztpraxis-bornemann.de/wp-content/uploads/2024/11/Nicole-Marasus.jpg"
+                   alt="Nicole Marasus"
+                   width="400" height="400"
+                   loading="lazy">
+            </div>
+            <div class="team-info">
+              <div class="team-name">Nicole Marasus</div>
+              <div class="team-role">MFA &amp; Versorgungsassistentin</div>
+              <div class="team-quals">Medizinische Fachangestellte · entlastende Versorgungsassistentin</div>
+            </div>
+          </article>
+
+          <article class="team-card anim-up d4">
+            <div class="team-thumb">
+              <img src="https://arztpraxis-bornemann.de/wp-content/uploads/2024/11/Jenny-Discher.jpg"
+                   alt="Jenny Discher"
+                   width="400" height="400"
+                   loading="lazy">
+            </div>
+            <div class="team-info">
+              <div class="team-name">Jenny Discher</div>
+              <div class="team-role">Medizinische Fachangestellte</div>
+              <div class="team-quals">DMP: COPD · Asthma · KHK · Diabetes mellitus Typ II</div>
+            </div>
+          </article>
+
+          <article class="team-card anim-up d5">
+            <div class="team-thumb">
+              <img src="https://arztpraxis-bornemann.de/wp-content/uploads/2025/07/Dummy-1.jpg"
+                   alt="Elena Dähn"
+                   width="400" height="400"
+                   loading="lazy">
+            </div>
+            <div class="team-info">
+              <div class="team-name">Elena Dähn</div>
+              <div class="team-role">Medizinische Fachangestellte</div>
+              <div class="team-quals">DMP: COPD · Asthma · KHK · Diabetes mellitus Typ II</div>
+            </div>
+          </article>
+
+          <article class="team-card anim-up d6">
+            <div class="team-thumb">
+              <img src="https://arztpraxis-bornemann.de/wp-content/uploads/2024/11/Lara-Zupp.jpg"
+                   alt="Lara Zupp"
+                   width="400" height="400"
+                   loading="lazy">
+            </div>
+            <div class="team-info">
+              <div class="team-name">Lara Zupp</div>
+              <div class="team-role">Medizinische Fachangestellte</div>
+              <div class="team-quals">DMP: COPD · Asthma · KHK · Diabetes mellitus Typ II</div>
+              <span class="team-badge">Derzeit in Elternzeit</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!--
+      ============================================================
+      GOOGLE-BEWERTUNGEN (Marquee-Karussell)
+      Echte, verifizierte Google-Rezensionen für Dr. med. Christoph
+      Bornemann (per Screenshot vom Kunden bereitgestellt).
+      ============================================================
+    -->
+    <section class="section section-testimonials" id="bewertungen" aria-labelledby="testi-h2">
+      <div class="container">
+        <header class="section-hdr">
+          <span class="section-kicker anim-up">Das sagen unsere Patienten</span>
+          <h2 class="section-h2 anim-up d1" id="testi-h2">Bewertungen auf Google</h2>
+          <p class="section-lead anim-up d2" style="margin-bottom:1.5rem;">
+            Vertrauen, das von unseren Patientinnen und Patienten kommt.
+          </p>
+          <a class="testi-summary anim-up d2"
+             href="https://maps.app.goo.gl/cc7gPQjM1DDPZFNJ7"
+             target="_blank" rel="noopener noreferrer">
+            <span class="stars" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </span>
+            4,6 von 5 · Google
+            <span class="testi-summary-link">Ansehen →</span>
+          </a>
+        </header>
+
+        <div class="marquee-wrap anim-scale">
+          <div class="marquee-track">
+            <!-- set 1 -->
+            <article class="testi-card">
+              <div class="testi-head">
+                <span class="testi-avatar" aria-hidden="true">AE</span>
+                <div>
+                  <div class="testi-name">Anke Eickwinkel</div>
+                  <div class="testi-src">Local Guide · Google-Rezension</div>
+                </div>
+              </div>
+              <div class="testi-stars" role="img" aria-label="5 von 5 Sternen">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <p class="testi-quote">„Dr. Bornemann und sein Team sind für mich mit Abstand die beste Praxis weit und breit. Man fühlt sich vom ersten Moment an ernst genommen und hervorragend betreut. Dr. Bornemann nimmt sich Zeit, hört aufmerksam zu und erklärt alles verständlich."</p>
+            </article>
+            <article class="testi-card">
+              <div class="testi-head">
+                <span class="testi-avatar" aria-hidden="true">Y</span>
+                <div>
+                  <div class="testi-name">Yakub 13</div>
+                  <div class="testi-src">Local Guide · Google-Rezension</div>
+                </div>
+              </div>
+              <div class="testi-stars" role="img" aria-label="5 von 5 Sternen">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <p class="testi-quote">„Als Neupatient habe ich mich kurzfristig und kurz vor Praxisschluss telefonisch gemeldet. Trotz der späten Stunde wurde ich nach kurzer Wartezeit von Herrn Dr. Bornemann behandelt. Ein äußerst freundlicher, kompetenter Arzt. Absolut empfehlenswert!"</p>
+            </article>
+            <article class="testi-card">
+              <div class="testi-head">
+                <span class="testi-avatar" aria-hidden="true">OM</span>
+                <div>
+                  <div class="testi-name">O. M</div>
+                  <div class="testi-src">Google-Rezension</div>
+                </div>
+              </div>
+              <div class="testi-stars" role="img" aria-label="5 von 5 Sternen">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <p class="testi-quote">„Der beste Arzt überhaupt. Wenn ich könnte, würde ich mehr Sterne geben. Die Damen am Empfang super nett und der Arzt selbst ist sehr nett und ruhig, nimmt sich viel Zeit und ist zu 1000% kompetent."</p>
+            </article>
+            <article class="testi-card">
+              <div class="testi-head">
+                <span class="testi-avatar" aria-hidden="true">CS</span>
+                <div>
+                  <div class="testi-name">Christian S.</div>
+                  <div class="testi-src">Local Guide · Google-Rezension</div>
+                </div>
+              </div>
+              <div class="testi-stars" role="img" aria-label="5 von 5 Sternen">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <p class="testi-quote">„Einfach eine gute Praxis mit einem spitzenmäßigen Arzt und einem freundlichen Team. Der Notfall mit dem Hexenschuss wurde unkompliziert und schnell behandelt. Die Praxis ist modern ausgestattet."</p>
+            </article>
+            <article class="testi-card">
+              <div class="testi-head">
+                <span class="testi-avatar" aria-hidden="true">P</span>
+                <div>
+                  <div class="testi-name">Persephone</div>
+                  <div class="testi-src">Local Guide · Google-Rezension</div>
+                </div>
+              </div>
+              <div class="testi-stars" role="img" aria-label="5 von 5 Sternen">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <p class="testi-quote">„Einfach ein toller Arzt, der sich Zeit für seine Patient*innen nimmt und darauf schaut, was sie wirklich brauchen. Auch an schwierigere Fälle traut er sich ran. Auch die Arzthelferinnen sind grosse Klasse."</p>
+            </article>
+            <article class="testi-card">
+              <div class="testi-head">
+                <span class="testi-avatar" aria-hidden="true">TP</span>
+                <div>
+                  <div class="testi-name">Trixi Paschen</div>
+                  <div class="testi-src">Local Guide · Google-Rezension</div>
+                </div>
+              </div>
+              <div class="testi-stars" role="img" aria-label="5 von 5 Sternen">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <p class="testi-quote">„Ein einzigartiger Arzt! Dr. Bornemann ist äußerst empathisch, nimmt sich stets viel Zeit, hört zu, erklärt gut. Sein gesamtes Team ist top! Alle sind freundlich und hilfsbereit."</p>
+            </article>
+            <article class="testi-card">
+              <div class="testi-head">
+                <span class="testi-avatar" aria-hidden="true">DG</span>
+                <div>
+                  <div class="testi-name">Dilan Gürbüz</div>
+                  <div class="testi-src">Local Guide · Google-Rezension</div>
+                </div>
+              </div>
+              <div class="testi-stars" role="img" aria-label="5 von 5 Sternen">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <p class="testi-quote">„Dr. Bornemann ist super freundlich, geduldig und empathisch (sogar Montag morgens). Habe in den vergangenen Jahren selten einen Arzt kennengelernt, der so freundlich ist und seinen Patienten wirklich zuhört."</p>
+            </article>
+            <article class="testi-card">
+              <div class="testi-head">
+                <span class="testi-avatar" aria-hidden="true">JC</span>
+                <div>
+                  <div class="testi-name">J.C I</div>
+                  <div class="testi-src">Local Guide · Google-Rezension</div>
+                </div>
+              </div>
+              <div class="testi-stars" role="img" aria-label="5 von 5 Sternen">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <p class="testi-quote">„Ohne Frage der freundlichste Arzt, mit dem ich je zu tun hatte. Jeder in der Praxis ist echt freundlich und nimmt sich Zeit für einen. Der Doktor hört einem richtig zu, egal wie oft man da ist."</p>
+            </article>
+
+            <!-- set 2 (duplicate for seamless infinite loop) -->
+            <article class="testi-card" aria-hidden="true">
+              <div class="testi-head">
+                <span class="testi-avatar">AE</span>
+                <div>
+                  <div class="testi-name">Anke Eickwinkel</div>
+                  <div class="testi-src">Local Guide · Google-Rezension</div>
+                </div>
+              </div>
+              <div class="testi-stars" role="img" aria-label="5 von 5 Sternen">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <p class="testi-quote">„Dr. Bornemann und sein Team sind für mich mit Abstand die beste Praxis weit und breit. Man fühlt sich vom ersten Moment an ernst genommen und hervorragend betreut. Dr. Bornemann nimmt sich Zeit, hört aufmerksam zu und erklärt alles verständlich."</p>
+            </article>
+            <article class="testi-card" aria-hidden="true">
+              <div class="testi-head">
+                <span class="testi-avatar">Y</span>
+                <div>
+                  <div class="testi-name">Yakub 13</div>
+                  <div class="testi-src">Local Guide · Google-Rezension</div>
+                </div>
+              </div>
+              <div class="testi-stars" role="img" aria-label="5 von 5 Sternen">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <p class="testi-quote">„Als Neupatient habe ich mich kurzfristig und kurz vor Praxisschluss telefonisch gemeldet. Trotz der späten Stunde wurde ich nach kurzer Wartezeit von Herrn Dr. Bornemann behandelt. Ein äußerst freundlicher, kompetenter Arzt. Absolut empfehlenswert!"</p>
+            </article>
+            <article class="testi-card" aria-hidden="true">
+              <div class="testi-head">
+                <span class="testi-avatar">OM</span>
+                <div>
+                  <div class="testi-name">O. M</div>
+                  <div class="testi-src">Google-Rezension</div>
+                </div>
+              </div>
+              <div class="testi-stars" role="img" aria-label="5 von 5 Sternen">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <p class="testi-quote">„Der beste Arzt überhaupt. Wenn ich könnte, würde ich mehr Sterne geben. Die Damen am Empfang super nett und der Arzt selbst ist sehr nett und ruhig, nimmt sich viel Zeit und ist zu 1000% kompetent."</p>
+            </article>
+            <article class="testi-card" aria-hidden="true">
+              <div class="testi-head">
+                <span class="testi-avatar">CS</span>
+                <div>
+                  <div class="testi-name">Christian S.</div>
+                  <div class="testi-src">Local Guide · Google-Rezension</div>
+                </div>
+              </div>
+              <div class="testi-stars" role="img" aria-label="5 von 5 Sternen">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <p class="testi-quote">„Einfach eine gute Praxis mit einem spitzenmäßigen Arzt und einem freundlichen Team. Der Notfall mit dem Hexenschuss wurde unkompliziert und schnell behandelt. Die Praxis ist modern ausgestattet."</p>
+            </article>
+            <article class="testi-card" aria-hidden="true">
+              <div class="testi-head">
+                <span class="testi-avatar">P</span>
+                <div>
+                  <div class="testi-name">Persephone</div>
+                  <div class="testi-src">Local Guide · Google-Rezension</div>
+                </div>
+              </div>
+              <div class="testi-stars" role="img" aria-label="5 von 5 Sternen">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <p class="testi-quote">„Einfach ein toller Arzt, der sich Zeit für seine Patient*innen nimmt und darauf schaut, was sie wirklich brauchen. Auch an schwierigere Fälle traut er sich ran. Auch die Arzthelferinnen sind grosse Klasse."</p>
+            </article>
+            <article class="testi-card" aria-hidden="true">
+              <div class="testi-head">
+                <span class="testi-avatar">TP</span>
+                <div>
+                  <div class="testi-name">Trixi Paschen</div>
+                  <div class="testi-src">Local Guide · Google-Rezension</div>
+                </div>
+              </div>
+              <div class="testi-stars" role="img" aria-label="5 von 5 Sternen">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <p class="testi-quote">„Ein einzigartiger Arzt! Dr. Bornemann ist äußerst empathisch, nimmt sich stets viel Zeit, hört zu, erklärt gut. Sein gesamtes Team ist top! Alle sind freundlich und hilfsbereit."</p>
+            </article>
+            <article class="testi-card" aria-hidden="true">
+              <div class="testi-head">
+                <span class="testi-avatar">DG</span>
+                <div>
+                  <div class="testi-name">Dilan Gürbüz</div>
+                  <div class="testi-src">Local Guide · Google-Rezension</div>
+                </div>
+              </div>
+              <div class="testi-stars" role="img" aria-label="5 von 5 Sternen">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <p class="testi-quote">„Dr. Bornemann ist super freundlich, geduldig und empathisch (sogar Montag morgens). Habe in den vergangenen Jahren selten einen Arzt kennengelernt, der so freundlich ist und seinen Patienten wirklich zuhört."</p>
+            </article>
+            <article class="testi-card" aria-hidden="true">
+              <div class="testi-head">
+                <span class="testi-avatar">JC</span>
+                <div>
+                  <div class="testi-name">J.C I</div>
+                  <div class="testi-src">Local Guide · Google-Rezension</div>
+                </div>
+              </div>
+              <div class="testi-stars" role="img" aria-label="5 von 5 Sternen">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <p class="testi-quote">„Ohne Frage der freundlichste Arzt, mit dem ich je zu tun hatte. Jeder in der Praxis ist echt freundlich und nimmt sich Zeit für einen. Der Doktor hört einem richtig zu, egal wie oft man da ist."</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SERVICE / ANFRAGEN ===================== -->
+    <section class="section section-service" id="service" aria-labelledby="service-h2">
+      <div class="container">
+        <header class="section-hdr">
+          <span class="section-kicker anim-up">Online-Service</span>
+          <h2 class="section-h2 anim-up d1" id="service-h2">Termin, Rezept &amp; Überweisung</h2>
+          <p class="section-lead anim-up d2">
+            Bequem von zu Hause anfragen – Rezepte und Überweisungen können Sie am Folgetag in der Praxis abholen.
+          </p>
+        </header>
+
+        <div class="svc-shell anim-up d2">
+
+          <!-- Tabs -->
+          <div class="svc-tablist" role="tablist" aria-label="Art der Anfrage">
+            <button class="svc-tab" role="tab" id="tab-termin"
+                    aria-controls="panel-termin" aria-selected="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              Termin
+            </button>
+            <button class="svc-tab" role="tab" id="tab-rezept"
+                    aria-controls="panel-rezept" aria-selected="false" tabindex="-1">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="13" y2="17"/></svg>
+              Rezept
+            </button>
+            <button class="svc-tab" role="tab" id="tab-ueberweisung"
+                    aria-controls="panel-ueberweisung" aria-selected="false" tabindex="-1">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              Überweisung
+            </button>
+          </div>
+
+          <!-- Panel: Termin -->
+          <div class="svc-panel" role="tabpanel" id="panel-termin" aria-labelledby="tab-termin">
+            <!-- Termin: Online-Kalender (DGN/docvisit), DSGVO-konform erst per Klick geladen -->
+            <div class="form-card kalender-card">
+              <div class="kalender-grid">
+                <div class="kalender-copy">
+                  <span class="kalender-ico" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01M16 18h.01"/></svg>
+                  </span>
+                  <h3>Termin online vereinbaren</h3>
+                  <p class="form-lead">Wählen Sie im Online-Kalender einen freien Termin – oder rufen Sie uns einfach an. Spontane Besuche sind bei akuten Beschwerden jederzeit möglich.</p>
+                  <a href="tel:0201381418" class="kalender-tel">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    Telefonisch: 0201 381418
+                  </a>
+                  <div class="form-note">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                    <span>Bitte halten Sie Ihre Versichertenkarte bereit. Für dringende Anliegen außerhalb der Sprechzeiten wählen Sie den ärztlichen Bereitschaftsdienst unter <strong>116 117</strong>.</span>
+                  </div>
+                </div>
+
+                <!-- Kalender wird erst nach Klick vom externen Anbieter (DGN/docvisit) geladen -->
+                <div id="kalender-huelle" class="kalender-huelle">
+                  <div id="kalender-platzhalter" class="kalender-platzhalter">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    <p>Der Online-Kalender wird von unserem Dienstleister <strong>DGN Service GmbH (docvisit)</strong> bereitgestellt. Beim Laden werden Daten an den Anbieter übertragen.</p>
+                    <button type="button" id="kalender-laden" class="btn-solid">Online-Kalender laden</button>
+                    <p class="kalender-ds">Es gilt die <a href="https://www.dgn.de/datenschutz/" target="_blank" rel="noopener">Datenschutz­erklärung der DGN</a>.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel: Rezept -->
+          <div class="svc-panel" role="tabpanel" id="panel-rezept" aria-labelledby="tab-rezept" hidden>
+            <div class="form-card">
+              <h3>Rezept anfordern</h3>
+              <p class="form-lead">
+                Fordern Sie Ihre Folgerezepte bequem online an. Ihr Rezept liegt in der Regel <strong>am Folgetag</strong> zur Abholung in der Praxis bereit.
+              </p>
+
+              <div class="form-note">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <span>Beim Absenden öffnet sich Ihr E-Mail-Programm mit einer vorbereiteten Nachricht an die Praxis.</span>
+              </div>
+
+              <form data-mailto data-subject="Rezeptanforderung">
+                <div class="form-row">
+                  <div class="field">
+                    <label for="rz-name">Name <span class="req" aria-hidden="true">*</span></label>
+                    <input type="text" id="rz-name" name="Name" data-label="Name" autocomplete="name" required>
+                  </div>
+                  <div class="field">
+                    <label for="rz-email">E-Mail <span class="req" aria-hidden="true">*</span></label>
+                    <input type="email" id="rz-email" name="E-Mail" data-label="E-Mail" autocomplete="email" required>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label for="rz-phone">Telefon</label>
+                  <input type="tel" id="rz-phone" name="Telefon" data-label="Telefon" autocomplete="tel">
+                  <span class="field-hint">Optional – für eventuelle Rückfragen.</span>
+                </div>
+
+                <div class="field">
+                  <label for="rz-meds">Benötigte Medikamente <span class="req" aria-hidden="true">*</span></label>
+                  <textarea id="rz-meds" name="Medikamente" data-label="Medikamente" placeholder="z. B. Ramipril 5 mg, Metformin 1000 mg …" required></textarea>
+                </div>
+
+                <div class="field">
+                  <label for="rz-note">Anmerkungen</label>
+                  <textarea id="rz-note" name="Anmerkungen" data-label="Anmerkungen" placeholder="Optionale Hinweise"></textarea>
+                </div>
+
+                <div class="consent">
+                  <input type="checkbox" id="rz-consent" required>
+                  <label for="rz-consent">
+                    Ich stimme zu, dass meine Angaben zur Bearbeitung meines Anliegens gespeichert und verarbeitet werden. Die Einwilligung kann jederzeit per E-Mail widerrufen werden.
+                  </label>
+                </div>
+
+                <button type="submit" class="form-submit">
+                  Rezept anfordern
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                </button>
+
+                <div class="form-success" role="status" hidden>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                  <span>Ihr E-Mail-Programm wurde geöffnet. Bitte senden Sie die vorbereitete Nachricht ab, um Ihre Anfrage abzuschließen.</span>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Panel: Überweisung -->
+          <div class="svc-panel" role="tabpanel" id="panel-ueberweisung" aria-labelledby="tab-ueberweisung" hidden>
+            <div class="form-card">
+              <h3>Überweisung anfordern</h3>
+              <p class="form-lead">
+                Benötigen Sie eine Überweisung zu einem Facharzt? Fordern Sie sie hier an – die Abholung ist in der Regel <strong>am Folgetag</strong> in der Praxis möglich.
+              </p>
+
+              <div class="form-note">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <span>Beim Absenden öffnet sich Ihr E-Mail-Programm mit einer vorbereiteten Nachricht an die Praxis.</span>
+              </div>
+
+              <form data-mailto data-subject="Überweisungsanforderung">
+                <div class="form-row">
+                  <div class="field">
+                    <label for="ue-name">Name <span class="req" aria-hidden="true">*</span></label>
+                    <input type="text" id="ue-name" name="Name" data-label="Name" autocomplete="name" required>
+                  </div>
+                  <div class="field">
+                    <label for="ue-email">E-Mail <span class="req" aria-hidden="true">*</span></label>
+                    <input type="email" id="ue-email" name="E-Mail" data-label="E-Mail" autocomplete="email" required>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label for="ue-phone">Telefon</label>
+                  <input type="tel" id="ue-phone" name="Telefon" data-label="Telefon" autocomplete="tel">
+                  <span class="field-hint">Optional – für eventuelle Rückfragen.</span>
+                </div>
+
+                <div class="field">
+                  <label for="ue-fach">Fachrichtung <span class="req" aria-hidden="true">*</span></label>
+                  <select id="ue-fach" name="Fachrichtung" data-label="Fachrichtung" required>
+                    <option value="" disabled selected>Bitte wählen …</option>
+                    <option>Augenheilkunde</option>
+                    <option>Chirurgie</option>
+                    <option>Dermatologie (Hautarzt)</option>
+                    <option>Diabetologie</option>
+                    <option>Gastroenterologie</option>
+                    <option>Gynäkologie</option>
+                    <option>HNO (Hals-Nasen-Ohren)</option>
+                    <option>Kardiologie</option>
+                    <option>Nephrologie</option>
+                    <option>Neurologie</option>
+                    <option>Nuklearmedizin</option>
+                    <option>Orthopädie</option>
+                    <option>Pneumologie (Lungenheilkunde)</option>
+                    <option>Psychiatrie</option>
+                    <option>Radiologie</option>
+                    <option>Urologie</option>
+                    <option>Sonstige</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label for="ue-note">Anmerkungen</label>
+                  <textarea id="ue-note" name="Anmerkungen" data-label="Anmerkungen" placeholder="Optionale Hinweise, z. B. konkreter Facharzt"></textarea>
+                </div>
+
+                <div class="consent">
+                  <input type="checkbox" id="ue-consent" required>
+                  <label for="ue-consent">
+                    Ich stimme zu, dass meine Angaben zur Bearbeitung meines Anliegens gespeichert und verarbeitet werden. Die Einwilligung kann jederzeit per E-Mail widerrufen werden.
+                  </label>
+                </div>
+
+                <button type="submit" class="form-submit">
+                  Überweisung anfordern
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                </button>
+
+                <div class="form-success" role="status" hidden>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                  <span>Ihr E-Mail-Programm wurde geöffnet. Bitte senden Sie die vorbereitete Nachricht ab, um Ihre Anfrage abzuschließen.</span>
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== KONTAKT ===================== -->
+    <section class="section" id="kontakt" aria-labelledby="contact-h2">
+      <div class="container">
+        <div class="kontakt-card anim-scale">
+          <div class="kontakt-glow" aria-hidden="true"></div>
+          <div class="kontakt-grid">
+
+            <!-- Adresse & Kontakt -->
+            <div class="kontakt-info">
+              <span class="kontakt-kicker">Kontakt &amp; Anfahrt</span>
+              <h2 class="kontakt-h2" id="contact-h2">Wir sind für Sie da.</h2>
+              <address class="kontakt-adresse">
+                <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Hausarztpraxis Dr. med. Bornemann<br>Karnaper Str. 99 · 45329 Essen</span></p>
+                <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:0201381418">0201 381418</a></p>
+                <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg><span>Fax: 0201 383530</span></p>
+                <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:kontakt@arztpraxis-bornemann.de">kontakt@arztpraxis-bornemann.de</a></p>
+              </address>
+              <!-- phones: „Jetzt anrufen" · PCs: just the number -->
+              <a href="tel:0201381418" class="kontakt-cta btn-shimmer">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <span class="only-mobile">Jetzt anrufen</span><span class="only-desktop">0201 381418</span>
+              </a>
+            </div>
+
+            <!-- Sprechzeiten -->
+            <div class="kontakt-zeiten">
+              <p class="kontakt-zeiten-hd"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Sprechzeiten</p>
+              <table class="kontakt-tbl" aria-label="Sprechzeiten der Praxis">
+                <tbody>
+                  <tr><td>Montag</td><td>7:00 – 11:00<span class="dot"> · </span><br class="br-m">14:30 – 17:00 Uhr</td></tr>
+                  <tr><td>Dienstag</td><td>7:00 – 11:00<span class="dot"> · </span><br class="br-m">14:30 – 17:00 Uhr</td></tr>
+                  <tr><td>Mittwoch</td><td>7:00 – 11:00 Uhr</td></tr>
+                  <tr><td>Donnerstag</td><td>7:00 – 11:00<span class="dot"> · </span><br class="br-m">14:30 – 17:00 Uhr</td></tr>
+                  <tr><td>Freitag</td><td>7:00 – 11:00 Uhr</td></tr>
+                </tbody>
+              </table>
+              <p class="kontakt-zeiten-note">Außerhalb der Sprechzeiten wenden Sie sich bitte an den ärztlichen Bereitschaftsdienst unter 116 117.</p>
+            </div>
+
+            <!-- Karte / Anfahrt (Google Maps, erst per Klick geladen) -->
+            <div class="kontakt-karte-wrap">
+              <div class="kontakt-karte-hd">
+                <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Anfahrt</p>
+                <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Karnaper+Str.+99%2C+45329+Essen" target="_blank" rel="noopener" class="kontakt-route">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>
+                  Route planen
+                </a>
+              </div>
+              <div id="karte-huelle" class="kontakt-karte">
+                <button type="button" id="karte-laden" class="karten-cover">
+                  <span class="karten-pin" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+                  <span class="karten-adresse">Karnaper Str. 99 · 45329 Essen</span>
+                  <span class="karten-hinweis">Beim Anzeigen der Karte werden Daten an Google Maps übertragen.</span>
+                  <span class="karten-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg> Karte anzeigen</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div>
+          <img class="footer-logo-img"
+               src="assets/logo.png"
+               alt="Logo Hausarztpraxis Bornemann"
+               width="72" height="55"
+               loading="lazy">
+          <div class="footer-brand-name">Hausarztpraxis Bornemann</div>
+          <div class="footer-brand-sub">Dr. med. Christoph Bornemann</div>
+          <p class="footer-brand-desc">
+            Ihre moderne Hausarztpraxis in Essen-Karnap – persönlich, kompetent und immer für Sie da.
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-col-hd">Navigation</div>
+          <nav class="footer-nav" aria-label="Footer Navigation">
+            <a href="#leistungen">Leistungen</a>
+            <a href="#ueber-uns">Über uns</a>
+            <a href="#team">Unser Team</a>
+            <a href="#kontakt">Kontakt &amp; Anfahrt</a>
+          </nav>
+        </div>
+
+        <div>
+          <div class="footer-col-hd">Kontakt</div>
+          <div class="footer-contact-row">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Karnaper Str. 99<br>45329 Essen</span>
+          </div>
+          <div class="footer-contact-row">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span><a href="tel:0201381418" style="color:inherit">0201 381418</a></span>
+          </div>
+          <div class="footer-contact-row">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span><a href="mailto:kontakt@arztpraxis-bornemann.de" style="color:inherit">kontakt@arztpraxis-bornemann.de</a></span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Hausarztpraxis Bornemann – Dr. med. Christoph Bornemann. Alle Rechte vorbehalten.</span>
+        <ul class="footer-legal" role="list">
+          <li><a href="#">Impressum</a></li>
+          <li><a href="#">Datenschutz</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== MOBILE ACTION BAR — sticky "Anrufen / Termin" on phone & tablet ===== -->
+  <div class="mobile-bar" aria-label="Schnellzugriff">
+    <div class="mobile-bar-grid">
+      <a href="tel:0201381418" class="mobile-bar-call">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Anrufen
+      </a>
+      <a href="#service" class="mobile-bar-termin nav-tab-link" data-tab="termin">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Termin
+      </a>
+    </div>
+  </div>
+
+  <!-- ===================== JS ===================== -->
+  <script>
+    // Loading screen — play animated logo once, then reveal site
+    (function () {
+      var loader = document.getElementById('loader');
+      var video  = document.getElementById('loaderVideo');
+      if (!loader) return;
+
+      document.body.classList.add('loading');
+      var done = false;
+
+      function finish() {
+        if (done) return;
+        done = true;
+        loader.classList.add('hidden');
+        document.body.classList.remove('loading');
+        setTimeout(function () { loader.remove(); }, 320);
+      }
+
+      // Hide when the logo animation finishes playing
+      if (video) {
+        video.addEventListener('ended', finish);
+        // If video can't autoplay / errors, don't trap the user
+        video.addEventListener('error', finish);
+      }
+      // Safety fallback — never block longer than 8s
+      setTimeout(finish, 8000);
+    })();
+
+    // Nav: stick on scroll
+    const nav = document.getElementById('nav');
+    function onScroll() {
+      nav.classList.toggle('stuck', window.scrollY > 16);
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    // Mobile nav toggle
+    const burger = document.getElementById('navBurger');
+    const drawer = document.getElementById('navDrawer');
+    burger.addEventListener('click', () => {
+      const open = drawer.classList.toggle('open');
+      burger.setAttribute('aria-expanded', String(open));
+      burger.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
+    });
+    drawer.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        drawer.classList.remove('open');
+        burger.setAttribute('aria-expanded', 'false');
+        burger.setAttribute('aria-label', 'Menü öffnen');
+      });
+    });
+
+    // Scroll animations via IntersectionObserver
+    const prefersMotion = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersMotion) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.add('is-visible');
+            io.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -44px 0px' });
+
+      document.querySelectorAll('.anim-up, .anim-left, .anim-right, .anim-scale')
+        .forEach(el => io.observe(el));
+    } else {
+      // Reveal immediately if user prefers reduced motion
+      document.querySelectorAll('.anim-up, .anim-left, .anim-right, .anim-scale')
+        .forEach(el => el.classList.add('is-visible'));
+    }
+
+    // Service tabs — accessible tablist
+    (function () {
+      var tabs = Array.prototype.slice.call(document.querySelectorAll('.svc-tab'));
+      if (!tabs.length) return;
+
+      function selectTab(tab) {
+        tabs.forEach(function (t) {
+          var selected = t === tab;
+          t.setAttribute('aria-selected', String(selected));
+          t.tabIndex = selected ? 0 : -1;
+          var panel = document.getElementById(t.getAttribute('aria-controls'));
+          if (panel) panel.hidden = !selected;
+        });
+      }
+
+      tabs.forEach(function (tab, i) {
+        tab.addEventListener('click', function () { selectTab(tab); });
+        tab.addEventListener('keydown', function (e) {
+          var idx = null;
+          if (e.key === 'ArrowRight') idx = (i + 1) % tabs.length;
+          else if (e.key === 'ArrowLeft') idx = (i - 1 + tabs.length) % tabs.length;
+          else if (e.key === 'Home') idx = 0;
+          else if (e.key === 'End') idx = tabs.length - 1;
+          if (idx !== null) {
+            e.preventDefault();
+            tabs[idx].focus();
+            selectTab(tabs[idx]);
+          }
+        });
+      });
+    })();
+
+    // Online calendar (docvisit/DGN): create the iframe only after an explicit click — no data leaves before consent
+    (function () {
+      var btn = document.getElementById('kalender-laden');
+      if (!btn) return;
+      btn.addEventListener('click', function () {
+        var huelle = document.getElementById('kalender-huelle');
+        var iframe = document.createElement('iframe');
+        iframe.src = 'https://www.docvisit.de/kalender/praxis-bornemann';
+        iframe.title = 'Online-Terminkalender der Hausarztpraxis Dr. med. Bornemann';
+        iframe.loading = 'lazy';
+        huelle.innerHTML = '';
+        huelle.style.padding = '0';
+        huelle.style.display = 'block';
+        huelle.appendChild(iframe);
+      });
+    })();
+
+    // Google map: create the iframe only after an explicit click — nothing goes to Google before consent
+    (function () {
+      var btn = document.getElementById('karte-laden');
+      if (!btn) return;
+      btn.addEventListener('click', function () {
+        var huelle = document.getElementById('karte-huelle');
+        var iframe = document.createElement('iframe');
+        iframe.src = 'https://maps.google.com/maps?q=Karnaper+Str.+99,+45329+Essen,+Germany&z=15&output=embed';
+        iframe.title = 'Standort der Hausarztpraxis Dr. med. Bornemann – Karnaper Str. 99, 45329 Essen';
+        iframe.loading = 'lazy';
+        iframe.setAttribute('allowfullscreen', '');
+        iframe.referrerPolicy = 'no-referrer-when-downgrade';
+        huelle.innerHTML = '';
+        huelle.appendChild(iframe);
+      });
+    })();
+
+    // Nav links "Termine / Rezepte / Überweisungen" open the matching service tab
+    (function () {
+      document.querySelectorAll('.nav-tab-link').forEach(function (link) {
+        link.addEventListener('click', function () {
+          var tabBtn = document.getElementById('tab-' + link.getAttribute('data-tab'));
+          if (tabBtn) tabBtn.click();
+          // scrolling & drawer-close are handled by the existing anchor handlers
+        });
+      });
+    })();
+
+    // Glow / spotlight cards — cursor-tracked highlight, brand blue only
+    (function () {
+      var glowEls = Array.prototype.slice.call(document.querySelectorAll('[data-glow]'));
+      if (!glowEls.length) return;
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      // touch-only devices have no hover/pointer position worth tracking
+      if (!window.matchMedia('(any-hover: hover)').matches) return;
+
+      glowEls.forEach(function (el) { el.classList.add('glow-ready'); });
+
+      var pending = false;
+      var lastX = 0, lastY = 0;
+
+      function apply() {
+        pending = false;
+        glowEls.forEach(function (el) {
+          var rect = el.getBoundingClientRect();
+          el.style.setProperty('--x', (lastX - rect.left) + 'px');
+          el.style.setProperty('--y', (lastY - rect.top) + 'px');
+          el.style.setProperty('--xp', (lastX / window.innerWidth).toFixed(2));
+        });
+      }
+
+      document.addEventListener('pointermove', function (e) {
+        lastX = e.clientX;
+        lastY = e.clientY;
+        if (!pending) {
+          pending = true;
+          requestAnimationFrame(apply);
+        }
+      }, { passive: true });
+    })();
+
+    // Service forms — compose a pre-filled e-mail to the practice
+    (function () {
+      var forms = document.querySelectorAll('form[data-mailto]');
+      Array.prototype.forEach.call(forms, function (form) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          var to = 'kontakt@arztpraxis-bornemann.de';
+          var subject = form.getAttribute('data-subject') || 'Anfrage';
+          var lines = [];
+          form.querySelectorAll('input[name], select[name], textarea[name]').forEach(function (el) {
+            if (el.type === 'checkbox') return;
+            var val = (el.value || '').trim();
+            if (!val) return;
+            lines.push((el.getAttribute('data-label') || el.name) + ': ' + val);
+          });
+          lines.push('', 'Gesendet über das Kontaktformular der Website.');
+          var href = 'mailto:' + to +
+                     '?subject=' + encodeURIComponent(subject) +
+                     '&body=' + encodeURIComponent(lines.join('\n'));
+          window.location.href = href;
+          var success = form.querySelector('.form-success');
+          if (success) success.hidden = false;
+        });
+      });
+    })();
+
+    // Smooth anchor scroll with nav offset
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const id = a.getAttribute('href').slice(1);
+        if (!id) return;
+        const target = document.getElementById(id);
+        if (!target) return;
+        e.preventDefault();
+        const offset = nav.offsetHeight + 16;
+        const top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+      });
+    });
+  </script>
+
+</body>
+</html>
