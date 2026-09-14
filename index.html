@@ -992,9 +992,10 @@ tailwind.config = {
         iframe.src = 'https://www.docvisit.de/kalender/praxis-bornemann';
         iframe.title = 'Online-Terminkalender der Hausarztpraxis Dr. med. Bornemann';
         iframe.loading = 'lazy';
-        iframe.style.cssText = 'width:100%;height:100%;min-height:520px;border:0;display:block;';
+        iframe.style.cssText = 'width:100%;flex:1 1 0;min-height:480px;border:0;display:block;';
         huelle.innerHTML = '';
-        huelle.classList.remove('flex', 'items-center', 'justify-center', 'p-7');
+        huelle.classList.remove('items-center', 'justify-center', 'p-7');
+        huelle.classList.add('flex-col');
         huelle.appendChild(iframe);
         // Fallback: falls der Browser das iframe nicht laden kann (DNS, Blocker), direkt zu docvisit
         var fallback = document.createElement('p');
