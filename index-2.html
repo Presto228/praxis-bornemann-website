@@ -649,6 +649,20 @@
     }
     .about-img-main:hover img { transform: scale(1.03); }
 
+    /* Tappable photo: the whole frame is a button that opens the lightbox */
+    .zoomable {
+      display: block;
+      width: 100%; height: 100%;
+      padding: 0; border: 0; background: none;
+      cursor: zoom-in;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .zoomable:focus-visible {
+      outline: 3px solid var(--blue-500);
+      outline-offset: 3px;
+    }
+    .zoomable:active img { transform: scale(.985); }
+
     /* Accent shape */
     .about-accent {
       position: absolute;
@@ -677,6 +691,70 @@
     .about-inset img {
       width: 100%; height: 100%;
       object-fit: cover;
+      transition: transform .4s var(--ease-spring);
+    }
+    .about-inset:hover img { transform: scale(1.04); }
+
+    /* =========================================
+       LIGHTBOX — native <dialog>, opened from tappable photos
+    ========================================= */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      width: 100%; height: 100%;
+      max-width: none; max-height: none;
+      margin: 0; padding: 0; border: 0;
+      background: transparent;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: .75rem;
+      color: var(--white);
+    }
+    .lightbox[open] { display: flex; }
+    .lightbox::backdrop {
+      background: rgba(2,31,58,.92);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+    .lightbox-img {
+      max-width: min(96vw, 1400px);
+      max-height: 84dvh;
+      width: auto; height: auto;
+      object-fit: contain;
+      border-radius: var(--radius-lg);
+      box-shadow: 0 24px 80px rgba(0,0,0,.45);
+    }
+    .lightbox-cap {
+      font-size: .85rem;
+      color: rgba(255,255,255,.72);
+      text-align: center;
+      padding: 0 1.5rem;
+      max-width: 60ch;
+    }
+    .lightbox-close {
+      position: fixed;
+      top: max(.75rem, env(safe-area-inset-top));
+      right: max(.75rem, env(safe-area-inset-right));
+      width: 48px; height: 48px;
+      border-radius: var(--radius-full);
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.22);
+      color: var(--white);
+      display: flex; align-items: center; justify-content: center;
+      transition: background .15s, transform .15s var(--ease-spring);
+    }
+    .lightbox-close:hover, .lightbox-close:focus-visible { background: rgba(255,255,255,.24); }
+    .lightbox-close:focus-visible { outline: 2px solid var(--white); outline-offset: 2px; }
+    .lightbox-close:active { transform: scale(.94); }
+    body.lightbox-open { overflow: hidden; }
+    @media (prefers-reduced-motion: no-preference) {
+      .lightbox[open] .lightbox-img { animation: lb-in .32s var(--ease-spring); }
+      @keyframes lb-in {
+        from { opacity: 0; transform: scale(.94); }
+        to   { opacity: 1; transform: none; }
+      }
     }
 
     .about-tag {
@@ -1682,6 +1760,10 @@
       .services-grid  { grid-template-columns: repeat(2, 1fr); }
       .about-grid     { grid-template-columns: 1fr; gap: 3rem; }
       .about-frame    { max-width: 480px; margin: 0 auto; }
+      /* keep the inset and the accent inside the page padding — no horizontal
+         wobble, nothing cut off at the left edge */
+      .about-inset    { left: -.75rem; bottom: 1.25rem; width: 46%; }
+      .about-accent   { right: -.75rem; bottom: -.75rem; }
       .team-grid      { grid-template-columns: repeat(2, 1fr); }
 
       .footer-grid { grid-template-columns: 1fr 1fr; }
@@ -1716,9 +1798,27 @@
       .testi-card { width: 250px; padding: 1.25rem; }
     }
 
+    @media (max-width: 640px) {
+      /* phone: one compact row per person — photo left, name + role right.
+         Stacked cards were either a 2-up grid with clipped job titles or
+         six screen-high portraits in a row. */
+      .team-grid { grid-template-columns: 1fr; gap: .75rem; }
+      .team-card {
+        display: grid;
+        grid-template-columns: 104px minmax(0, 1fr);
+        align-items: stretch;
+      }
+      .team-thumb { aspect-ratio: auto; min-height: 104px; height: 100%; }
+      .team-info  { padding: .875rem 1rem .875rem .9rem; align-self: center; }
+      .team-name  { font-size: .95rem; margin-bottom: .15rem; }
+      .team-role  { font-size: .66rem; margin-bottom: .35rem; }
+      .team-quals { font-size: .78rem; line-height: 1.5; }
+      .team-badge { margin-top: .4rem; }
+    }
+
     @media (max-width: 480px) {
       .team-grid  { grid-template-columns: 1fr; }
-      .about-inset { display: none; }
+      .about-inset { width: 44%; border-width: 2px; }
     }
   </style>
 </head>
@@ -1948,17 +2048,29 @@
 
           <div class="about-frame anim-left">
             <div class="about-img-main">
-              <img src="https://arztpraxis-bornemann.de/wp-content/uploads/2024/11/Christoph-bornemann-1.jpg"
-                   alt="Dr. med. Christoph Bornemann, Facharzt für Allgemeinmedizin"
-                   width="480" height="600"
-                   loading="lazy">
+              <button type="button" class="zoomable"
+                      data-lightbox="assets/Christoph-bornemann-1.jpg"
+                      data-lightbox-alt="Dr. med. Christoph Bornemann, Facharzt für Allgemeinmedizin"
+                      data-lightbox-caption="Dr. med. Christoph Bornemann – Facharzt für Allgemeinmedizin, Knappschaftsarzt"
+                      aria-label="Foto von Dr. med. Christoph Bornemann vergrößern">
+                <img src="assets/Christoph-bornemann-1.jpg"
+                     alt="Dr. med. Christoph Bornemann, Facharzt für Allgemeinmedizin"
+                     width="480" height="600"
+                     loading="lazy">
+              </button>
             </div>
             <div class="about-accent" aria-hidden="true"></div>
-            <div class="about-inset" aria-hidden="true">
-              <img src="https://arztpraxis-bornemann.de/wp-content/uploads/2024/11/Anm500.jpg"
-                   alt=""
-                   width="200" height="150"
-                   loading="lazy">
+            <div class="about-inset">
+              <button type="button" class="zoomable"
+                      data-lightbox="assets/anmeldung.jpg"
+                      data-lightbox-alt="Die Anmeldung der Hausarztpraxis Bornemann"
+                      data-lightbox-caption="Unsere Anmeldung – hier werden Sie empfangen"
+                      aria-label="Foto der Anmeldung vergrößern">
+                <img src="assets/anmeldung.jpg"
+                     alt="Die Anmeldung der Hausarztpraxis Bornemann"
+                     width="200" height="150"
+                     loading="lazy">
+              </button>
             </div>
           </div>
 
@@ -2012,7 +2124,7 @@
 
           <article class="team-card team-card-lead anim-up d1">
             <div class="team-thumb">
-              <img src="https://arztpraxis-bornemann.de/wp-content/uploads/2024/11/Christoph-bornemann-1.jpg"
+              <img src="assets/Christoph-bornemann-1.jpg"
                    alt="Dr. med. Christoph Bornemann"
                    width="400" height="400"
                    loading="lazy">
@@ -2026,7 +2138,7 @@
 
           <article class="team-card anim-up d2">
             <div class="team-thumb">
-              <img src="https://arztpraxis-bornemann.de/wp-content/uploads/2024/11/christina-kempf.jpg"
+              <img src="assets/christina-kempf.jpg"
                    alt="Christina Kempf"
                    width="400" height="400"
                    loading="lazy">
@@ -2040,7 +2152,7 @@
 
           <article class="team-card anim-up d3">
             <div class="team-thumb">
-              <img src="https://arztpraxis-bornemann.de/wp-content/uploads/2024/11/Nicole-Marasus.jpg"
+              <img src="assets/Nicole-Marasus.jpg"
                    alt="Nicole Marasus"
                    width="400" height="400"
                    loading="lazy">
@@ -2054,7 +2166,7 @@
 
           <article class="team-card anim-up d4">
             <div class="team-thumb">
-              <img src="https://arztpraxis-bornemann.de/wp-content/uploads/2024/11/Jenny-Discher.jpg"
+              <img src="assets/Jenny-Discher.jpg"
                    alt="Jenny Discher"
                    width="400" height="400"
                    loading="lazy">
@@ -2068,7 +2180,7 @@
 
           <article class="team-card anim-up d5">
             <div class="team-thumb">
-              <img src="https://arztpraxis-bornemann.de/wp-content/uploads/2025/07/Dummy-1.jpg"
+              <img src="assets/Dummy-1.jpg"
                    alt="Elena Dähn"
                    width="400" height="400"
                    loading="lazy">
@@ -2082,7 +2194,7 @@
 
           <article class="team-card anim-up d6">
             <div class="team-thumb">
-              <img src="https://arztpraxis-bornemann.de/wp-content/uploads/2024/11/Lara-Zupp.jpg"
+              <img src="assets/Lara-Zupp.jpg"
                    alt="Lara Zupp"
                    width="400" height="400"
                    loading="lazy">
@@ -2689,6 +2801,15 @@
     </div>
   </div>
 
+  <!-- ===== LIGHTBOX — full-size view for tappable photos ===== -->
+  <dialog class="lightbox" id="lightbox" aria-label="Bildansicht">
+    <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Bildansicht schließen">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <img class="lightbox-img" id="lightboxImg" src="" alt="">
+    <p class="lightbox-cap" id="lightboxCap"></p>
+  </dialog>
+
   <!-- ===================== JS ===================== -->
   <script>
     // Loading screen — play animated logo once, then reveal site
@@ -2917,6 +3038,33 @@
         window.scrollTo({ top, behavior: 'smooth' });
       });
     });
+
+    // Lightbox — any [data-lightbox] button opens its image full-size
+    (function () {
+      var lb  = document.getElementById('lightbox');
+      var img = document.getElementById('lightboxImg');
+      var cap = document.getElementById('lightboxCap');
+      if (!lb || typeof lb.showModal !== 'function') return;
+
+      function open(btn) {
+        img.src = btn.getAttribute('data-lightbox');
+        img.alt = btn.getAttribute('data-lightbox-alt') || '';
+        cap.textContent = btn.getAttribute('data-lightbox-caption') || '';
+        cap.hidden = !cap.textContent;
+        document.body.classList.add('lightbox-open');
+        lb.showModal();
+      }
+      document.querySelectorAll('[data-lightbox]').forEach(function (btn) {
+        btn.addEventListener('click', function () { open(btn); });
+      });
+      document.getElementById('lightboxClose').addEventListener('click', function () { lb.close(); });
+      // tap anywhere outside the picture closes it
+      lb.addEventListener('click', function (e) { if (e.target === lb) lb.close(); });
+      lb.addEventListener('close', function () {
+        document.body.classList.remove('lightbox-open');
+        img.removeAttribute('src');
+      });
+    })();
   </script>
 
 </body>
