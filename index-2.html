@@ -506,7 +506,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: opacity .3s var(--ease-out), visibility .3s var(--ease-out);
+      transition: opacity .25s var(--ease-out), visibility .25s var(--ease-out);
     }
     .loader.hidden {
       opacity: 0;
@@ -2812,11 +2812,21 @@
 
   <!-- ===================== JS ===================== -->
   <script>
-    // Loading screen — play animated logo once, then reveal site
+    // Loading screen — play the animated logo once per visit, then reveal site
     (function () {
       var loader = document.getElementById('loader');
       var video  = document.getElementById('loaderVideo');
       if (!loader) return;
+
+      // Intro only on the first page load of a session (not again when coming
+      // back from Impressum/Datenschutz) and not for reduced-motion users.
+      var seen = false;
+      try { seen = sessionStorage.getItem('introShown') === '1'; } catch (e) {}
+      if (seen || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        loader.remove();
+        return;
+      }
+      try { sessionStorage.setItem('introShown', '1'); } catch (e) {}
 
       document.body.classList.add('loading');
       var done = false;
@@ -2826,17 +2836,23 @@
         done = true;
         loader.classList.add('hidden');
         document.body.classList.remove('loading');
-        setTimeout(function () { loader.remove(); }, 320);
+        setTimeout(function () { loader.remove(); }, 260);
       }
 
-      // Hide when the logo animation finishes playing
       if (video) {
         video.addEventListener('ended', finish);
-        // If video can't autoplay / errors, don't trap the user
         video.addEventListener('error', finish);
+        // Kick playback explicitly (autoplay can be deferred until the element
+        // is ready); if it is refused, don't show a white screen — reveal the site.
+        var p = video.play();
+        if (p && typeof p.catch === 'function') p.catch(finish);
+        // Still not playing after 1.2s (slow network, blocked autoplay)? Reveal.
+        var started = false;
+        video.addEventListener('playing', function () { started = true; });
+        setTimeout(function () { if (!started) finish(); }, 1200);
       }
-      // Safety fallback — never block longer than 8s
-      setTimeout(finish, 8000);
+      // Safety fallback — never block longer than 4s
+      setTimeout(finish, 4000);
     })();
 
     // Nav: stick on scroll
